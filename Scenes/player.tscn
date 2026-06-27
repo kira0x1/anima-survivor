@@ -14,10 +14,13 @@ script = ExtResource("1_cvnsp")
 
 [node name="Sprite" type="AnimatedSprite2D" parent="Colorizer" unique_id=1904442925]
 texture_filter = 1
+position = Vector2(0, 15)
 scale = Vector2(2, 2)
 sprite_frames = ExtResource("1_v0iea")
 animation = &"walk_up"
 autoplay = "idle"
+frame_progress = 0.8610582
+offset = Vector2(0, -7.5)
 script = ExtResource("3_6t5aa")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2027810709]
