@@ -1,8 +1,29 @@
-[gd_scene format=3 uid="uid://cc76cb4gm2gpx"]
+[gd_scene format=4 uid="uid://cc76cb4gm2gpx"]
 
 [ext_resource type="PackedScene" uid="uid://dxx3v5mga07pt" path="res://Scenes/player.tscn" id="1_ebmjs"]
+[ext_resource type="TileSet" uid="uid://dm4u0eg76wk5r" path="res://sprites/props/props.tres" id="2_qxrlw"]
 
 [node name="Game" type="Node2D" unique_id=1388643394]
 
+[node name="Bg" type="CanvasLayer" parent="." unique_id=504119323]
+layer = -10
+
+[node name="ColorRect" type="ColorRect" parent="Bg" unique_id=383177441]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.72067666, 0.7173909, 0.6480817, 1)
+
+[node name="Tilemaps" type="Node2D" parent="." unique_id=1134287207]
+scale = Vector2(2, 2)
+
+[node name="Props Layer" type="TileMapLayer" parent="Tilemaps" unique_id=905535583]
+texture_filter = 1
+tile_map_data = PackedByteArray("AAAGAAcAAAACAAAAAAAPAAcAAAAHAAYAAAARAAYAAAAHAAYAAAASAAUAAAAHAAYAAAASAAYAAAAHAAYAAAAZAAoAAAAHAAYAAAAdAAkAAAAHAAYAAAAPAAoAAAAHAAYAAAAVAAoAAAAHAAYAAAAYABAAAAAHAAYAAAAYAA8AAAACAAUAAAAZAA8AAAAHAAYAAAAYAA0AAAAHAAYAAAAZAAYAAAAHAAYAAAAWAAUAAAACAAMAAAANAAgAAAACAAMAAAAQAA0AAAAHAAQAAAAVAAwAAAAHAAYAAAAUABAAAAAHAAYAAAAVAA4AAAAHAAQAAAAaAA4AAAACAAMAABAaAAsAAAAHAAAAAAAPAAUAAAAHAAAAAAAJAAoAAAAHAAAAAAAKAA0AAAACAAMAAAA=")
+tile_set = ExtResource("2_qxrlw")
+use_kinematic_bodies = true
+
 [node name="Player" parent="." unique_id=1222682647 instance=ExtResource("1_ebmjs")]
-position = Vector2(121, 154)
+position = Vector2(575, 323)
