@@ -11,5 +11,8 @@ func _physics_process(_delta: float) -> void:
 		var direction: Vector2 = global_position.direction_to(player_pos)
 		velocity = direction * 40
 		move_and_slide()
-	else: 
+	else:
 		velocity = Vector2.ZERO
+	
+	
+	anim.handle_velocity(velocity);

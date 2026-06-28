@@ -18,7 +18,7 @@ scale = Vector2(2, 2)
 sprite_frames = ExtResource("1_4are2")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.8771641
+frame_progress = 0.19305201
 offset = Vector2(-3, -14)
 script = ExtResource("2_bsing")
 
