@@ -1,7 +1,9 @@
 [gd_scene format=4 uid="uid://cc76cb4gm2gpx"]
 
-[ext_resource type="PackedScene" uid="uid://dxx3v5mga07pt" path="res://Scenes/player.tscn" id="1_ebmjs"]
-[ext_resource type="TileSet" uid="uid://dm4u0eg76wk5r" path="res://sprites/props/props.tres" id="2_qxrlw"]
+[ext_resource type="TileSet" uid="uid://dm4u0eg76wk5r" path="res://sprites/props/props.tres" id="1_yqjtg"]
+[ext_resource type="PackedScene" uid="uid://dxx3v5mga07pt" path="res://scenes/player.tscn" id="2_lnu2h"]
+[ext_resource type="PackedScene" uid="uid://ddr6joisppuo1" path="res://scenes/spawner.tscn" id="3_lnu2h"]
+[ext_resource type="PackedScene" uid="uid://ct422ldg811wo" path="res://scenes/mob.tscn" id="4_lbhrr"]
 
 [node name="Game" type="Node2D" unique_id=1388643394]
 y_sort_enabled = true
@@ -26,7 +28,14 @@ scale = Vector2(2, 2)
 y_sort_enabled = true
 texture_filter = 1
 tile_map_data = PackedByteArray("AAAGAAcAAAACAAAAAAAWAAUAAAACAAMAAAANAAgAAAACAAMAAAAVAA4AAAAHAAQAAAAaAA4AAAACAAMAABAaAAsAAAAHAAAAAAAJAAoAAAAHAAAAAAAKAA0AAAACAAMAAAALAA0AAAAHAAYAAAAKAA4AAAAHAAYAAAAbAAsAAAAHAAYAAAAXAAUAAAAHAAYAAAAVAAYAAAAHAAYAAAAWAAoAAAAHAAYAAAAMAAgAAAAHAAYAAAAPAAgAAAAHAAYAAAANAAoAAAAHAAYAAAAbAAwAAAAHAAMAAAANAA8AAAAHAAQAAAAbAAIAAAAHAAAAAAANAAIAAAAHAAAAAAAEAAQAAAAHAAAAAAAWAAcAAAABAAQAAAAQAA4AAAABAAQAABAWABEAAAACAAUAAAA=")
-tile_set = ExtResource("2_qxrlw")
+tile_set = ExtResource("1_yqjtg")
 
-[node name="Player" parent="." unique_id=1222682647 instance=ExtResource("1_ebmjs")]
-position = Vector2(592, 341)
+[node name="Player" parent="." unique_id=1222682647 instance=ExtResource("2_lnu2h")]
+unique_name_in_owner = true
+position = Vector2(578, 323)
+
+[node name="spawner" parent="." unique_id=1997197035 instance=ExtResource("3_lnu2h")]
+position = Vector2(824, 273)
+
+[node name="mob" parent="." unique_id=750238883 instance=ExtResource("4_lbhrr")]
+position = Vector2(633, 356)

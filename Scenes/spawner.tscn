@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://ddr6joisppuo1"]
+
+[ext_resource type="Script" uid="uid://u3xusrgge3l3" path="res://scripts/spawner.gd" id="1_ik2nu"]
+[ext_resource type="Texture2D" uid="uid://tc10otifmdp0" path="res://sprites/props/Stone and Rock.png" id="2_tx2ig"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tye4b"]
+radius = 18.027756
+
+[node name="spawner" type="Node2D" unique_id=1997197035]
+script = ExtResource("1_ik2nu")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1261091156]
+modulate = Color(1.1492012, 0.35020512, 0.35020512, 1)
+texture_filter = 1
+scale = Vector2(2, 2)
+texture = ExtResource("2_tx2ig")
+region_enabled = true
+region_rect = Rect2(32, 0, 32, 32)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=960616452]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1337606691]
+position = Vector2(0, 3)
+shape = SubResource("CircleShape2D_tye4b")
+
+[node name="Timer" type="Timer" parent="." unique_id=606399848]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

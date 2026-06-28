@@ -13,7 +13,7 @@ config_version=5
 config/name="anima-survivor"
 run/main_scene="uid://cc76cb4gm2gpx"
 config/features=PackedStringArray("4.7", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://sprites/icon.svg"
 
 [display]
 
