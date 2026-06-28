@@ -6,17 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="48cabc87-ec5c-40a3-92fb-1d75b725d221" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scenes/game.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/Scenes/game.tscn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scenes/player.gd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scenes/player.gd.uid" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scenes/player.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/Scenes/player.tscn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scenes/player_anim.gd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scenes/player_anim.gd.uid" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/addons/rider-plugin/bin/windows/~rider-gdextension.windows.editor.x86_64.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icon.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icon.svg.import" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project.godot" beforeDir="false" afterPath="$PROJECT_DIR$/project.godot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sprites/props/props.tres" beforeDir="false" afterPath="$PROJECT_DIR$/sprites/props/props.tres" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/mob.gd" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/mob.gd" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +46,7 @@
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.readMode.enableVisualFormatting": "true",
@@ -136,7 +127,7 @@
       <workItem from="1782558938023" duration="148000" />
       <workItem from="1782559141348" duration="87000" />
       <workItem from="1782559265153" duration="1938000" />
-      <workItem from="1782632667615" duration="3453000" />
+      <workItem from="1782632667615" duration="3614000" />
     </task>
     <servers />
   </component>

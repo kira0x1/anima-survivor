@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://ct422ldg811wo"]
 
 [ext_resource type="SpriteFrames" uid="uid://p44l8g2ahn2s" path="res://sprites/mobs/pig/pig_animations.tres" id="1_4are2"]
-[ext_resource type="Script" uid="uid://dv822jeno5w3b" path="res://Scripts/mob.gd" id="1_d4cuo"]
+[ext_resource type="Script" uid="uid://dv822jeno5w3b" path="res://scripts/mob.gd" id="1_d4cuo"]
 [ext_resource type="Script" uid="uid://htwvy7tsypcm" path="res://scripts/mob_anim.gd" id="2_bsing"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_tye4b"]
@@ -18,9 +18,11 @@ scale = Vector2(2, 2)
 sprite_frames = ExtResource("1_4are2")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.6717508
+frame_progress = 0.8771641
 offset = Vector2(-3, -14)
 script = ExtResource("2_bsing")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=243369397]
 shape = SubResource("CircleShape2D_tye4b")
+
+[node name="attack_timer" type="Timer" parent="." unique_id=1227217026]
