@@ -3,9 +3,15 @@
 [ext_resource type="SpriteFrames" uid="uid://p44l8g2ahn2s" path="res://sprites/mobs/pig/pig_animations.tres" id="1_4are2"]
 [ext_resource type="Script" uid="uid://dv822jeno5w3b" path="res://scripts/mob.gd" id="1_d4cuo"]
 [ext_resource type="Script" uid="uid://htwvy7tsypcm" path="res://scripts/mob_anim.gd" id="2_bsing"]
+[ext_resource type="Script" uid="uid://dop853rdq07ce" path="res://scripts/mob_state_machine.gd" id="4_71rcx"]
+[ext_resource type="Script" uid="uid://c7igtnots6p2l" path="res://scripts/states/idle_state.gd" id="5_xsfyf"]
+[ext_resource type="Script" uid="uid://c1mt1lxx82313" path="res://scripts/states/chase_state.gd" id="6_h8ps3"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_tye4b"]
 radius = 23.021729
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5gcps"]
+radius = 108.0
 
 [node name="mob" type="CharacterBody2D" unique_id=1745597189]
 collision_layer = 2
@@ -26,3 +32,25 @@ script = ExtResource("2_bsing")
 shape = SubResource("CircleShape2D_tye4b")
 
 [node name="attack_timer" type="Timer" parent="." unique_id=1227217026]
+
+[node name="aggro_radius" type="Area2D" parent="." unique_id=1119483291]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="aggro_radius" unique_id=770170764]
+shape = SubResource("CircleShape2D_5gcps")
+debug_color = Color(0.91309386, 0.17503181, 0.58803153, 0.41960785)
+
+[node name="state_machine" type="Node" parent="." unique_id=168818776]
+script = ExtResource("4_71rcx")
+start_state = NodePath("idle_state")
+
+[node name="idle_state" type="Node" parent="state_machine" unique_id=1967577367]
+unique_name_in_owner = true
+script = ExtResource("5_xsfyf")
+
+[node name="chase_state" type="Node" parent="state_machine" unique_id=943187361]
+unique_name_in_owner = true
+script = ExtResource("6_h8ps3")
+
+[connection signal="body_entered" from="aggro_radius" to="state_machine/idle_state" method="_on_aggro_radius_body_entered"]

@@ -4,7 +4,7 @@ extends CharacterBody2D
 var lastDirection: Vector2 = Vector2(0,0);
 var direction: Vector2 = Vector2(0,0);
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	velocity = direction * 100;
 	move_and_slide()
 
