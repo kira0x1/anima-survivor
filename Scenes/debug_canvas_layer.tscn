@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://cakalngity8uc" path="res://scripts/states/state_debug.gd" id="1_yi42q"]
 
 [node name="Debug CanvasLayer" type="CanvasLayer" unique_id=1166547204]
-visible = false
 
 [node name="Panel" type="Panel" parent="." unique_id=1407879101]
 offset_left = 7.0

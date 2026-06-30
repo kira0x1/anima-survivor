@@ -1,6 +1,10 @@
 extends CharacterBody2D
 
 @onready var player_anim: AnimatedSprite2D = $Colorizer/Sprite
+
+var health: float = 100.0;
+var max_health: float = 100.0
+
 var lastDirection: Vector2 = Vector2(0,0);
 var direction: Vector2 = Vector2(0,0);
 

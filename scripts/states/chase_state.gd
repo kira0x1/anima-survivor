@@ -3,6 +3,7 @@ extends State
 const MAX_CHASE_TIME: float = 3.0
 const MAX_CHASE_DISTANCE: float = 400.0
 const MIN_CHASE_DISTANCE: float = 200.0
+const ATTACK_DISTANCE: float = 90.0 
 
 var player_distance: float = 0.0
 var player_in_min_distance: bool
@@ -28,6 +29,11 @@ func _physics_process(_delta: float) -> void:
 
 	owner.chase_player()
 	var distance = owner.get_player_distance()
+
+	if distance <= ATTACK_DISTANCE:
+		finished.emit("attack")		
+	
+	
 	player_distance = distance
 	player_in_min_distance = distance <= MIN_CHASE_DISTANCE
 

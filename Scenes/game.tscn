@@ -4,6 +4,22 @@
 [ext_resource type="PackedScene" uid="uid://dxx3v5mga07pt" path="res://scenes/player.tscn" id="2_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://ddr6joisppuo1" path="res://scenes/spawner.tscn" id="3_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://ct422ldg811wo" path="res://scenes/mob.tscn" id="4_lbhrr"]
+[ext_resource type="Script" uid="uid://cs2tfdii6h4bt" path="res://scripts/health_bar.gd" id="5_iywne"]
+[ext_resource type="Script" uid="uid://cakalngity8uc" path="res://scripts/states/state_debug.gd" id="6_p57ef"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lbhrr"]
+bg_color = Color(0, 0, 0, 0.09803922)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iywne"]
+bg_color = Color(0.8291041, 0.11756676, 0.2103869, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
 
 [node name="Game" type="Node2D" unique_id=1388643394]
 y_sort_enabled = true
@@ -40,5 +56,64 @@ position = Vector2(824, 273)
 [node name="mob" parent="." unique_id=750238883 instance=ExtResource("4_lbhrr")]
 unique_name_in_owner = true
 position = Vector2(782, 357)
+
+[node name="sprite" parent="mob" index="0" unique_id=1989649171]
+animation = &"attack"
+frame = 4
+frame_progress = 1.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1512424151]
+
+[node name="health_bar" type="ProgressBar" parent="CanvasLayer" unique_id=557733983]
+anchors_preset = -1
+anchor_left = 0.35
+anchor_top = 0.975
+anchor_right = 0.65
+anchor_bottom = 0.975
+offset_top = -20.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/background = SubResource("StyleBoxFlat_lbhrr")
+theme_override_styles/fill = SubResource("StyleBoxFlat_iywne")
+value = 100.0
+show_percentage = false
+script = ExtResource("5_iywne")
+
+[node name="health_text" type="Label" parent="CanvasLayer/health_bar" unique_id=1617732849]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 10
+text = "100 / 100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Debug CanvasLayer" type="CanvasLayer" parent="." unique_id=1166547204]
+
+[node name="Panel" type="Panel" parent="Debug CanvasLayer" unique_id=1407879101]
+offset_left = 7.0
+offset_top = 8.0
+offset_right = 246.0
+offset_bottom = 100.0
+
+[node name="Label" type="Label" parent="Debug CanvasLayer/Panel" unique_id=1797625226]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = -4.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 8
+text = "state debug"
+script = ExtResource("6_p57ef")
+
+[connection signal="state_changed" from="mob/state_machine" to="Debug CanvasLayer/Panel/Label" method="_on_state_machine_state_changed"]
 
 [editable path="mob"]

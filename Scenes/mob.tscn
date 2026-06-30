@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://dop853rdq07ce" path="res://scripts/mob_state_machine.gd" id="4_71rcx"]
 [ext_resource type="Script" uid="uid://c7igtnots6p2l" path="res://scripts/states/idle_state.gd" id="5_xsfyf"]
 [ext_resource type="Script" uid="uid://c1mt1lxx82313" path="res://scripts/states/chase_state.gd" id="6_h8ps3"]
+[ext_resource type="Script" uid="uid://b07elhbn1nyo4" path="res://scripts/states/attack_state.gd" id="7_ebxvl"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_tye4b"]
 radius = 23.021729
@@ -51,9 +52,16 @@ script = ExtResource("5_xsfyf")
 unique_name_in_owner = true
 script = ExtResource("6_h8ps3")
 
+[node name="attack_state" type="Node" parent="state_machine" unique_id=2092994865]
+unique_name_in_owner = true
+script = ExtResource("7_ebxvl")
+
 [node name="attack_timer" type="Timer" parent="." unique_id=1227217026]
+one_shot = true
 
 [node name="chase_timer" type="Timer" parent="." unique_id=262944798]
 
+[connection signal="animation_finished" from="sprite" to="state_machine/attack_state" method="_on_sprite_animation_finished"]
 [connection signal="body_entered" from="aggro_radius" to="state_machine/idle_state" method="_on_aggro_radius_body_entered"]
+[connection signal="timeout" from="attack_timer" to="state_machine/attack_state" method="_on_attack_timer_timeout"]
 [connection signal="timeout" from="chase_timer" to="state_machine/chase_state" method="_on_chase_timer_timeout"]

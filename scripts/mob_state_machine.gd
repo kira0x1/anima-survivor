@@ -1,15 +1,15 @@
 extends StateMachine
 
-@onready var idle = %idle_state
-@onready var chase = %chase_state
+@onready var idle: State = %idle_state
+@onready var chase: State = %chase_state
+@onready var attack: State = $attack_state
 #@onready var stagger = $stagger
-#@onready var attack = $attack
 
 func _ready() -> void:
 	states_map = {
 		"idle": idle,
 		"chase": chase,
-#		"attack": attack,
+		"attack": attack,
 #		"stagger": stagger
 	}
 	
