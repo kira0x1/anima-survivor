@@ -6,7 +6,6 @@ func _ready() -> void:
 	var timer: Timer = get_node("Timer")
 	timer.wait_time = spawn_rate
 	timer.start()
-	print("timer started...")
 
 
 func _on_timer_timeout() -> void:

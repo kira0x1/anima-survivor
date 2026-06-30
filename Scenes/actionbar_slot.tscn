@@ -2,6 +2,18 @@
 
 [ext_resource type="Script" uid="uid://n36gy8fxaamg" path="res://scripts/actionbar_slot.gd" id="1_peu56"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_peu56"]
+draw_center = false
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 0.84966666, 0.18, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
 [node name="Actionbar_Slot" type="Button" unique_id=253840982]
 custom_minimum_size = Vector2(36, 36)
 offset_right = 8.0
@@ -23,4 +35,13 @@ offset_bottom = -3.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 8
-text = "1"
+
+[node name="selected_highlight" type="Panel" parent="." unique_id=1921411113]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_peu56")
