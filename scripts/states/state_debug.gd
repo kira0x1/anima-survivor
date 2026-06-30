@@ -19,7 +19,7 @@ func update_text():
 	if current_state.get_name() == "chase_state":
 		text += "\n" + "player in distance: %s" % current_state.player_in_min_distance
 		text += "\n" + "distance: %d / %d" % [current_state.MIN_CHASE_DISTANCE, current_state.player_distance]
-		
+				
 		if not current_state.player_in_min_distance and current_state.chase_timer:
 			text += "\nTimer: %d" % current_state.chase_timer.time_left
 		

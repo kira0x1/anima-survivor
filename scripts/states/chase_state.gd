@@ -30,8 +30,11 @@ func _physics_process(_delta: float) -> void:
 	var distance = owner.get_player_distance()
 	player_distance = distance
 	player_in_min_distance = distance <= MIN_CHASE_DISTANCE
+
 	if not player_in_min_distance and chase_timer.is_stopped():
 		chase_timer.start()
+	elif player_in_min_distance and not chase_timer.is_stopped():
+		chase_timer.stop()
 
 func _on_chase_timer_timeout() -> void:
 	if is_active:
