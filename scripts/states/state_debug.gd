@@ -28,6 +28,7 @@ func update_text():
 	if cur_state.get_name() == "attack_state":
 		text += "\n" + "is_attacking: %s" % cur_state.is_attacking
 		text += "\n" + "attack_timer: %.1f" % cur_state.attack_timer.time_left
+		text += "\n" + "distance: %d / %d" % [cur_state.ATTACK_DISTANCE, cur_state.player_distance]
 		
 func _process(_delta: float) -> void:
 	if in_chase_state or in_attack_state:

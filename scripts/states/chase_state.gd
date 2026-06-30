@@ -5,11 +5,12 @@ const MAX_CHASE_DISTANCE: float = 400.0
 const MIN_CHASE_DISTANCE: float = 200.0
 const ATTACK_DISTANCE: float = 90.0 
 
+var is_active
+var body: CharacterBody2D
+var chase_timer: Timer
+
 var player_distance: float = 0.0
 var player_in_min_distance: bool
-var is_active
-var chase_timer: Timer
-var body: CharacterBody2D
 
 func enter():
 	is_active = true
