@@ -5,6 +5,7 @@ signal on_damage
 
 var health: float = 100.0;
 var max_health: float = 100.0
+var is_alive: bool = true
 
 var lastDirection: Vector2 = Vector2(0,0);
 var direction: Vector2 = Vector2(0,0);
@@ -17,6 +18,14 @@ func _process(_delta: float) -> void:
 	direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
 	player_anim.move(velocity)
 
-func take_damage(damage: float):
+func take_damage(damage: float) -> void:
+	if not is_alive:
+		return
+
 	health -= damage;
+	
+	if health <= 0.0:
+		is_alive = false
+		health = 0
+		
 	on_damage.emit()

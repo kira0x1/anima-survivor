@@ -6,9 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="48cabc87-ec5c-40a3-92fb-1d75b725d221" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/mob.gd" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/mob.gd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/player.gd" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/player.gd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/player_anim.gd" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/player_anim.gd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/states/attack_state.gd" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/states/attack_state.gd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/states/chase_state.gd" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/states/chase_state.gd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/states/state_debug.gd" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/states/state_debug.gd" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,7 +18,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DarkyenusTimeTracker">
-    <option name="totalTimeSeconds" value="8531" />
+    <option name="totalTimeSeconds" value="9245" />
     <option name="naggedAbout" value="1" />
   </component>
   <component name="DpaMonitoringSettings">
@@ -147,7 +149,7 @@
       <workItem from="1782632667615" duration="3894000" />
       <workItem from="1782735360649" duration="4849000" />
       <workItem from="1782807740509" duration="6742000" />
-      <workItem from="1782830840258" duration="706000" />
+      <workItem from="1782830840258" duration="1417000" />
     </task>
     <servers />
   </component>

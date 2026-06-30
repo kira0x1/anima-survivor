@@ -4,9 +4,11 @@ var attack_timer: Timer
 var is_active: bool = false
 var is_attacking: bool = false
 var in_attack_range: bool = false
+
+# todo: remove when done testing
 var player_distance: float = 0.0
 
-const ATTACK_DAMAGE: float = 10.0 
+const ATTACK_DAMAGE: float = 40.0 
 const ATTACK_SPEED: float = 0.8
 const ATTACK_DISTANCE: float = 100.0
 

@@ -2,14 +2,14 @@ extends AnimatedSprite2D
 var lastDirection: Vector2 = Vector2(0,0);
 
 func move(direction: Vector2) -> void:
+
 	if direction.x > 0.0:
 		play("walk_right")
 		flip_h = false
-	if direction.x < 0.0:
+	elif direction.x < 0.0:
 		play("walk_right")
 		flip_h = true
-		
-	if direction.y < 0.0:
+	elif direction.y < 0.0:
 		play("walk_up")
 		flip_v = false;
 	elif direction.y > 0.0:

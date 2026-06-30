@@ -30,7 +30,7 @@ func _physics_process(_delta: float) -> void:
 
 	owner.chase_player()
 	var distance = owner.get_player_distance()
-
+	
 	if distance <= ATTACK_DISTANCE:
 		finished.emit("attack")		
 	
