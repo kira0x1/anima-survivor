@@ -7,4 +7,20 @@ custom_minimum_size = Vector2(36, 36)
 offset_right = 8.0
 offset_bottom = 8.0
 size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 8
+alignment = 0
 script = ExtResource("1_peu56")
+
+[node name="slot_text" type="Label" parent="." unique_id=1784208774]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = 3.0
+offset_right = -4.0
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 8
+text = "1"
