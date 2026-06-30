@@ -4,11 +4,14 @@ var slots: Array
 var slot_selected_id: int = 0
 var slot_selected
 
+var apple =	preload("res://items/apple_item.tres") 
+
 func _ready() -> void:
 	slots = get_children()
 
 	slot_selected_id = 0
 	slots[slot_selected_id].select_slot()
+	slots[slot_selected_id].set_item(apple)
 	
 
 func select_slot(slot_id):
