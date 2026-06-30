@@ -48,7 +48,7 @@ tile_set = ExtResource("1_yqjtg")
 
 [node name="Player" parent="." unique_id=1222682647 instance=ExtResource("2_lnu2h")]
 unique_name_in_owner = true
-position = Vector2(578, 323)
+position = Vector2(578, 324)
 
 [node name="spawner" parent="." unique_id=1997197035 instance=ExtResource("3_lnu2h")]
 position = Vector2(824, 273)
@@ -58,7 +58,6 @@ unique_name_in_owner = true
 position = Vector2(782, 357)
 
 [node name="sprite" parent="mob" index="0" unique_id=1989649171]
-animation = &"attack"
 frame = 4
 frame_progress = 1.0
 
@@ -114,6 +113,7 @@ theme_override_font_sizes/font_size = 8
 text = "state debug"
 script = ExtResource("6_p57ef")
 
+[connection signal="on_damage" from="Player" to="CanvasLayer/health_bar" method="_on_player_on_damage"]
 [connection signal="state_changed" from="mob/state_machine" to="Debug CanvasLayer/Panel/Label" method="_on_state_machine_state_changed"]
 
 [editable path="mob"]

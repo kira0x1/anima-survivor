@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+signal on_damage
 @onready var player_anim: AnimatedSprite2D = $Colorizer/Sprite
 
 var health: float = 100.0;
@@ -15,3 +16,7 @@ func _physics_process(_delta: float) -> void:
 func _process(_delta: float) -> void:
 	direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
 	player_anim.move(velocity)
+
+func take_damage(damage: float):
+	health -= damage;
+	on_damage.emit()

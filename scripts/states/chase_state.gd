@@ -17,7 +17,7 @@ func enter():
 	chase_timer = owner.get_node(^"chase_timer")
 	chase_timer.wait_time = MAX_CHASE_TIME
 	
-	print("entered chase state")
+#	print("entered chase state")
 	
 func exit():
 	is_active = false

@@ -2,6 +2,7 @@ extends Label
 
 var state_machine
 var in_chase_state
+var in_attack_state
 var cur_state
 
 func _ready() -> void:
@@ -11,6 +12,7 @@ func _ready() -> void:
 func _on_state_machine_state_changed(current_state: Variant) -> void:
 	cur_state = current_state
 	in_chase_state = current_state.get_name() == "chase_state"
+	in_attack_state = current_state.get_name() == "attack_state"
 	update_text()
 
 func update_text():
@@ -23,6 +25,10 @@ func update_text():
 		if not cur_state.player_in_min_distance and cur_state.chase_timer:
 			text += "\nTimer: %d" % cur_state.chase_timer.time_left
 		
+	if cur_state.get_name() == "attack_state":
+		text += "\n" + "is_attacking: %s" % cur_state.is_attacking
+		text += "\n" + "attack_timer: %.1f" % cur_state.attack_timer.time_left
+		
 func _process(_delta: float) -> void:
-	if in_chase_state:
+	if in_chase_state or in_attack_state:
 		update_text()

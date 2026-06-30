@@ -5,14 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="48cabc87-ec5c-40a3-92fb-1d75b725d221" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/scripts/states/attack_state.gd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scenes/game.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/Scenes/game.tscn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scenes/mob.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/Scenes/mob.tscn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/mob_state_machine.gd" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/mob_state_machine.gd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/health_bar.gd" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/health_bar.gd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/mob.gd" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/mob.gd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/player.gd" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/player.gd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/states/attack_state.gd" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/states/attack_state.gd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/states/chase_state.gd" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/states/chase_state.gd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sprites/mobs/pig/pig_animations.tres" beforeDir="false" afterPath="$PROJECT_DIR$/sprites/mobs/pig/pig_animations.tres" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/states/state_debug.gd" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/states/state_debug.gd" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,7 +19,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DarkyenusTimeTracker">
-    <option name="totalTimeSeconds" value="5686" />
+    <option name="totalTimeSeconds" value="7879" />
     <option name="naggedAbout" value="1" />
   </component>
   <component name="DpaMonitoringSettings">
@@ -150,7 +149,7 @@
       <workItem from="1782559265153" duration="1938000" />
       <workItem from="1782632667615" duration="3894000" />
       <workItem from="1782735360649" duration="4849000" />
-      <workItem from="1782807740509" duration="4513000" />
+      <workItem from="1782807740509" duration="6699000" />
     </task>
     <servers />
   </component>
