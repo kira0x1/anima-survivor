@@ -4,7 +4,6 @@
 [ext_resource type="PackedScene" uid="uid://dxx3v5mga07pt" path="res://scenes/player.tscn" id="2_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://ddr6joisppuo1" path="res://scenes/spawner.tscn" id="3_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://ct422ldg811wo" path="res://scenes/mob.tscn" id="4_lbhrr"]
-[ext_resource type="Script" uid="uid://cakalngity8uc" path="res://scripts/states/state_debug.gd" id="5_iywne"]
 
 [node name="Game" type="Node2D" unique_id=1388643394]
 y_sort_enabled = true
@@ -41,30 +40,5 @@ position = Vector2(824, 273)
 [node name="mob" parent="." unique_id=750238883 instance=ExtResource("4_lbhrr")]
 unique_name_in_owner = true
 position = Vector2(782, 357)
-
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1980231584]
-
-[node name="Panel" type="Panel" parent="CanvasLayer" unique_id=877792685]
-offset_left = 7.0
-offset_top = 8.0
-offset_right = 246.0
-offset_bottom = 100.0
-
-[node name="Label" type="Label" parent="CanvasLayer/Panel" unique_id=406261719]
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 4.0
-offset_top = 4.0
-offset_right = -4.0
-offset_bottom = -4.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/font_size = 8
-text = "state debug"
-script = ExtResource("5_iywne")
-
-[connection signal="state_changed" from="mob/state_machine" to="CanvasLayer/Panel/Label" method="_on_state_machine_state_changed"]
 
 [editable path="mob"]
