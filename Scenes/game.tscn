@@ -39,15 +39,16 @@ position = Vector2(578, 323)
 position = Vector2(824, 273)
 
 [node name="mob" parent="." unique_id=750238883 instance=ExtResource("4_lbhrr")]
-position = Vector2(776, 356)
+unique_name_in_owner = true
+position = Vector2(782, 357)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1980231584]
 
 [node name="Panel" type="Panel" parent="CanvasLayer" unique_id=877792685]
 offset_left = 7.0
 offset_top = 8.0
-offset_right = 203.0
-offset_bottom = 69.0
+offset_right = 246.0
+offset_bottom = 100.0
 
 [node name="Label" type="Label" parent="CanvasLayer/Panel" unique_id=406261719]
 layout_mode = 1
@@ -63,3 +64,7 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 8
 text = "state debug"
 script = ExtResource("5_iywne")
+
+[connection signal="state_changed" from="mob/state_machine" to="CanvasLayer/Panel/Label" method="_on_state_machine_state_changed"]
+
+[editable path="mob"]

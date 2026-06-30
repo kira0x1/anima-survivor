@@ -31,8 +31,6 @@ script = ExtResource("2_bsing")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=243369397]
 shape = SubResource("CircleShape2D_tye4b")
 
-[node name="attack_timer" type="Timer" parent="." unique_id=1227217026]
-
 [node name="aggro_radius" type="Area2D" parent="." unique_id=1119483291]
 collision_layer = 0
 collision_mask = 4
@@ -53,4 +51,9 @@ script = ExtResource("5_xsfyf")
 unique_name_in_owner = true
 script = ExtResource("6_h8ps3")
 
+[node name="attack_timer" type="Timer" parent="." unique_id=1227217026]
+
+[node name="chase_timer" type="Timer" parent="." unique_id=262944798]
+
 [connection signal="body_entered" from="aggro_radius" to="state_machine/idle_state" method="_on_aggro_radius_body_entered"]
+[connection signal="timeout" from="chase_timer" to="state_machine/chase_state" method="_on_chase_timer_timeout"]
