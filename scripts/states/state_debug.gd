@@ -19,11 +19,12 @@ func update_text():
 	text = String(cur_state.get_name())
 	
 	if cur_state.get_name() == "chase_state":
-		text += "\n" + "player in distance: %s" % cur_state.player_in_min_distance
+		text += "\n" + "player in distance: %s" % cur_state.player_in_distance
 		text += "\n" + "distance: %d / %d" % [cur_state.MIN_CHASE_DISTANCE, cur_state.player_distance]
 				
-		if not cur_state.player_in_min_distance and cur_state.chase_timer:
-			text += "\nTimer: %d" % cur_state.chase_timer.time_left
+		if cur_state.chase_timer:
+			text += "\nTimer: %.1f" % cur_state.chase_timer.time_left
+#		if not cur_state.player_in_min_distance and cur_state.chase_timer:
 		
 	if cur_state.get_name() == "attack_state":
 		text += "\n" + "is_attacking: %s" % cur_state.is_attacking

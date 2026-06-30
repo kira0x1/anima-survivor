@@ -10,7 +10,7 @@ var player_distance: float = 0.0
 
 const ATTACK_DAMAGE: float = 40.0 
 const ATTACK_SPEED: float = 0.8
-const ATTACK_DISTANCE: float = 100.0
+const ATTACK_DISTANCE: float = 60.0
 
 @onready var anim: AnimatedSprite2D = owner.get_node(^"sprite") 
 var player
