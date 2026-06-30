@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://df4unlwix45ey"]
+
+[ext_resource type="PackedScene" uid="uid://cje03mc5hm4re" path="res://scenes/actionbar_slot.tscn" id="1_bc4oh"]
+
+[node name="Actionbar" type="HBoxContainer" unique_id=1406471244]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -150.0
+offset_top = -51.0
+offset_right = 150.0
+offset_bottom = -11.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 2
+
+[node name="Actionbar_Slot" parent="." unique_id=253840982 instance=ExtResource("1_bc4oh")]
+layout_mode = 2
+
+[node name="Actionbar_Slot2" parent="." unique_id=1057898233 instance=ExtResource("1_bc4oh")]
+layout_mode = 2
+
+[node name="Actionbar_Slot3" parent="." unique_id=979403206 instance=ExtResource("1_bc4oh")]
+layout_mode = 2
+
+[node name="Actionbar_Slot4" parent="." unique_id=1656954850 instance=ExtResource("1_bc4oh")]
+layout_mode = 2
+
+[node name="Actionbar_Slot5" parent="." unique_id=688483528 instance=ExtResource("1_bc4oh")]
+layout_mode = 2
+
+[node name="Actionbar_Slot6" parent="." unique_id=1253171799 instance=ExtResource("1_bc4oh")]
+layout_mode = 2
+
+[node name="Actionbar_Slot7" parent="." unique_id=1147450930 instance=ExtResource("1_bc4oh")]
+layout_mode = 2

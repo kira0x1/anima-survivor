@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://ct422ldg811wo" path="res://scenes/mob.tscn" id="4_lbhrr"]
 [ext_resource type="Script" uid="uid://cs2tfdii6h4bt" path="res://scripts/health_bar.gd" id="5_iywne"]
 [ext_resource type="Script" uid="uid://cakalngity8uc" path="res://scripts/states/state_debug.gd" id="6_p57ef"]
+[ext_resource type="PackedScene" uid="uid://df4unlwix45ey" path="res://scenes/action_bar.tscn" id="7_gee14"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lbhrr"]
 bg_color = Color(0, 0, 0, 0.09803922)
@@ -57,19 +58,18 @@ position = Vector2(824, 273)
 unique_name_in_owner = true
 position = Vector2(782, 357)
 
-[node name="sprite" parent="mob" index="0" unique_id=1989649171]
-frame = 4
-frame_progress = 1.0
-
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1512424151]
 
 [node name="health_bar" type="ProgressBar" parent="CanvasLayer" unique_id=557733983]
-anchors_preset = -1
-anchor_left = 0.35
-anchor_top = 0.975
-anchor_right = 0.65
-anchor_bottom = 0.975
-offset_top = -20.0
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -150.0
+offset_top = -81.0
+offset_right = 10.0
+offset_bottom = -63.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_styles/background = SubResource("StyleBoxFlat_lbhrr")
@@ -89,6 +89,8 @@ theme_override_font_sizes/font_size = 10
 text = "100 / 100"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Actionbar" parent="CanvasLayer" unique_id=1406471244 instance=ExtResource("7_gee14")]
 
 [node name="Debug CanvasLayer" type="CanvasLayer" parent="." unique_id=1166547204]
 
