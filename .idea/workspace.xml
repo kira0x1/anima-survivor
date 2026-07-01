@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="48cabc87-ec5c-40a3-92fb-1d75b725d221" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/hand_equip.gd" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/hand_equip.gd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project.godot" beforeDir="false" afterPath="$PROJECT_DIR$/project.godot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/stats_ui.gd" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/stats_ui.gd" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,7 +15,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DarkyenusTimeTracker">
-    <option name="totalTimeSeconds" value="16262" />
+    <option name="totalTimeSeconds" value="16536" />
     <option name="naggedAbout" value="1" />
   </component>
   <component name="DpaMonitoringSettings">
@@ -149,7 +150,8 @@
       <workItem from="1782836513491" duration="6000" />
       <workItem from="1782838175886" duration="5720000" />
       <workItem from="1782849554778" duration="2286000" />
-      <workItem from="1782881051377" duration="5065000" />
+      <workItem from="1782881051377" duration="6164000" />
+      <workItem from="1782907910824" duration="191000" />
     </task>
     <servers />
   </component>

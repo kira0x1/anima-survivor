@@ -94,6 +94,7 @@ vertical_alignment = 1
 [node name="Actionbar" parent="CanvasLayer" unique_id=1406471244 instance=ExtResource("7_gee14")]
 
 [node name="stats_ui" parent="CanvasLayer" unique_id=803843134 instance=ExtResource("5_gee14")]
+visible = false
 offset_left = 15.0
 offset_top = -162.0
 offset_right = 278.0
