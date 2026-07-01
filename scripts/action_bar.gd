@@ -5,7 +5,9 @@ var slot_selected_id: int = 0
 var slot_selected
 
 signal slot_changed(slot: ActionbarSlot)
-var apple: ItemData = preload("res://items/apple_item.tres") 
+var apple: ItemData = preload("res://items/apple_item.tres")
+
+const slot_input_map: Array[String] = ["slot_1", "slot_2", "slot_3", "slot_4", "slot_5", "slot_6", "slot_7"]
 
 func _ready() -> void:
 	slots = get_children()
@@ -24,6 +26,11 @@ func select_slot(slot_id):
 	slot_changed.emit(slot_selected)
 	
 func _input(event: InputEvent) -> void:
+	for i in slot_input_map.size():
+		if event.is_action_pressed(slot_input_map[i]):
+			select_slot(i)
+	
+
 	if event.is_pressed():
 		var next_slot: int = slot_selected_id
 		
