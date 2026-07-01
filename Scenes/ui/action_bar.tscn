@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://df4unlwix45ey"]
 
 [ext_resource type="Script" uid="uid://d4hj0h0pdjh7i" path="res://scripts/action_bar.gd" id="1_ayqex"]
-[ext_resource type="PackedScene" uid="uid://cje03mc5hm4re" path="res://scenes/actionbar_slot.tscn" id="1_bc4oh"]
+[ext_resource type="PackedScene" uid="uid://cje03mc5hm4re" path="res://scenes/ui/actionbar_slot.tscn" id="1_bc4oh"]
 
 [node name="Actionbar" type="HBoxContainer" unique_id=1406471244]
 anchors_preset = 7

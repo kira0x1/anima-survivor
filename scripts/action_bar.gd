@@ -4,7 +4,8 @@ var slots: Array
 var slot_selected_id: int = 0
 var slot_selected
 
-var apple =	preload("res://items/apple_item.tres") 
+signal slot_changed(slot: ActionbarSlot)
+var apple: ItemData = preload("res://items/apple_item.tres") 
 
 func _ready() -> void:
 	slots = get_children()
@@ -13,22 +14,25 @@ func _ready() -> void:
 	slots[slot_selected_id].select_slot()
 	slots[slot_selected_id].set_item(apple)
 	
-
 func select_slot(slot_id):
 	slots[slot_selected_id].deselect_slot()
 	slots[slot_id].select_slot()
+
+	slot_selected = slots[slot_id]
 	slot_selected_id = slot_id
+	
+	slot_changed.emit(slot_selected)
 	
 func _input(event: InputEvent) -> void:
 	if event.is_pressed():
 		var next_slot: int = slot_selected_id
 		
-		if event.is_action("scroll_down"):
+		if event.is_action("scroll_up"):
 			next_slot = next_slot - 1
 			if next_slot < 0: 
 				next_slot = slots.size() - 1
 
-		elif event.is_action("scroll_up"):
+		elif event.is_action("scroll_down"):
 			next_slot += 1
 			if next_slot >= slots.size(): 
 				next_slot = 0
@@ -36,4 +40,3 @@ func _input(event: InputEvent) -> void:
 			return
 
 		select_slot(next_slot)
-			

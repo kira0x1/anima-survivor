@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://blknqccvyr6rm" path="res://scenes/ui/stats_ui.tscn" id="5_gee14"]
 [ext_resource type="Script" uid="uid://cs2tfdii6h4bt" path="res://scripts/health_bar.gd" id="5_iywne"]
 [ext_resource type="Script" uid="uid://cakalngity8uc" path="res://scripts/states/state_debug.gd" id="6_p57ef"]
-[ext_resource type="PackedScene" uid="uid://df4unlwix45ey" path="res://scenes/action_bar.tscn" id="7_gee14"]
+[ext_resource type="PackedScene" uid="uid://df4unlwix45ey" path="res://scenes/ui/action_bar.tscn" id="7_gee14"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lbhrr"]
 bg_color = Color(0, 0, 0, 0.09803922)
@@ -124,5 +124,7 @@ script = ExtResource("6_p57ef")
 
 [connection signal="on_damage" from="Player" to="CanvasLayer/health_bar" method="_on_player_on_damage"]
 [connection signal="state_changed" from="mob/state_machine" to="Debug CanvasLayer/Panel/Label" method="_on_state_machine_state_changed"]
+[connection signal="slot_changed" from="CanvasLayer/Actionbar" to="Player/hand_equip" method="_on_actionbar_slot_changed"]
 
+[editable path="Player"]
 [editable path="mob"]

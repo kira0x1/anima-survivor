@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://coxdaxmfwwisi" path="res://scripts/player.gd" id="1_qhqgy"]
 [ext_resource type="SpriteFrames" uid="uid://des0v201vqcer" path="res://sprites/player/player_animations.tres" id="2_dqkch"]
 [ext_resource type="Script" uid="uid://bgh3p66qcf46u" path="res://scripts/player_anim.gd" id="3_qlg0r"]
+[ext_resource type="PackedScene" uid="uid://coamxv2u8vv40" path="res://scenes/hand_equip.tscn" id="4_dqkch"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_tye4b"]
 
@@ -28,3 +29,6 @@ position = Vector2(0, 4)
 shape = SubResource("CircleShape2D_tye4b")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1513925562]
+
+[node name="hand_equip" parent="." unique_id=1980578000 instance=ExtResource("4_dqkch")]
+position = Vector2(9, 9)

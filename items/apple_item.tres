@@ -1,12 +1,18 @@
 [gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://chfys4j5e6gyj"]
 
-[ext_resource type="Texture2D" uid="uid://b8go5pptuu7fa" path="res://sprites/icon.svg" id="1_gmp0g"]
-[ext_resource type="Script" uid="uid://wpidfr3ad7a3" path="res://scenes/items/item_data.gd" id="1_timq0"]
+[ext_resource type="Texture2D" uid="uid://d23tk1rg4x7c2" path="res://sprites/objects/Some Objects.png" id="1_gmp0g"]
+[ext_resource type="PackedScene" uid="uid://c45qy2dm1vvew" path="res://scenes/items/apple_item.tscn" id="2_egour"]
+[ext_resource type="Script" uid="uid://wpidfr3ad7a3" path="res://scripts/item_data.gd" id="2_gmp0g"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kf5ae"]
+atlas = ExtResource("1_gmp0g")
+region = Rect2(48, 0, 16, 16)
 
 [resource]
-script = ExtResource("1_timq0")
+script = ExtResource("2_gmp0g")
 item_name = "Apple"
 item_description = "an apple.. yummy :3"
 stackable = true
-icon = ExtResource("1_gmp0g")
+icon = SubResource("AtlasTexture_kf5ae")
+item_scene = ExtResource("2_egour")
 metadata/_custom_type_script = "uid://wpidfr3ad7a3"

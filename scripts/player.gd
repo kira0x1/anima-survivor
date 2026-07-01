@@ -31,3 +31,4 @@ func take_damage(damage: float) -> void:
 		health = 0
 		
 	on_damage.emit()
+

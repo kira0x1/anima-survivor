@@ -1,5 +1,7 @@
 extends Button
 
+class_name ActionbarSlot
+
 var is_occupied: bool = false
 var is_selected: bool = false
 var highlight: Panel

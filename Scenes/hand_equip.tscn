@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://coamxv2u8vv40"]
+
+[ext_resource type="Script" uid="uid://cst56xakfcfj8" path="res://scripts/hand_equip.gd" id="1_ja80i"]
+
+[node name="hand_equip" type="Marker2D" unique_id=1980578000]
+script = ExtResource("1_ja80i")
+
+[node name="item" type="Marker2D" parent="." unique_id=1577707664]
+position = Vector2(7, 5)
