@@ -1,7 +1,9 @@
 extends CharacterBody2D
 
 signal on_damage
+
 @onready var player_anim: AnimatedSprite2D = $Colorizer/Sprite
+var stats: Stats = Stats.new()
 
 var health: float = 100.0;
 var max_health: float = 100.0
