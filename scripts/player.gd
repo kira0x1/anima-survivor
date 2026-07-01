@@ -1,10 +1,11 @@
 extends CharacterBody2D
 
 signal on_damage
+signal on_xp_change
 
 @onready var player_anim: AnimatedSprite2D = $Colorizer/Sprite
-var stats: Stats = Stats.new()
 
+var stats: Stats = Stats.new()
 var health: float = 100.0;
 var max_health: float = 100.0
 var is_alive: bool = true
@@ -32,3 +33,6 @@ func take_damage(damage: float) -> void:
 		
 	on_damage.emit()
 
+func give_xp(xp: float):
+	stats.xp += xp
+	on_xp_change.emit()

@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://blknqccvyr6rm"]
 
 [ext_resource type="Script" uid="uid://c0tbwwage3jhl" path="res://scripts/stats_ui.gd" id="1_xm8em"]
+[ext_resource type="Script" uid="uid://cfxtxi5fwpvlx" path="res://scripts/ui/xp_bar.gd" id="2_uiwkp"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tye4b"]
 bg_color = Color(0, 0, 0, 0.22745098)
@@ -9,12 +10,19 @@ corner_radius_top_right = 4
 corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5gcps"]
-bg_color = Color(0.56, 0.56, 0.56, 0.6431373)
-corner_radius_top_left = 4
-corner_radius_top_right = 4
-corner_radius_bottom_right = 4
-corner_radius_bottom_left = 4
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xm8em"]
+bg_color = Color(0.21, 0.21, 0.21, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uiwkp"]
+bg_color = Color(0.4691357, 0.33797655, 0.7592787, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
 
 [node name="stats_ui" type="Panel" unique_id=1141133084]
 anchors_preset = 4
@@ -28,6 +36,53 @@ grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_tye4b")
 script = ExtResource("1_xm8em")
 
+[node name="bio" type="Panel" parent="." unique_id=341613111]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = 115.0
+grow_horizontal = 2
+
+[node name="info" type="VBoxContainer" parent="bio" unique_id=1092405419]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.56
+offset_left = 5.0
+offset_top = 5.0
+offset_right = -5.0
+offset_bottom = -5.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="name_label" type="Label" parent="bio/info" unique_id=1165432153]
+layout_mode = 2
+text = "Kira"
+
+[node name="level_label" type="Label" parent="bio/info" unique_id=955701944]
+layout_mode = 2
+text = "lvl 1"
+
+[node name="xp_bar" type="ProgressBar" parent="bio" unique_id=5032544]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 5.0
+offset_top = -27.0
+offset_right = -5.0
+offset_bottom = -5.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/background = SubResource("StyleBoxFlat_xm8em")
+theme_override_styles/fill = SubResource("StyleBoxFlat_uiwkp")
+value = 28.0
+script = ExtResource("2_uiwkp")
+
 [node name="stats" type="Panel" parent="." unique_id=638298863]
 layout_mode = 1
 anchors_preset = -1
@@ -35,12 +90,11 @@ anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 10.0
-offset_top = -357.0
+offset_top = -330.0
 offset_right = -10.0
 offset_bottom = -10.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_styles/panel = SubResource("StyleBoxFlat_5gcps")
 
 [node name="stats_vlist" type="VBoxContainer" parent="stats" unique_id=150477407]
 layout_mode = 1
@@ -63,33 +117,3 @@ text = "speed:  0"
 unique_name_in_owner = true
 layout_mode = 2
 text = "stamina: 0"
-
-[node name="bio" type="Panel" parent="." unique_id=341613111]
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 1.0
-offset_left = 10.0
-offset_top = 10.0
-offset_right = -10.0
-offset_bottom = 88.0
-grow_horizontal = 2
-
-[node name="info" type="VBoxContainer" parent="bio" unique_id=1092405419]
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 5.0
-offset_top = 5.0
-offset_right = -5.0
-offset_bottom = -5.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="name_label" type="Label" parent="bio/info" unique_id=1165432153]
-layout_mode = 2
-text = "Kira"
-
-[node name="level_label" type="Label" parent="bio/info" unique_id=955701944]
-layout_mode = 2
-text = "lvl 1"

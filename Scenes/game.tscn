@@ -8,6 +8,7 @@
 [ext_resource type="Script" uid="uid://cs2tfdii6h4bt" path="res://scripts/health_bar.gd" id="5_iywne"]
 [ext_resource type="Script" uid="uid://cakalngity8uc" path="res://scripts/states/state_debug.gd" id="6_p57ef"]
 [ext_resource type="PackedScene" uid="uid://df4unlwix45ey" path="res://scenes/ui/action_bar.tscn" id="7_gee14"]
+[ext_resource type="PackedScene" uid="uid://bkltruarjgmf0" path="res://scenes/xp_orb.tscn" id="9_0tnpc"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lbhrr"]
 bg_color = Color(0, 0, 0, 0.09803922)
@@ -94,7 +95,6 @@ vertical_alignment = 1
 [node name="Actionbar" parent="CanvasLayer" unique_id=1406471244 instance=ExtResource("7_gee14")]
 
 [node name="stats_ui" parent="CanvasLayer" unique_id=803843134 instance=ExtResource("5_gee14")]
-visible = false
 offset_left = 15.0
 offset_top = -162.0
 offset_right = 278.0
@@ -123,7 +123,18 @@ theme_override_font_sizes/font_size = 8
 text = "state debug"
 script = ExtResource("6_p57ef")
 
+[node name="xp_orb" parent="." unique_id=2033809023 instance=ExtResource("9_0tnpc")]
+position = Vector2(477, 361)
+collision_layer = 0
+collision_mask = 4
+
+[node name="xp_orb2" parent="." unique_id=1743396755 instance=ExtResource("9_0tnpc")]
+position = Vector2(556, 278)
+collision_layer = 0
+collision_mask = 4
+
 [connection signal="on_damage" from="Player" to="CanvasLayer/health_bar" method="_on_player_on_damage"]
+[connection signal="on_xp_change" from="Player" to="CanvasLayer/stats_ui" method="_on_player_on_xp_change"]
 [connection signal="state_changed" from="mob/state_machine" to="Debug CanvasLayer/Panel/Label" method="_on_state_machine_state_changed"]
 [connection signal="slot_changed" from="CanvasLayer/Actionbar" to="Player/hand_equip" method="_on_actionbar_slot_changed"]
 
