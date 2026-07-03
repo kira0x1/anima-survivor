@@ -29,12 +29,3 @@ layout_mode = 2
 
 [node name="Actionbar_Slot4" parent="." unique_id=1656954850 instance=ExtResource("1_bc4oh")]
 layout_mode = 2
-
-[node name="Actionbar_Slot5" parent="." unique_id=688483528 instance=ExtResource("1_bc4oh")]
-layout_mode = 2
-
-[node name="Actionbar_Slot6" parent="." unique_id=1253171799 instance=ExtResource("1_bc4oh")]
-layout_mode = 2
-
-[node name="Actionbar_Slot7" parent="." unique_id=1147450930 instance=ExtResource("1_bc4oh")]
-layout_mode = 2

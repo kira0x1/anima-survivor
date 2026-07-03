@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://b8yqrqhndmi1k"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v13ij"]
+bg_color = Color(0, 0, 0, 0.36862746)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[node name="Upgrade Selection" type="Control" unique_id=1789212969]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="." unique_id=1790037211]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 50.0
+offset_top = 50.0
+offset_right = -50.0
+offset_bottom = -50.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_v13ij")

@@ -38,6 +38,74 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.72067666, 0.7173909, 0.6480817, 1)
 
+[node name="PlayerUI Canvas" type="CanvasLayer" parent="." unique_id=1512424151]
+
+[node name="health_bar" type="ProgressBar" parent="PlayerUI Canvas" unique_id=557733983]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -90.0
+offset_top = -72.0
+offset_right = 90.0
+offset_bottom = -54.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/background = SubResource("StyleBoxFlat_lbhrr")
+theme_override_styles/fill = SubResource("StyleBoxFlat_iywne")
+value = 100.0
+show_percentage = false
+script = ExtResource("5_iywne")
+
+[node name="health_text" type="Label" parent="PlayerUI Canvas/health_bar" unique_id=1617732849]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 10
+text = "100 / 100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Actionbar" parent="PlayerUI Canvas" unique_id=1406471244 instance=ExtResource("7_gee14")]
+anchors_preset = -1
+offset_left = -90.0
+offset_top = -36.0
+offset_right = 90.0
+offset_bottom = -10.0
+
+[node name="stats_ui" parent="PlayerUI Canvas" unique_id=803843134 instance=ExtResource("5_gee14")]
+offset_left = 15.0
+offset_top = -162.0
+offset_right = 278.0
+offset_bottom = 296.0
+
+[node name="Debug Canvas" type="CanvasLayer" parent="." unique_id=1166547204]
+
+[node name="Panel" type="Panel" parent="Debug Canvas" unique_id=1407879101]
+offset_left = 7.0
+offset_top = 8.0
+offset_right = 246.0
+offset_bottom = 100.0
+
+[node name="Label" type="Label" parent="Debug Canvas/Panel" unique_id=1797625226]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = -4.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 8
+text = "state debug"
+script = ExtResource("6_p57ef")
+
 [node name="Tilemaps" type="Node2D" parent="." unique_id=1134287207]
 z_as_relative = false
 y_sort_enabled = true
@@ -60,69 +128,6 @@ position = Vector2(824, 273)
 unique_name_in_owner = true
 position = Vector2(782, 357)
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1512424151]
-
-[node name="health_bar" type="ProgressBar" parent="CanvasLayer" unique_id=557733983]
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -150.0
-offset_top = -81.0
-offset_right = 10.0
-offset_bottom = -63.0
-grow_horizontal = 2
-grow_vertical = 0
-theme_override_styles/background = SubResource("StyleBoxFlat_lbhrr")
-theme_override_styles/fill = SubResource("StyleBoxFlat_iywne")
-value = 100.0
-show_percentage = false
-script = ExtResource("5_iywne")
-
-[node name="health_text" type="Label" parent="CanvasLayer/health_bar" unique_id=1617732849]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/font_size = 10
-text = "100 / 100"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Actionbar" parent="CanvasLayer" unique_id=1406471244 instance=ExtResource("7_gee14")]
-
-[node name="stats_ui" parent="CanvasLayer" unique_id=803843134 instance=ExtResource("5_gee14")]
-offset_left = 15.0
-offset_top = -162.0
-offset_right = 278.0
-offset_bottom = 296.0
-
-[node name="Debug CanvasLayer" type="CanvasLayer" parent="." unique_id=1166547204]
-
-[node name="Panel" type="Panel" parent="Debug CanvasLayer" unique_id=1407879101]
-offset_left = 7.0
-offset_top = 8.0
-offset_right = 246.0
-offset_bottom = 100.0
-
-[node name="Label" type="Label" parent="Debug CanvasLayer/Panel" unique_id=1797625226]
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 4.0
-offset_top = 4.0
-offset_right = -4.0
-offset_bottom = -4.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/font_size = 8
-text = "state debug"
-script = ExtResource("6_p57ef")
-
 [node name="xp_orb" parent="." unique_id=2033809023 instance=ExtResource("9_0tnpc")]
 position = Vector2(477, 361)
 collision_layer = 0
@@ -133,10 +138,10 @@ position = Vector2(556, 278)
 collision_layer = 0
 collision_mask = 4
 
-[connection signal="on_damage" from="Player" to="CanvasLayer/health_bar" method="_on_player_on_damage"]
-[connection signal="on_xp_change" from="Player" to="CanvasLayer/stats_ui" method="_on_player_on_xp_change"]
-[connection signal="state_changed" from="mob/state_machine" to="Debug CanvasLayer/Panel/Label" method="_on_state_machine_state_changed"]
-[connection signal="slot_changed" from="CanvasLayer/Actionbar" to="Player/hand_equip" method="_on_actionbar_slot_changed"]
+[connection signal="slot_changed" from="PlayerUI Canvas/Actionbar" to="Player/hand_equip" method="_on_actionbar_slot_changed"]
+[connection signal="on_damage" from="Player" to="PlayerUI Canvas/health_bar" method="_on_player_on_damage"]
+[connection signal="on_xp_change" from="Player" to="PlayerUI Canvas/stats_ui" method="_on_player_on_xp_change"]
+[connection signal="state_changed" from="mob/state_machine" to="Debug Canvas/Panel/Label" method="_on_state_machine_state_changed"]
 
 [editable path="Player"]
 [editable path="mob"]
