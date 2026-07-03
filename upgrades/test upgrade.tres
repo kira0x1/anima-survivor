@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="UpgradeData" format=3 uid="uid://cabgca8pecidn"]
+
+[ext_resource type="Script" uid="uid://blyb1f2jj0r88" path="res://scripts/upgrade_data.gd" id="1_ayrdu"]
+[ext_resource type="Texture2D" uid="uid://dtlqltkr0iaq7" path="res://sprites/equipment/rpg_icons_free/torch.png" id="2_qsq8o"]
+
+[resource]
+script = ExtResource("1_ayrdu")
+upgrade_name = "Increase Slash Damage"
+upgrade_description = "+15% slash damage increase"
+upgrade_icon = ExtResource("2_qsq8o")
+metadata/_custom_type_script = "uid://blyb1f2jj0r88"

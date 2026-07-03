@@ -1,7 +1,14 @@
 [gd_scene format=3 uid="uid://b8yqrqhndmi1k"]
 
+[ext_resource type="PackedScene" uid="uid://bd1j1j2cs1oi4" path="res://scenes/ui/upgrade_card.tscn" id="1_nmwu3"]
+[ext_resource type="Script" uid="uid://capsyt0lq40xa" path="res://scripts/ui/upgrade_selection.gd" id="1_rewuw"]
+[ext_resource type="Script" uid="uid://blyb1f2jj0r88" path="res://scripts/upgrade_data.gd" id="2_ag840"]
+[ext_resource type="Resource" uid="uid://cabgca8pecidn" path="res://upgrades/test upgrade.tres" id="3_1kv1b"]
+[ext_resource type="Resource" uid="uid://b3i6vmwji8v80" path="res://upgrades/mage_upgrade.tres" id="4_gwd4b"]
+[ext_resource type="Resource" uid="uid://drtu41ltfc3sx" path="res://upgrades/move_upgrade.tres" id="5_sguap"]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v13ij"]
-bg_color = Color(0, 0, 0, 0.36862746)
+bg_color = Color(0.11858145, 0.11858136, 0.11858138, 1)
 corner_radius_top_left = 4
 corner_radius_top_right = 4
 corner_radius_bottom_right = 4
@@ -14,16 +21,43 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_rewuw")
+upgrade_tests = Array[ExtResource("2_ag840")]([ExtResource("3_1kv1b"), ExtResource("4_gwd4b"), ExtResource("5_sguap")])
 
-[node name="Panel" type="Panel" parent="." unique_id=1790037211]
+[node name="Cards" type="Panel" parent="." unique_id=1790037211]
 layout_mode = 1
-anchors_preset = -1
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 50.0
-offset_top = 50.0
-offset_right = -50.0
-offset_bottom = -50.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -363.0
+offset_top = -274.0
+offset_right = 363.0
+offset_bottom = 274.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_v13ij")
+
+[node name="Upgrade HBox" type="HBoxContainer" parent="Cards" unique_id=1263658239]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.7
+offset_left = 20.0
+offset_top = 20.0
+offset_right = -20.0
+offset_bottom = -20.00003
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 8
+alignment = 1
+
+[node name="card_1" parent="Cards/Upgrade HBox" unique_id=113578228 instance=ExtResource("1_nmwu3")]
+layout_mode = 2
+
+[node name="card_2" parent="Cards/Upgrade HBox" unique_id=1380396601 instance=ExtResource("1_nmwu3")]
+layout_mode = 2
+
+[node name="card_3" parent="Cards/Upgrade HBox" unique_id=135108720 instance=ExtResource("1_nmwu3")]
+layout_mode = 2

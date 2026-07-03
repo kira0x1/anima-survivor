@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="UpgradeData" format=3 uid="uid://b3i6vmwji8v80"]
+
+[ext_resource type="Script" uid="uid://blyb1f2jj0r88" path="res://scripts/upgrade_data.gd" id="1_qw2rb"]
+[ext_resource type="Texture2D" uid="uid://ha26xd5sjt6b" path="res://sprites/equipment/rpg_icons_free/staff.png" id="2_bsbyj"]
+
+[resource]
+script = ExtResource("1_qw2rb")
+upgrade_name = "Magic Damage"
+upgrade_description = "increase magic damage and range"
+upgrade_icon = ExtResource("2_bsbyj")
+metadata/_custom_type_script = "uid://blyb1f2jj0r88"

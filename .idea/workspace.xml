@@ -5,7 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="48cabc87-ec5c-40a3-92fb-1d75b725d221" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/scripts/upgrade_data.gd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/upgrade_data.gd.uid" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scenes/ui/upgrade_card.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/Scenes/ui/upgrade_card.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scenes/ui/upgrade_selection.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/Scenes/ui/upgrade_selection.tscn" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,6 +156,8 @@
       <workItem from="1782907910824" duration="3104000" />
       <workItem from="1782920786713" duration="909000" />
       <workItem from="1783010267309" duration="602000" />
+      <workItem from="1783078818777" duration="609000" />
+      <workItem from="1783086019526" duration="3462000" />
     </task>
     <servers />
   </component>

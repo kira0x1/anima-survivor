@@ -1,24 +1,39 @@
 [gd_scene format=3 uid="uid://bd1j1j2cs1oi4"]
 
+[ext_resource type="Script" uid="uid://b1xs773pnb6sp" path="res://scripts/ui/upgrade_card.gd" id="1_40ijt"]
 [ext_resource type="Texture2D" uid="uid://gx8f7l5h80ji" path="res://sprites/equipment/rpg_icons_free/sword.png" id="1_jq2e7"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ikfdi"]
-bg_color = Color(0, 0, 0, 0.49411765)
+bg_color = Color(0.051970966, 0.051970966, 0.051970936, 1)
 corner_radius_top_left = 4
 corner_radius_top_right = 4
 corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
 
-[node name="Upgrade Card" type="Control" unique_id=1454445402]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ay13x"]
+bg_color = Color(0.20511743, 0.20511743, 0.20511743, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
 
-[node name="Panel" type="Panel" parent="." unique_id=113578228]
-layout_mode = 1
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_40ijt"]
+bg_color = Color(0.20392157, 0.20392157, 0.20392157, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qdprk"]
+bg_color = Color(0.7581918, 0.7581918, 0.7581917, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[node name="Upgrade Card" type="Panel" unique_id=113578228]
+custom_maximum_size = Vector2(220, 400)
+propagate_maximum_size = true
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -30,9 +45,12 @@ offset_right = 110.0
 offset_bottom = 200.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 theme_override_styles/panel = SubResource("StyleBoxFlat_ikfdi")
+script = ExtResource("1_40ijt")
 
-[node name="Upgrade Icon" type="Button" parent="Panel" unique_id=1583840952]
+[node name="Upgrade Icon" type="Button" parent="." unique_id=1583840952]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
@@ -43,11 +61,12 @@ anchor_bottom = 0.25
 offset_right = -10.0
 grow_horizontal = 2
 theme_override_constants/icon_max_width = 52
+theme_override_styles/normal = SubResource("StyleBoxFlat_ay13x")
 icon = ExtResource("1_jq2e7")
 icon_alignment = 1
 expand_icon = true
 
-[node name="Name Text" type="Label" parent="Panel" unique_id=688474]
+[node name="Name Text" type="Label" parent="." unique_id=688474]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -58,20 +77,21 @@ offset_right = -11.0
 offset_bottom = 60.0
 grow_horizontal = 0
 text = "Sword"
+horizontal_alignment = 1
 
-[node name="Text Panel" type="Panel" parent="Panel" unique_id=1410290382]
+[node name="Text Panel" type="Panel" parent="." unique_id=1410290382]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.05
-anchor_top = 0.397
+anchor_top = 0.284
 anchor_right = 0.95000005
 anchor_bottom = 0.97
-offset_top = 0.19999695
 offset_right = -1.5258789e-05
 grow_horizontal = 2
 grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_40ijt")
 
-[node name="Label" type="Label" parent="Panel/Text Panel" unique_id=1169322427]
+[node name="Description Text" type="Label" parent="Text Panel" unique_id=1169322427]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
@@ -86,3 +106,17 @@ text = "tasdsad asd saas
 asdsadsa
 Stamina: 15
 WeaonType"
+
+[node name="Accept Button" type="Button" parent="." unique_id=1947230465]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 16.0
+offset_bottom = 56.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.7615194, 0.21205837, 0.51342237, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_qdprk")
+text = "Accept"

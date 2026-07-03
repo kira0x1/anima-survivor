@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="UpgradeData" format=3 uid="uid://drtu41ltfc3sx"]
+
+[ext_resource type="Script" uid="uid://blyb1f2jj0r88" path="res://scripts/upgrade_data.gd" id="1_c452n"]
+[ext_resource type="Texture2D" uid="uid://bdfxhsroebfbw" path="res://sprites/equipment/rpg_icons_free/bag.png" id="2_m0h0y"]
+
+[resource]
+script = ExtResource("1_c452n")
+upgrade_name = "Boots"
+upgrade_description = "increase move speed"
+upgrade_icon = ExtResource("2_m0h0y")
+metadata/_custom_type_script = "uid://blyb1f2jj0r88"
