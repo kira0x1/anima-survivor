@@ -26,9 +26,9 @@ func init_stat_card(upgrade: UpgradeData):
 	upgrade_data = upgrade
 
 func init_weapon_card(weapon: WeaponData):
-	icon_btn.icon = weapon.weapon_icon
-	name_text.text = weapon.weapon_name
-	description_text.text = weapon.weapon_description
+	icon_btn.icon = weapon.icon
+	name_text.text = weapon.name
+	description_text.text = weapon.description
 	upgrade_data = weapon
 
 func _on_accept_button_pressed() -> void:

@@ -6,7 +6,7 @@ var is_occupied: bool = false
 var is_selected: bool = false
 var highlight: Panel
 
-var slot_item: ItemData
+var slot_item: Resource
 var slot_id: int
 var slot_text: Label
 
@@ -28,5 +28,5 @@ func deselect_slot():
 func set_item(item):
 	slot_item = item
 	icon = slot_item.icon
-	text = item.item_name
+	text = item.name
 	is_occupied = true;

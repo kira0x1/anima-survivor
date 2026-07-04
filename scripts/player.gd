@@ -4,6 +4,7 @@ class_name Player
 
 signal on_damage
 signal on_xp_change
+signal on_gained_weapon(weapon_data: WeaponData)
 
 @onready var player_anim: AnimatedSprite2D = $Colorizer/Sprite
 
@@ -34,6 +35,10 @@ func take_damage(damage: float) -> void:
 		health = 0
 		
 	on_damage.emit()
+
+func give_weapon(weapon_data: WeaponData):
+	on_gained_weapon.emit(weapon_data)
+	print("recieved weapon: %s" % weapon_data.name)
 
 func give_xp(xp: float):
 	stats.xp += xp

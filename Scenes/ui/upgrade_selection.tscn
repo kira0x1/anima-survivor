@@ -24,6 +24,14 @@ grow_vertical = 2
 script = ExtResource("1_rewuw")
 upgrade_tests = Array[ExtResource("2_ag840")]([ExtResource("3_1kv1b"), ExtResource("4_gwd4b"), ExtResource("5_sguap")])
 
+[node name="Tint" type="Panel" parent="." unique_id=12566831]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
 [node name="Cards" type="Panel" parent="." unique_id=1790037211]
 layout_mode = 1
 anchors_preset = 8

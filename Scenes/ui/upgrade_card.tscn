@@ -76,7 +76,7 @@ offset_top = 12.0
 offset_right = -11.0
 offset_bottom = 96.0
 grow_horizontal = 0
-theme_override_font_sizes/font_size = 9
+theme_override_font_sizes/font_size = 12
 clip_text = true
 
 [node name="Text Panel" type="Panel" parent="." unique_id=1410290382]
@@ -92,6 +92,7 @@ grow_vertical = 0
 theme_override_styles/panel = SubResource("StyleBoxFlat_40ijt")
 
 [node name="Description Text" type="Label" parent="Text Panel" unique_id=1169322427]
+custom_maximum_size = Vector2(178, 254.4)
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
@@ -102,10 +103,7 @@ offset_right = -10.0
 offset_bottom = -10.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "tasdsad asd saas
-asdsadsa
-Stamina: 15
-WeaonType"
+autowrap_mode = 3
 
 [node name="Accept Button" type="Button" parent="." unique_id=1947230465]
 layout_mode = 1

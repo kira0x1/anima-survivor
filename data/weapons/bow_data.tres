@@ -5,9 +5,9 @@
 
 [resource]
 script = ExtResource("1_ub52n")
-weapon_name = "bow"
-weapon_description = "a little bow to shoot arrows"
-weapon_icon = ExtResource("2_rpvnb")
+name = "Bow"
+description = "a little bow"
+icon = ExtResource("2_rpvnb")
 weapon_type = 6
 range_type = 1
 metadata/_custom_type_script = "uid://77knqqtu4xqr"

@@ -7,7 +7,9 @@ enum UpgradeType {STAT, WEAPON}
 var cards: Array[UpgradeCard]
 
 var has_upgrade_selected: bool = false
+var is_upgrading: bool = false
 
+@export var give_upgrade_on_start: bool = false
 @export var upgrade_type: UpgradeType
 @export var upgrade_weapons: Array[WeaponData] = []
 @export var upgrade_tests: Array[UpgradeData] = []
@@ -16,8 +18,13 @@ func _ready() -> void:
 	for child in find_children("card*"):
 		cards.push_back(child)
 	
-	generate_cards()
+	if give_upgrade_on_start:
+		create_upgrades()
 
+func create_upgrades():
+	generate_cards()
+	is_upgrading = true
+	visible = true
 
 func generate_cards():
 	var i: int = 0
@@ -44,6 +51,16 @@ func on_upgrade_selected(upgrade_card: UpgradeCard, upgrade_data: Resource) -> v
 	if upgrade_card.upgrade_type == UpgradeType.STAT:
 		upgrade_name = upgrade_data.upgrade_name
 	else:
-		upgrade_name = upgrade_data.weapon_name
+		upgrade_name = upgrade_data.name
+		give_weapon_upgrade(upgrade_data)
 
 	print("selected upgrade: %s" % upgrade_name)
+	
+
+func give_weapon_upgrade(weapon_data: WeaponData):
+	%Player.give_weapon(weapon_data)
+	done_upgrading()
+	
+func done_upgrading():
+	visible = false
+	is_upgrading = false
