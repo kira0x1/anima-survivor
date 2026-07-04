@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bd1j1j2cs1oi4"]
 
-[ext_resource type="Script" uid="uid://b1xs773pnb6sp" path="res://scripts/ui/upgrade_card.gd" id="1_40ijt"]
+[ext_resource type="Script" uid="uid://b1xs773pnb6sp" path="res://scripts/upgrades/upgrade_card.gd" id="1_40ijt"]
 [ext_resource type="Texture2D" uid="uid://gx8f7l5h80ji" path="res://sprites/equipment/rpg_icons_free/sword.png" id="1_jq2e7"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ikfdi"]
@@ -122,3 +122,5 @@ grow_vertical = 0
 theme_override_colors/font_color = Color(0.7615194, 0.21205837, 0.51342237, 1)
 theme_override_styles/normal = SubResource("StyleBoxFlat_qdprk")
 text = "Accept"
+
+[connection signal="pressed" from="Accept Button" to="." method="_on_accept_button_pressed"]

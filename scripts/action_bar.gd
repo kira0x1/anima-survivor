@@ -5,7 +5,7 @@ var slot_selected_id: int = 0
 var slot_selected
 
 signal slot_changed(slot: ActionbarSlot)
-var apple: ItemData = preload("res://items/apple_item.tres")
+#var apple: ItemData = preload("res://items/apple_item.tres")
 
 const slot_input_map: Array[String] = ["slot_1", "slot_2", "slot_3", "slot_4", "slot_5", "slot_6", "slot_7"]
 
@@ -14,7 +14,7 @@ func _ready() -> void:
 
 	slot_selected_id = 0
 	slots[slot_selected_id].select_slot()
-	slots[slot_selected_id].set_item(apple)
+#	slots[slot_selected_id].set_item(apple)
 	
 func select_slot(slot_id):
 	slots[slot_selected_id].deselect_slot()
