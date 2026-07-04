@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+class_name Player
+
 signal on_damage
 signal on_xp_change
 
@@ -14,7 +16,7 @@ var lastDirection: Vector2 = Vector2(0,0);
 var direction: Vector2 = Vector2(0,0);
 
 func _physics_process(_delta: float) -> void:
-	velocity = direction * 100;
+	velocity = direction * stats.calculate_velocity()
 	move_and_slide()
 
 func _process(_delta: float) -> void:

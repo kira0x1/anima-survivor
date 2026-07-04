@@ -5,9 +5,9 @@ extends Panel
 @onready var xp_bar: ProgressBar = $bio/xp_bar
 
 func _ready() -> void:
-	var stats = %Player.stats
+	var stats: Stats = %Player.stats
 	stamina_label.text = "stamina: %d" % stats.stamina
-	speed_label.text = "speed: %d" % stats.speed
+	speed_label.text = "speed: %d (%d)" % [stats.speed, stats.calculate_velocity()]
 	xp_bar.refresh_ui(stats.xp, stats.max_xp)
 
 func _input(event: InputEvent) -> void:

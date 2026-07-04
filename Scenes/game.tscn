@@ -9,6 +9,7 @@
 [ext_resource type="Script" uid="uid://cakalngity8uc" path="res://scripts/states/state_debug.gd" id="6_p57ef"]
 [ext_resource type="PackedScene" uid="uid://df4unlwix45ey" path="res://scenes/ui/action_bar.tscn" id="7_gee14"]
 [ext_resource type="PackedScene" uid="uid://bkltruarjgmf0" path="res://scenes/xp_orb.tscn" id="9_0tnpc"]
+[ext_resource type="PackedScene" uid="uid://b8yqrqhndmi1k" path="res://scenes/ui/upgrade_selection.tscn" id="10_vtaks"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lbhrr"]
 bg_color = Color(0, 0, 0, 0.09803922)
@@ -137,6 +138,18 @@ collision_mask = 4
 position = Vector2(556, 278)
 collision_layer = 0
 collision_mask = 4
+
+[node name="Upgrade Canvas" type="CanvasLayer" parent="." unique_id=1338811253]
+visible = false
+
+[node name="Tint" type="Panel" parent="Upgrade Canvas" unique_id=2118699027]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Upgrade Selection" parent="Upgrade Canvas" unique_id=1789212969 instance=ExtResource("10_vtaks")]
 
 [connection signal="slot_changed" from="PlayerUI Canvas/Actionbar" to="Player/hand_equip" method="_on_actionbar_slot_changed"]
 [connection signal="on_damage" from="Player" to="PlayerUI Canvas/health_bar" method="_on_player_on_damage"]

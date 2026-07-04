@@ -6,3 +6,6 @@ var max_xp: float = 100.0
 
 var stamina: int = 1
 var speed: int = 10
+
+func calculate_velocity() -> float:
+	return speed * 12.0;
