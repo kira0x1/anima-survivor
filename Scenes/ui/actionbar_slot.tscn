@@ -16,6 +16,7 @@ corner_radius_bottom_right = 2
 corner_radius_bottom_left = 2
 
 [node name="Actionbar_Slot" type="Button" unique_id=253840982]
+texture_filter = 1
 custom_minimum_size = Vector2(36, 36)
 offset_right = 8.0
 offset_bottom = 8.0

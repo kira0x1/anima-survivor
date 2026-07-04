@@ -6,26 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="48cabc87-ec5c-40a3-92fb-1d75b725d221" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scenes/game.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/Scenes/game.tscn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scenes/ui/action_bar.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/Scenes/ui/action_bar.tscn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scenes/ui/actionbar_slot.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/Scenes/ui/actionbar_slot.tscn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scenes/ui/upgrade_card.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/Scenes/ui/upgrade_card.tscn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scenes/ui/upgrade_selection.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/Scenes/ui/upgrade_selection.tscn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/items/apple_item.tres" beforeDir="false" afterPath="$PROJECT_DIR$/data/items/apple_item.tres" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/weapons/bow_data.tres" beforeDir="false" afterPath="$PROJECT_DIR$/data/weapons/bow_data.tres" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/action_bar.gd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/action_bar.gd.uid" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/actionbar_slot.gd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/actionbar_slot.gd.uid" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/hand_equip.gd" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/hand_equip.gd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/health_bar.gd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/health_bar.gd.uid" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/item_data.gd" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/item_data.gd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/player.gd" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/player.gd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/states/idle_state.gd" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/states/idle_state.gd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/ui/action_bar.gd" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/ui/action_bar.gd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/upgrades/WeaponData.gd" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/upgrades/WeaponData.gd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/upgrades/upgrade_card.gd" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/upgrades/upgrade_card.gd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/upgrades/upgrade_selection.gd" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/upgrades/upgrade_selection.gd" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +17,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DarkyenusTimeTracker">
-    <option name="totalTimeSeconds" value="24450" />
+    <option name="totalTimeSeconds" value="25398" />
     <option name="naggedAbout" value="1" />
   </component>
   <component name="DpaMonitoringSettings">
@@ -174,7 +158,7 @@
       <workItem from="1783010267309" duration="602000" />
       <workItem from="1783078818777" duration="609000" />
       <workItem from="1783086019526" duration="4509000" />
-      <workItem from="1783178109692" duration="7027000" />
+      <workItem from="1783178109692" duration="7971000" />
     </task>
     <servers />
   </component>

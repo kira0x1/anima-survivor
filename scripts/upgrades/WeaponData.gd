@@ -9,6 +9,8 @@ class_name WeaponData
 @export var weapon_type: WeaponType
 @export var range_type: RangeType
 
+@export var item_scene: PackedScene
+
 enum WeaponType {
 	SWORD,
 	AXE,

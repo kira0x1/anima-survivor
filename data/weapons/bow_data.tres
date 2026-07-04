@@ -1,6 +1,7 @@
 [gd_resource type="Resource" script_class="WeaponData" format=3 uid="uid://74r5humttv6w"]
 
 [ext_resource type="Script" uid="uid://77knqqtu4xqr" path="res://scripts/upgrades/WeaponData.gd" id="1_ub52n"]
+[ext_resource type="PackedScene" uid="uid://dmaohapx4lx2c" path="res://scenes/items/bow_item.tscn" id="2_dnreq"]
 [ext_resource type="Texture2D" uid="uid://bn6gto0v8q2po" path="res://sprites/equipment/rpg_icons_free/bow.png" id="2_rpvnb"]
 
 [resource]
@@ -10,4 +11,5 @@ description = "a little bow"
 icon = ExtResource("2_rpvnb")
 weapon_type = 6
 range_type = 1
+item_scene = ExtResource("2_dnreq")
 metadata/_custom_type_script = "uid://77knqqtu4xqr"

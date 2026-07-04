@@ -34,7 +34,6 @@ func _input(event: InputEvent) -> void:
 		if event.is_action_pressed(slot_input_map[i]):
 			select_slot(i)
 	
-
 	if event.is_pressed():
 		var next_slot: int = slot_selected_id
 		
@@ -42,16 +41,15 @@ func _input(event: InputEvent) -> void:
 			next_slot = next_slot - 1
 			if next_slot < 0: 
 				next_slot = slots.size() - 1
-
+			
+			select_slot(next_slot)
+			
 		elif event.is_action("scroll_down"):
 			next_slot += 1
 			if next_slot >= slots.size(): 
 				next_slot = 0
-		else:
-			return
-
-		select_slot(next_slot)
-
+			select_slot(next_slot)
+			
 
 func has_free_slots() -> bool:
 	var found_free: bool = false
