@@ -1,7 +1,36 @@
 [gd_scene format=3 uid="uid://dmaohapx4lx2c"]
 
 [ext_resource type="Texture2D" uid="uid://bn6gto0v8q2po" path="res://sprites/equipment/rpg_icons_free/bow.png" id="1_fhpx6"]
+[ext_resource type="Script" uid="uid://btu4miwnm3ac4" path="res://scripts/bow_item.gd" id="2_5jo3t"]
 
-[node name="bow_item" type="Sprite2D" unique_id=1305073664]
+[sub_resource type="CircleShape2D" id="CircleShape2D_5jo3t"]
+radius = 160.0
+
+[node name="bow_item" type="Area2D" unique_id=150426745]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("2_5jo3t")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=156596782]
+shape = SubResource("CircleShape2D_5jo3t")
+
+[node name="Timer" type="Timer" parent="." unique_id=1002586392]
+unique_name_in_owner = true
+wait_time = 0.2
+autostart = true
+
+[node name="weapon_pivot" type="Marker2D" parent="." unique_id=103585778]
+
+[node name="ShootingPoint" type="Marker2D" parent="weapon_pivot" unique_id=873672110]
+unique_name_in_owner = true
+position = Vector2(36, 0)
+scale = Vector2(1.5, 1.5)
+
+[node name="bow_sprite" type="Sprite2D" parent="weapon_pivot" unique_id=1305073664]
 texture_filter = 1
+position = Vector2(32, 0)
+rotation = 2.3561945
+scale = Vector2(1.5, 1.5)
 texture = ExtResource("1_fhpx6")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

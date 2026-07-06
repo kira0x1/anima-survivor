@@ -10,3 +10,10 @@ class_name ItemData
 @export var max_stack: int = 16
 
 @export var item_scene: PackedScene
+
+enum ItemType {
+	CONSUMABLE,
+	WEAPON
+}
+
+@export var item_type: ItemType = ItemType.CONSUMABLE

@@ -5,19 +5,18 @@ var slot_selected_id: int = 0
 var slot_selected
 
 signal slot_changed(slot: ActionbarSlot)
-var apple: ItemData = preload("res://data/items/apple_item.tres")
+#var apple: ItemData = preload("res://data/items/apple_item.tres")
 
 const slot_input_map: Array[String] = ["slot_1", "slot_2", "slot_3", "slot_4", "slot_5", "slot_6", "slot_7"]
 
 func _ready() -> void:
 	slots = []
-	var slot_children = get_children().map(func(c: Node): return c as ActionbarSlot) as Array[ActionbarSlot]
-	print("slotchildren: %s " % slot_children.size())
+	var slot_children: Array = get_children().map(func(c: Node): return c as ActionbarSlot) as Array[ActionbarSlot]
 	slots.append_array(slot_children)
 	
 	slot_selected_id = 0
 	slots[slot_selected_id].select_slot()
-	slots[slot_selected_id].set_item(apple)
+#	slots[slot_selected_id].set_item(apple)
 	select_slot(0)
 
 func select_slot(slot_id):

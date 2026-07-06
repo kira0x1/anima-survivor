@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://ctf300f3ey3o3"]
+
+[ext_resource type="Script" uid="uid://lhwlu6j5t6dg" path="res://scenes/projectile.gd" id="1_23jat"]
+[ext_resource type="Texture2D" uid="uid://crtterasn53vo" path="res://sprites/equipment/rpg_icons_free/arrow.png" id="1_umosx"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tye4b"]
+radius = 22.203604
+
+[node name="arrow" type="Area2D" unique_id=455301170]
+top_level = true
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_23jat")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1465723114]
+texture_filter = 1
+rotation = 0.7853982
+scale = Vector2(2, 2)
+texture = ExtResource("1_umosx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1246220396]
+shape = SubResource("CircleShape2D_tye4b")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
