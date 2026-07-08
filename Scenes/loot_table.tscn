@@ -3,12 +3,20 @@
 [ext_resource type="Script" uid="uid://bnp8u7wko61rq" path="res://scripts/loot table/loot_table.gd" id="1_fomvq"]
 [ext_resource type="Script" uid="uid://c7dsppgor7gln" path="res://scripts/loot table/loot_table_item.gd" id="2_4nfbf"]
 [ext_resource type="PackedScene" uid="uid://b6o715cfif1fa" path="res://scenes/loot_items/heal_orb.tscn" id="3_l2wu6"]
+[ext_resource type="PackedScene" uid="uid://bkltruarjgmf0" path="res://scenes/xp_orb.tscn" id="4_o1n12"]
 
 [sub_resource type="Resource" id="Resource_l2wu6"]
 script = ExtResource("2_4nfbf")
+chance = 0.3
 item_data = ExtResource("3_l2wu6")
+metadata/_custom_type_script = "uid://c7dsppgor7gln"
+
+[sub_resource type="Resource" id="Resource_um7wq"]
+script = ExtResource("2_4nfbf")
+chance = 0.7
+item_data = ExtResource("4_o1n12")
 metadata/_custom_type_script = "uid://c7dsppgor7gln"
 
 [node name="loot_table" type="Node" unique_id=162447270]
 script = ExtResource("1_fomvq")
-items_table = Array[ExtResource("2_4nfbf")]([SubResource("Resource_l2wu6")])
+items_table = Array[ExtResource("2_4nfbf")]([SubResource("Resource_l2wu6"), SubResource("Resource_um7wq")])

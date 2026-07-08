@@ -9,7 +9,7 @@ func generate_loot() -> Array[LootTableItem]:
 
 	for item in items_table:
 		var f: float = randf()
-#		print("rng: %.2f / %.2f" % [f, item.chance])
+		print("rng: %.2f / %.2f" % [f, item.chance])
 		if item.chance >= f:
 			drops.push_front(item)
 	
