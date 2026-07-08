@@ -9,6 +9,7 @@
 [ext_resource type="Script" uid="uid://c1mt1lxx82313" path="res://scripts/states/chase_state.gd" id="6_h8ps3"]
 [ext_resource type="Script" uid="uid://b07elhbn1nyo4" path="res://scripts/states/attack_state.gd" id="7_ebxvl"]
 [ext_resource type="Script" uid="uid://jfx6rhmmc8eh" path="res://scripts/states/death_state.gd" id="8_nao87"]
+[ext_resource type="PackedScene" uid="uid://sl0sj0hopgps" path="res://scenes/loot_table.tscn" id="10_i71wu"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_tye4b"]
 radius = 21.095022
@@ -75,6 +76,8 @@ offset_left = -18.0
 offset_top = -31.0
 offset_right = 17.0
 offset_bottom = -26.0
+
+[node name="loot_table" parent="." unique_id=162447270 instance=ExtResource("10_i71wu")]
 
 [connection signal="on_damage" from="." to="state_machine/idle_state" method="_on_mob_on_damage"]
 [connection signal="on_damage" from="." to="world_healthbar" method="_on_mob_on_damage"]

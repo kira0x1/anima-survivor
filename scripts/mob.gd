@@ -6,7 +6,8 @@ signal on_damage
 signal on_death(mob: Mob)
 
 @onready var anim: Node = get_node("sprite")
-@onready var aggro_detector: Area2D = get_node("aggro_radius")
+@onready var aggro_detector: Area2D = $"aggro_radius"
+@onready var loot_table: LootTable = $loot_table
 
 var move_speed: float = 60.0
 var player
@@ -60,4 +61,5 @@ func take_damage(damage: float) -> void:
 func handle_death():
 	is_dead = true
 	$CollisionShape2D.set_deferred("disabled", true)
+	loot_table.spawn_item()
 	on_death.emit(self)

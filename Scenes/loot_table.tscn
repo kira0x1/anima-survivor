@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://sl0sj0hopgps"]
+
+[ext_resource type="Script" uid="uid://bnp8u7wko61rq" path="res://scripts/loot table/loot_table.gd" id="1_fomvq"]
+[ext_resource type="Script" uid="uid://c7dsppgor7gln" path="res://scripts/loot table/loot_table_item.gd" id="2_4nfbf"]
+[ext_resource type="Resource" uid="uid://chfys4j5e6gyj" path="res://data/items/apple_item.tres" id="3_l2wu6"]
+
+[sub_resource type="Resource" id="Resource_l2wu6"]
+script = ExtResource("2_4nfbf")
+chance = 0.5
+item_data = ExtResource("3_l2wu6")
+metadata/_custom_type_script = "uid://c7dsppgor7gln"
+
+[node name="loot_table" type="Node" unique_id=162447270]
+script = ExtResource("1_fomvq")
+items_table = Array[ExtResource("2_4nfbf")]([SubResource("Resource_l2wu6")])
