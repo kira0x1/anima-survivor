@@ -76,6 +76,7 @@ offset_top = -31.0
 offset_right = 17.0
 offset_bottom = -26.0
 
+[connection signal="on_damage" from="." to="state_machine/idle_state" method="_on_mob_on_damage"]
 [connection signal="on_damage" from="." to="world_healthbar" method="_on_mob_on_damage"]
 [connection signal="on_death" from="." to="state_machine" method="_on_mob_on_death"]
 [connection signal="on_death" from="." to="world_healthbar" method="_on_mob_on_death"]

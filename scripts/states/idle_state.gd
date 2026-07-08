@@ -15,3 +15,9 @@ func _on_aggro_radius_body_entered(_body: Node2D) -> void:
 	
 	finished.emit("chase")
 	
+
+func _on_mob_on_damage() -> void:
+	if not is_active: 
+		return
+		
+	finished.emit("chase")
