@@ -3,6 +3,7 @@ extends CharacterBody2D
 class_name Player
 
 signal on_damage
+signal on_heal
 signal on_xp_change
 signal on_gained_weapon(weapon_data: WeaponData)
 
@@ -43,3 +44,8 @@ func give_weapon(weapon_data: WeaponData):
 func give_xp(xp: float):
 	stats.xp += xp
 	on_xp_change.emit()
+
+func heal(amount: float):
+	health += amount
+	health = clamp(health, 0.0, max_health)
+	on_heal.emit()

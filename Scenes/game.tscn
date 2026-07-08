@@ -106,7 +106,7 @@ tile_set = ExtResource("1_yqjtg")
 
 [node name="Player" parent="." unique_id=1222682647 instance=ExtResource("2_lnu2h")]
 unique_name_in_owner = true
-position = Vector2(578, 324)
+position = Vector2(579, 325)
 
 [node name="xp_orb" parent="." unique_id=2033809023 instance=ExtResource("9_0tnpc")]
 position = Vector2(477, 361)
@@ -128,6 +128,7 @@ position = Vector2(824, 273)
 [connection signal="on_damage" from="Player" to="PlayerUI Canvas/health_bar" method="_on_player_on_damage"]
 [connection signal="on_gained_weapon" from="Player" to="PlayerUI Canvas/Actionbar" method="_on_player_on_gained_weapon"]
 [connection signal="on_gained_weapon" from="Player" to="Player/hand_equip" method="_on_player_on_gained_weapon"]
+[connection signal="on_heal" from="Player" to="PlayerUI Canvas/health_bar" method="_on_player_on_heal"]
 [connection signal="on_xp_change" from="Player" to="PlayerUI Canvas/stats_ui" method="_on_player_on_xp_change"]
 
 [editable path="Player"]

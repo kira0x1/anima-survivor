@@ -1,5 +1,8 @@
 extends Area2D
 
+# dont shoot if enemies this close
+const MIN_RANGE: float = 40.0
+
 @export var fire_rate: float = 0.8;
 @export var damage: float = 10.0;
 
@@ -36,8 +39,12 @@ func _physics_process(_delta: float) -> void:
 		look_at(target.global_position)
 			
 		
-		
-func shoot():
+func shoot() -> void:
+	var target_distance: float = target.get_player_distance()
+	if target_distance <= MIN_RANGE:
+		print("too close so not shooting")
+		return
+	
 	const ARROW: PackedScene = preload("res://scenes/arrow.tscn")
 	var new_arrow: Node = ARROW.instantiate()
 	new_arrow.global_position = %ShootingPoint.global_position

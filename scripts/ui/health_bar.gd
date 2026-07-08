@@ -11,3 +11,7 @@ func refresh_ui():
 	
 func _on_player_on_damage() -> void:
 	refresh_ui()	
+
+
+func _on_player_on_heal() -> void:
+	refresh_ui()
