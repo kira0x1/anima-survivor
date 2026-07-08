@@ -8,6 +8,7 @@
 [ext_resource type="Script" uid="uid://c7igtnots6p2l" path="res://scripts/states/idle_state.gd" id="5_xsfyf"]
 [ext_resource type="Script" uid="uid://c1mt1lxx82313" path="res://scripts/states/chase_state.gd" id="6_h8ps3"]
 [ext_resource type="Script" uid="uid://b07elhbn1nyo4" path="res://scripts/states/attack_state.gd" id="7_ebxvl"]
+[ext_resource type="Script" uid="uid://jfx6rhmmc8eh" path="res://scripts/states/death_state.gd" id="8_nao87"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_tye4b"]
 radius = 21.095022
@@ -24,10 +25,8 @@ texture_filter = 1
 position = Vector2(0, 20)
 scale = Vector2(2, 2)
 sprite_frames = ExtResource("1_4are2")
-animation = &"attack"
+animation = &"dead"
 autoplay = "idle"
-frame = 4
-frame_progress = 1.0
 offset = Vector2(-3, -14)
 script = ExtResource("2_bsing")
 
@@ -60,6 +59,11 @@ script = ExtResource("6_h8ps3")
 [node name="attack_state" type="Node" parent="state_machine" unique_id=2092994865]
 unique_name_in_owner = true
 script = ExtResource("7_ebxvl")
+
+[node name="death_state" type="Node" parent="state_machine" unique_id=416689561]
+unique_name_in_owner = true
+script = ExtResource("8_nao87")
+metadata/_custom_type_script = "uid://oynoh8xdagrw"
 
 [node name="attack_timer" type="Timer" parent="." unique_id=1227217026]
 one_shot = true

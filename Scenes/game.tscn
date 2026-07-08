@@ -154,6 +154,7 @@ upgrade_weapons = Array[ExtResource("11_dinhu")]([ExtResource("11_kvpfn"), ExtRe
 [connection signal="on_gained_weapon" from="Player" to="PlayerUI Canvas/Actionbar" method="_on_player_on_gained_weapon"]
 [connection signal="on_gained_weapon" from="Player" to="Player/hand_equip" method="_on_player_on_gained_weapon"]
 [connection signal="on_xp_change" from="Player" to="PlayerUI Canvas/stats_ui" method="_on_player_on_xp_change"]
+[connection signal="on_death" from="mob" to="mob/state_machine" method="_on_mob_on_death"]
 [connection signal="state_changed" from="mob/state_machine" to="Debug Canvas/Panel/Label" method="_on_state_machine_state_changed"]
 
 [editable path="Player"]

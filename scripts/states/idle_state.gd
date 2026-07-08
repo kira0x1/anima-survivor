@@ -15,7 +15,6 @@ func _on_aggro_radius_body_entered(body: Node2D) -> void:
 	if not is_active: 
 		return
 	
-	print(body.name + " entered aggro radius")
 	finished.emit("chase")
 #	if body.is_in_group("player"):
 	

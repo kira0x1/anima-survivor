@@ -14,7 +14,10 @@ var health: float = 100.0;
 var max_health: float = 100.0;
 var is_dead: bool = false;
 
-func chase_player():
+func chase_player() -> void:
+	if is_dead:
+		return
+
 	var player_pos = %Player.global_position
 	var dir_to_player: Vector2 = get_player_direction()
 	
@@ -51,5 +54,6 @@ func take_damage(damage: float) -> void:
 	on_damage.emit()
 
 func handle_death():
+	print("on death")
 	is_dead = true
 	on_death.emit()
