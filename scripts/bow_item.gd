@@ -1,6 +1,6 @@
 extends Area2D
 
-@export var fire_rate: float = 0.3;
+@export var fire_rate: float = 0.8;
 @export var damage: float = 10.0;
 
 var has_target: bool = false

@@ -1,6 +1,6 @@
 extends Area2D
 
-const SPEED: int = 1000
+const SPEED: int = 760
 const RANGE: int = 1200
 const BULLET_DAMAGE: int = 5
 

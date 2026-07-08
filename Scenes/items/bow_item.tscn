@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://btu4miwnm3ac4" path="res://scripts/bow_item.gd" id="2_5jo3t"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5jo3t"]
-radius = 160.0
+radius = 250.0
 
 [node name="bow_item" type="Area2D" unique_id=150426745]
 collision_layer = 0
@@ -23,7 +23,7 @@ autostart = true
 
 [node name="ShootingPoint" type="Marker2D" parent="weapon_pivot" unique_id=873672110]
 unique_name_in_owner = true
-position = Vector2(36, 0)
+position = Vector2(13, 0)
 scale = Vector2(1.5, 1.5)
 
 [node name="bow_sprite" type="Sprite2D" parent="weapon_pivot" unique_id=1305073664]
