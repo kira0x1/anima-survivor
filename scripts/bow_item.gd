@@ -4,18 +4,37 @@ extends Area2D
 @export var damage: float = 10.0;
 
 var has_target: bool = false
+var target: Mob
 
 func _ready() -> void:
 	var timer: Timer = %Timer
 	timer.wait_time = fire_rate
 	
+func filter_targets(bodies: Array[Node2D]) -> void:
+	has_target = false
+
+	if bodies.size() == 0:
+		return
+
+	for body in bodies:
+		var t: Mob = body
+
+		if t.is_dead:
+			continue
+
+		has_target = true
+		target = t
+		break
+	
+
 func _physics_process(_delta: float) -> void:
 	var bodies: Array[Node2D] = get_overlapping_bodies()
-	has_target = bodies.size() > 0
+
+	filter_targets(bodies)
 	
-	if bodies.size() > 0:
-		var target: Node2D = bodies[0]
+	if has_target:
 		look_at(target.global_position)
+			
 		
 		
 func shoot():
