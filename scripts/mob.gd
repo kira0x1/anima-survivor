@@ -1,8 +1,18 @@
 extends CharacterBody2D
 
+class_name Mob
+
+signal on_damage
+signal on_death
+
 @onready var anim: Node = get_node("sprite")
 @onready var aggro_detector: Area2D = get_node("aggro_radius")
+
 var move_speed: float = 60.0
+
+var health: float = 100.0;
+var max_health: float = 100.0;
+var is_dead: bool = false;
 
 func chase_player():
 	var player_pos = %Player.global_position
@@ -27,3 +37,19 @@ func get_player_distance() -> float:
 func get_player_direction() -> Vector2:
 	var player_direction: Vector2 = to_local(%Player.global_transform.origin).normalized()
 	return player_direction
+
+func take_damage(damage: float) -> void:
+	if is_dead:
+		return
+		
+	health -= damage;
+
+	if health <= 0.0:
+		health = 0.0;
+		handle_death()
+	
+	on_damage.emit()
+
+func handle_death():
+	is_dead = true
+	on_death.emit()

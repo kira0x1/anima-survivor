@@ -2,7 +2,7 @@ extends Area2D
 
 const SPEED: int = 760
 const RANGE: int = 1200
-const BULLET_DAMAGE: int = 5
+const BULLET_DAMAGE: float = 5.0
 
 var travel_distance: int = 0
 
