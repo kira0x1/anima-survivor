@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://blnxvvek0iqt8"]
+
+[ext_resource type="Script" uid="uid://cakalngity8uc" path="res://scripts/states/state_debug.gd" id="1_yg56n"]
+
+[node name="Debug Canvas" type="CanvasLayer" unique_id=1045294474]
+
+[node name="Panel" type="Panel" parent="." unique_id=1246917915]
+offset_left = 7.0
+offset_top = 8.0
+offset_right = 246.0
+offset_bottom = 100.0
+
+[node name="Label" type="Label" parent="Panel" unique_id=582587457]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = -4.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 8
+text = "state debug"
+script = ExtResource("1_yg56n")

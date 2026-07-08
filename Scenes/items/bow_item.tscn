@@ -10,8 +10,8 @@ radius = 250.0
 collision_layer = 0
 collision_mask = 2
 script = ExtResource("2_5jo3t")
-fire_rate = 0.6
-damage = 20.0
+fire_rate = 0.4
+damage = 60.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=156596782]
 shape = SubResource("CircleShape2D_5jo3t")

@@ -25,4 +25,13 @@ shape = SubResource("CircleShape2D_tye4b")
 
 [node name="Timer" type="Timer" parent="." unique_id=606399848]
 
+[node name="spawn_01" type="Marker2D" parent="." unique_id=1328070933]
+position = Vector2(-94, 0)
+
+[node name="spawn_02" type="Marker2D" parent="." unique_id=1350029506]
+position = Vector2(0, 75)
+
+[node name="spawn_03" type="Marker2D" parent="." unique_id=218146140]
+position = Vector2(-70, 64)
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

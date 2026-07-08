@@ -3,15 +3,14 @@
 [ext_resource type="TileSet" uid="uid://dm4u0eg76wk5r" path="res://sprites/props/props.tres" id="1_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://dxx3v5mga07pt" path="res://scenes/player.tscn" id="2_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://ddr6joisppuo1" path="res://scenes/spawner.tscn" id="3_lnu2h"]
-[ext_resource type="PackedScene" uid="uid://ct422ldg811wo" path="res://scenes/mob.tscn" id="4_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://blknqccvyr6rm" path="res://scenes/ui/stats_ui.tscn" id="5_gee14"]
 [ext_resource type="Script" uid="uid://cs2tfdii6h4bt" path="res://scripts/ui/health_bar.gd" id="5_iywne"]
-[ext_resource type="Script" uid="uid://cakalngity8uc" path="res://scripts/states/state_debug.gd" id="6_p57ef"]
 [ext_resource type="PackedScene" uid="uid://df4unlwix45ey" path="res://scenes/ui/action_bar.tscn" id="7_gee14"]
 [ext_resource type="PackedScene" uid="uid://bkltruarjgmf0" path="res://scenes/xp_orb.tscn" id="9_0tnpc"]
 [ext_resource type="PackedScene" uid="uid://b8yqrqhndmi1k" path="res://scenes/ui/upgrade_selection.tscn" id="10_vtaks"]
 [ext_resource type="Script" uid="uid://77knqqtu4xqr" path="res://scripts/upgrades/WeaponData.gd" id="11_dinhu"]
 [ext_resource type="Resource" uid="uid://74r5humttv6w" path="res://data/weapons/bow_data.tres" id="11_kvpfn"]
+[ext_resource type="Script" uid="uid://cpwhcg7vstt0b" path="res://scripts/spawn_manager.gd" id="12_kvuet"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lbhrr"]
 bg_color = Color(0, 0, 0, 0.09803922)
@@ -86,28 +85,13 @@ offset_top = -162.0
 offset_right = 278.0
 offset_bottom = 296.0
 
-[node name="Debug Canvas" type="CanvasLayer" parent="." unique_id=1166547204]
+[node name="Upgrade Canvas" type="CanvasLayer" parent="." unique_id=1338811253]
 
-[node name="Panel" type="Panel" parent="Debug Canvas" unique_id=1407879101]
-offset_left = 7.0
-offset_top = 8.0
-offset_right = 246.0
-offset_bottom = 100.0
-
-[node name="Label" type="Label" parent="Debug Canvas/Panel" unique_id=1797625226]
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 4.0
-offset_top = 4.0
-offset_right = -4.0
-offset_bottom = -4.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/font_size = 8
-text = "state debug"
-script = ExtResource("6_p57ef")
+[node name="Upgrade Selection" parent="Upgrade Canvas" unique_id=1789212969 instance=ExtResource("10_vtaks")]
+visible = false
+give_upgrade_on_start = true
+upgrade_type = 1
+upgrade_weapons = Array[ExtResource("11_dinhu")]([ExtResource("11_kvpfn"), ExtResource("11_kvpfn"), ExtResource("11_kvpfn")])
 
 [node name="Tilemaps" type="Node2D" parent="." unique_id=1134287207]
 z_as_relative = false
@@ -124,13 +108,6 @@ tile_set = ExtResource("1_yqjtg")
 unique_name_in_owner = true
 position = Vector2(578, 324)
 
-[node name="spawner" parent="." unique_id=1997197035 instance=ExtResource("3_lnu2h")]
-position = Vector2(824, 273)
-
-[node name="mob" parent="." unique_id=750238883 instance=ExtResource("4_lbhrr")]
-unique_name_in_owner = true
-position = Vector2(782, 357)
-
 [node name="xp_orb" parent="." unique_id=2033809023 instance=ExtResource("9_0tnpc")]
 position = Vector2(477, 361)
 collision_layer = 0
@@ -141,21 +118,16 @@ position = Vector2(556, 278)
 collision_layer = 0
 collision_mask = 4
 
-[node name="Upgrade Canvas" type="CanvasLayer" parent="." unique_id=1338811253]
+[node name="spawn_manager" type="Node2D" parent="." unique_id=1891769547]
+script = ExtResource("12_kvuet")
 
-[node name="Upgrade Selection" parent="Upgrade Canvas" unique_id=1789212969 instance=ExtResource("10_vtaks")]
-visible = false
-give_upgrade_on_start = true
-upgrade_type = 1
-upgrade_weapons = Array[ExtResource("11_dinhu")]([ExtResource("11_kvpfn"), ExtResource("11_kvpfn"), ExtResource("11_kvpfn")])
+[node name="spawner" parent="spawn_manager" unique_id=1997197035 instance=ExtResource("3_lnu2h")]
+position = Vector2(824, 273)
 
 [connection signal="slot_changed" from="PlayerUI Canvas/Actionbar" to="Player/hand_equip" method="_on_actionbar_slot_changed"]
 [connection signal="on_damage" from="Player" to="PlayerUI Canvas/health_bar" method="_on_player_on_damage"]
 [connection signal="on_gained_weapon" from="Player" to="PlayerUI Canvas/Actionbar" method="_on_player_on_gained_weapon"]
 [connection signal="on_gained_weapon" from="Player" to="Player/hand_equip" method="_on_player_on_gained_weapon"]
 [connection signal="on_xp_change" from="Player" to="PlayerUI Canvas/stats_ui" method="_on_player_on_xp_change"]
-[connection signal="on_death" from="mob" to="mob/state_machine" method="_on_mob_on_death"]
-[connection signal="state_changed" from="mob/state_machine" to="Debug Canvas/Panel/Label" method="_on_state_machine_state_changed"]
 
 [editable path="Player"]
-[editable path="mob"]
