@@ -77,6 +77,7 @@ offset_right = 17.0
 offset_bottom = -26.0
 
 [connection signal="on_damage" from="." to="world_healthbar" method="_on_mob_on_damage"]
+[connection signal="on_death" from="." to="world_healthbar" method="_on_mob_on_death"]
 [connection signal="animation_finished" from="sprite" to="state_machine/attack_state" method="_on_sprite_animation_finished"]
 [connection signal="body_entered" from="aggro_radius" to="state_machine/idle_state" method="_on_aggro_radius_body_entered"]
 [connection signal="timeout" from="attack_timer" to="state_machine/attack_state" method="_on_attack_timer_timeout"]

@@ -11,3 +11,6 @@ func update_bar():
 
 func _on_mob_on_damage() -> void:
 	update_bar()
+
+func _on_mob_on_death() -> void:
+	hide()	
