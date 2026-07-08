@@ -24,6 +24,7 @@ position = Vector2(0, 3)
 shape = SubResource("CircleShape2D_tye4b")
 
 [node name="Timer" type="Timer" parent="." unique_id=606399848]
+one_shot = true
 
 [node name="spawn_01" type="Marker2D" parent="." unique_id=1328070933]
 position = Vector2(-94, 0)
