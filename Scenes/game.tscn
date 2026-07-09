@@ -110,13 +110,9 @@ position = Vector2(579, 325)
 
 [node name="xp_orb" parent="." unique_id=2033809023 instance=ExtResource("9_0tnpc")]
 position = Vector2(477, 361)
-collision_layer = 0
-collision_mask = 4
 
 [node name="xp_orb2" parent="." unique_id=1743396755 instance=ExtResource("9_0tnpc")]
 position = Vector2(556, 278)
-collision_layer = 0
-collision_mask = 4
 
 [node name="spawn_manager" type="Node2D" parent="." unique_id=1891769547]
 script = ExtResource("12_kvuet")

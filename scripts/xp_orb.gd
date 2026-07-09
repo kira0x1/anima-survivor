@@ -6,4 +6,3 @@ var xp: float = 10.0
 
 func give_consume_award():
 	player.give_xp(xp)
-	print("giving consume award")

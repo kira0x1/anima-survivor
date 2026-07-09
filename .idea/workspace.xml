@@ -6,7 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="48cabc87-ec5c-40a3-92fb-1d75b725d221" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scenes/game.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/Scenes/game.tscn" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/loot table/loot_table.gd" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/loot table/loot_table.gd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/loot_orb.gd" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/loot_orb.gd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/spawner.gd" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/spawner.gd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/xp_orb.gd" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/xp_orb.gd" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,7 +18,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DarkyenusTimeTracker">
-    <option name="totalTimeSeconds" value="36702" />
+    <option name="totalTimeSeconds" value="38238" />
     <option name="naggedAbout" value="1" />
   </component>
   <component name="DpaMonitoringSettings">
@@ -159,7 +163,8 @@
       <workItem from="1783366048575" duration="1960000" />
       <workItem from="1783368113655" duration="1413000" />
       <workItem from="1783512440370" duration="5024000" />
-      <workItem from="1783532654976" duration="7056000" />
+      <workItem from="1783532654976" duration="7191000" />
+      <workItem from="1783576752469" duration="1408000" />
     </task>
     <servers />
   </component>

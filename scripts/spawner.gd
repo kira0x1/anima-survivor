@@ -5,11 +5,11 @@ signal on_mob_spawned
 # can disable spawning mobs from spawning_manager
 var is_spawning_mobs: bool = true
 
-var min_spawn_rate: float = 0.7
-var max_spawn_rate: float = 1.8
-var spawn_rate: float = 0.4;
+var min_spawn_rate: float = 0.2
+var max_spawn_rate: float = 0.3
+var spawn_rate: float = 0.2;
 
-const MAX_MOBS_ALIVE: int = 3
+const MAX_MOBS_ALIVE: int = 10
 var mobs_spawned_count: int = 0
 var spawn_points: Array[Variant] = []
 @onready var timer: Timer = get_node("Timer") 
