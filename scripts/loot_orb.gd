@@ -15,16 +15,8 @@ func _ready() -> void:
 	can_consume = true
 
 func _physics_process(delta: float) -> void:
-#	if !is_grabbed:
-#		var bodies = get_overlapping_bodies()
-#	
-#		if bodies.size() > 0:
-#			print("body: %s" % bodies[0].name)
-#			is_grabbed = true
-
 	if !is_grabbed or !can_consume:
 		return
-	
 	
 	var player_pos: Vector2 = player.global_position
 	global_position = global_position.move_toward(player_pos, MOVE_SPEED * delta)

@@ -1,11 +1,11 @@
-[gd_resource type="Resource" script_class="UpgradeData" format=3 uid="uid://drtu41ltfc3sx"]
+[gd_resource type="Resource" script_class="UpgradeStatData" format=3 uid="uid://drtu41ltfc3sx"]
 
-[ext_resource type="Script" uid="uid://blyb1f2jj0r88" path="res://scripts/upgrades/upgrade_data.gd" id="1_c452n"]
-[ext_resource type="Texture2D" uid="uid://bdfxhsroebfbw" path="res://sprites/equipment/rpg_icons_free/bag.png" id="2_m0h0y"]
+[ext_resource type="Script" uid="uid://dmcf32uoauw2k" path="res://scripts/upgrades/upgrade_stat_data.gd" id="1_4tf7f"]
+[ext_resource type="Texture2D" uid="uid://djbxagpb4wxb7" path="res://sprites/equipment/rpg_icons_free/leather_boots.png" id="2_vojsa"]
 
 [resource]
-script = ExtResource("1_c452n")
+script = ExtResource("1_4tf7f")
 upgrade_name = "Boots"
-upgrade_description = "increase move speed"
-upgrade_icon = ExtResource("2_m0h0y")
-metadata/_custom_type_script = "uid://blyb1f2jj0r88"
+upgrade_description = "increase movement speed"
+upgrade_icon = ExtResource("2_vojsa")
+metadata/_custom_type_script = "uid://dmcf32uoauw2k"

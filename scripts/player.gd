@@ -2,9 +2,11 @@ extends CharacterBody2D
 
 class_name Player
 
+signal on_level_up
 signal on_damage
 signal on_heal
 signal on_xp_change
+signal on_stat_change
 signal on_gained_weapon(weapon_data: WeaponData)
 
 @onready var player_anim: AnimatedSprite2D = $Colorizer/Sprite
@@ -39,11 +41,25 @@ func take_damage(damage: float) -> void:
 
 func give_weapon(weapon_data: WeaponData):
 	on_gained_weapon.emit(weapon_data)
-	print("recieved weapon: %s" % weapon_data.name)
 
 func give_xp(xp: float):
 	stats.xp += xp
+	
+	if stats.xp >= stats.max_xp:
+		level_up()
+	
 	on_xp_change.emit()
+
+func level_up():
+	stats.xp = 0.0
+	stats.level = stats.level + 1
+	on_level_up.emit()
+	
+func give_stat(upgrade_stat_data: UpgradeStatData):
+	if upgrade_stat_data.stat_type == upgrade_stat_data.stat_upgrade_type.SPEED:
+		stats.speed += upgrade_stat_data.amount
+	
+	on_stat_change.emit()
 
 func heal(amount: float):
 	health += amount

@@ -22,5 +22,3 @@ func spawn_item():
 	for item in drops:
 		var item_spawn: Node2D = item.item_data.instantiate()
 		get_parent().call_deferred("add_child", item_spawn)
-#		call_deferred("add_child", item_spawn)
-#		item_spawn.set_deferred("global_position", owner.global_position)

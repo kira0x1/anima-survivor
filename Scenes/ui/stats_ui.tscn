@@ -24,6 +24,9 @@ corner_radius_top_right = 2
 corner_radius_bottom_right = 2
 corner_radius_bottom_left = 2
 
+[sub_resource type="LabelSettings" id="LabelSettings_uiwkp"]
+font_size = 12
+
 [node name="stats_ui" type="Panel" unique_id=1141133084]
 anchors_preset = 4
 anchor_top = 0.5
@@ -81,7 +84,26 @@ grow_vertical = 0
 theme_override_styles/background = SubResource("StyleBoxFlat_xm8em")
 theme_override_styles/fill = SubResource("StyleBoxFlat_uiwkp")
 value = 28.0
+show_percentage = false
 script = ExtResource("2_uiwkp")
+
+[node name="Label" type="Label" parent="bio/xp_bar" unique_id=1687499190]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -26.5
+offset_top = -8.5
+offset_right = 26.5
+offset_bottom = 8.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "100 / 100"
+label_settings = SubResource("LabelSettings_uiwkp")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="stats" type="Panel" parent="." unique_id=638298863]
 layout_mode = 1

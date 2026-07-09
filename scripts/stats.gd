@@ -4,8 +4,8 @@ var level: int = 1
 var xp: float = 0.0
 var max_xp: float = 100.0
 
-var stamina: int = 1
-var speed: int = 10
+var stamina: float = 1
+var speed: float = 10
 
 func calculate_velocity() -> float:
 	return speed * 12.0;

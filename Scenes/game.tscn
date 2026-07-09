@@ -6,7 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://blknqccvyr6rm" path="res://scenes/ui/stats_ui.tscn" id="5_gee14"]
 [ext_resource type="Script" uid="uid://cs2tfdii6h4bt" path="res://scripts/ui/health_bar.gd" id="5_iywne"]
 [ext_resource type="PackedScene" uid="uid://df4unlwix45ey" path="res://scenes/ui/action_bar.tscn" id="7_gee14"]
+[ext_resource type="Script" uid="uid://dmcf32uoauw2k" path="res://scripts/upgrades/upgrade_stat_data.gd" id="7_kvuet"]
 [ext_resource type="PackedScene" uid="uid://bkltruarjgmf0" path="res://scenes/xp_orb.tscn" id="9_0tnpc"]
+[ext_resource type="Resource" uid="uid://drtu41ltfc3sx" path="res://data/upgrades/move_upgrade.tres" id="10_ssvqc"]
 [ext_resource type="PackedScene" uid="uid://b8yqrqhndmi1k" path="res://scenes/ui/upgrade_selection.tscn" id="10_vtaks"]
 [ext_resource type="Script" uid="uid://77knqqtu4xqr" path="res://scripts/upgrades/WeaponData.gd" id="11_dinhu"]
 [ext_resource type="Resource" uid="uid://74r5humttv6w" path="res://data/weapons/bow_data.tres" id="11_kvpfn"]
@@ -92,6 +94,7 @@ visible = false
 give_upgrade_on_start = true
 upgrade_type = 1
 upgrade_weapons = Array[ExtResource("11_dinhu")]([ExtResource("11_kvpfn"), ExtResource("11_kvpfn"), ExtResource("11_kvpfn")])
+upgrade_stats = Array[ExtResource("7_kvuet")]([ExtResource("10_ssvqc"), ExtResource("10_ssvqc"), ExtResource("10_ssvqc")])
 
 [node name="Tilemaps" type="Node2D" parent="." unique_id=1134287207]
 z_as_relative = false
@@ -125,6 +128,9 @@ position = Vector2(824, 273)
 [connection signal="on_gained_weapon" from="Player" to="PlayerUI Canvas/Actionbar" method="_on_player_on_gained_weapon"]
 [connection signal="on_gained_weapon" from="Player" to="Player/hand_equip" method="_on_player_on_gained_weapon"]
 [connection signal="on_heal" from="Player" to="PlayerUI Canvas/health_bar" method="_on_player_on_heal"]
+[connection signal="on_level_up" from="Player" to="PlayerUI Canvas/stats_ui" method="_on_player_on_level_up"]
+[connection signal="on_level_up" from="Player" to="Upgrade Canvas/Upgrade Selection" method="_on_player_on_level_up"]
+[connection signal="on_stat_change" from="Player" to="PlayerUI Canvas/stats_ui" method="_on_player_on_stat_change"]
 [connection signal="on_xp_change" from="Player" to="PlayerUI Canvas/stats_ui" method="_on_player_on_xp_change"]
 
 [editable path="Player"]

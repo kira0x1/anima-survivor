@@ -19,6 +19,7 @@ texture_filter = 1
 position = Vector2(0, -8)
 scale = Vector2(2, 2)
 sprite_frames = ExtResource("2_me6n8")
-frame_progress = 0.7956659
+autoplay = "default"
+frame_progress = 0.53713435
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -12,7 +12,7 @@ var is_upgrading: bool = false
 @export var give_upgrade_on_start: bool = false
 @export var upgrade_type: UpgradeType
 @export var upgrade_weapons: Array[WeaponData] = []
-@export var upgrade_tests: Array[UpgradeData] = []
+@export var upgrade_stats: Array[UpgradeStatData] = []
 
 func _ready() -> void:
 	for child in find_children("card*"):
@@ -29,7 +29,7 @@ func create_upgrades():
 func generate_cards():
 	var i: int = 0
 
-	var upgrade_pool: Array = upgrade_tests
+	var upgrade_pool: Array = upgrade_stats
 	if upgrade_type == UpgradeType.WEAPON:
 		upgrade_pool = upgrade_weapons
 		
@@ -50,12 +50,14 @@ func on_upgrade_selected(upgrade_card: UpgradeCard, upgrade_data: Resource) -> v
 	
 	if upgrade_card.upgrade_type == UpgradeType.STAT:
 		upgrade_name = upgrade_data.upgrade_name
+		give_stat_upgrade(upgrade_data)
 	else:
 		upgrade_name = upgrade_data.name
 		give_weapon_upgrade(upgrade_data)
 
-	print("selected upgrade: %s" % upgrade_name)
-	
+func give_stat_upgrade(upgrade_data: UpgradeStatData):
+	%Player.give_stat(upgrade_data)
+	done_upgrading()
 
 func give_weapon_upgrade(weapon_data: WeaponData):
 	%Player.give_weapon(weapon_data)
@@ -64,3 +66,8 @@ func give_weapon_upgrade(weapon_data: WeaponData):
 func done_upgrading():
 	visible = false
 	is_upgrading = false
+	has_upgrade_selected = false
+
+func _on_player_on_level_up() -> void:
+	upgrade_type = UpgradeType.STAT
+	create_upgrades()

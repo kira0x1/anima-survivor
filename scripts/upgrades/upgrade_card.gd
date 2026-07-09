@@ -12,13 +12,13 @@ var upgrade_data: Variant
 var upgrade_type: UpgradeSelection.UpgradeType = UpgradeSelection.UpgradeType.STAT
 
 func init_card(upgrade, card_type: UpgradeSelection.UpgradeType):
+	upgrade_type = card_type
+	
 	if card_type == UpgradeSelection.UpgradeType.WEAPON:
 		init_weapon_card(upgrade)
 	else:
 		init_stat_card(upgrade)
 	
-	upgrade_type = card_type
-
 func init_stat_card(upgrade: UpgradeData):
 	icon_btn.icon = upgrade.upgrade_icon
 	name_text.text = upgrade.upgrade_name
