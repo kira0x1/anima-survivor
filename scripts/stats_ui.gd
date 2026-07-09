@@ -24,9 +24,9 @@ func toggle_ui() -> void:
 func _on_player_on_xp_change() -> void:
 	xp_bar.refresh_ui(%Player.stats.xp, %Player.stats.max_xp)
 
-
 func _on_player_on_level_up() -> void:
 	level_label.text = "lvl %d" % %Player.stats.level
 
 func _on_player_on_stat_change() -> void:
 	refresh_stat_ui()
+	print("stat speed: %d" % stats.speed)

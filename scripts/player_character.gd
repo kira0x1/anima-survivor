@@ -11,3 +11,4 @@ class_name PlayerCharacter
 @export_category("stats")
 @export var speed: float = 10
 @export var stamina: float = 1
+@export var weapon_range_bonus: float = 0.0

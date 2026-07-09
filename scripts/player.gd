@@ -21,7 +21,6 @@ var lastDirection: Vector2 = Vector2(0,0);
 var direction: Vector2 = Vector2(0,0);
 
 func _ready() -> void:
-	stats = Stats.new()
 	stats.speed = player_character.speed
 	stats.stamina = player_character.stamina
 	give_weapon(player_character.starting_weapon)
@@ -63,8 +62,12 @@ func level_up():
 	on_level_up.emit()
 	
 func give_stat(upgrade_stat_data: UpgradeStatData):
-	if upgrade_stat_data.stat_type == upgrade_stat_data.StatType.SPEED:
+	var stat_type: UpgradeStatData.StatType = upgrade_stat_data.stat_type
+	
+	if stat_type == upgrade_stat_data.StatType.SPEED:
 		stats.speed += upgrade_stat_data.amount
+	elif stat_type == UpgradeStatData.StatType.RANGE:
+		stats.weapon_range_bonus += upgrade_stat_data.amount
 	
 	on_stat_change.emit()
 

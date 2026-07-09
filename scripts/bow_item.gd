@@ -1,5 +1,7 @@
 extends Area2D
 
+# TODO - create weapon class and inherit from it 
+
 # dont shoot if enemies this close
 const MIN_RANGE: float = 40.0
 
@@ -49,7 +51,8 @@ func shoot() -> void:
 	var new_arrow: Node = ARROW.instantiate()
 	new_arrow.global_position = %ShootingPoint.global_position
 	new_arrow.global_rotation = %ShootingPoint.global_rotation
-	new_arrow.damage = damage	
+	new_arrow.damage = damage
+	
 	%ShootingPoint.add_child(new_arrow)
 
 
