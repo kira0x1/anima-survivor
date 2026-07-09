@@ -25,6 +25,7 @@ func create_upgrades():
 	generate_cards()
 	is_upgrading = true
 	visible = true
+	get_tree().paused = true
 
 func generate_cards():
 	var i: int = 0
@@ -67,7 +68,8 @@ func done_upgrading():
 	visible = false
 	is_upgrading = false
 	has_upgrade_selected = false
-
+	get_tree().paused = false
+	
 func _on_player_on_level_up() -> void:
 	upgrade_type = UpgradeType.STAT
 	create_upgrades()

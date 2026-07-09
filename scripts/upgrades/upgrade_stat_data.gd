@@ -2,10 +2,17 @@ extends UpgradeData
 
 class_name UpgradeStatData
 
-enum stat_upgrade_type {
+enum StatType {
 	SPEED,
-	STAMINA
+	STAMINA,
+	RANGE
 }
 
-@export var stat_type: stat_upgrade_type
+enum StatValueType {
+	FLAT,
+	PERCENTAGE
+}
+
+@export var stat_type: StatType
 @export var amount: float = 10.0
+@export var value_type: StatValueType = StatValueType.FLAT

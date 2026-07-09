@@ -2,10 +2,11 @@
 
 [ext_resource type="PackedScene" uid="uid://bd1j1j2cs1oi4" path="res://scenes/ui/upgrade_card.tscn" id="1_nmwu3"]
 [ext_resource type="Script" uid="uid://capsyt0lq40xa" path="res://scripts/upgrades/upgrade_selection.gd" id="1_rewuw"]
-[ext_resource type="Script" uid="uid://blyb1f2jj0r88" path="res://scripts/upgrades/upgrade_data.gd" id="2_ag840"]
-[ext_resource type="Resource" uid="uid://cabgca8pecidn" path="res://data/upgrades/test upgrade.tres" id="3_1kv1b"]
-[ext_resource type="Resource" uid="uid://b3i6vmwji8v80" path="res://data/upgrades/mage_upgrade.tres" id="4_gwd4b"]
+[ext_resource type="Script" uid="uid://77knqqtu4xqr" path="res://scripts/upgrades/WeaponData.gd" id="2_yvear"]
+[ext_resource type="Resource" uid="uid://74r5humttv6w" path="res://data/weapons/bow_data.tres" id="3_mwdqw"]
+[ext_resource type="Script" uid="uid://dmcf32uoauw2k" path="res://scripts/upgrades/upgrade_stat_data.gd" id="4_251q4"]
 [ext_resource type="Resource" uid="uid://drtu41ltfc3sx" path="res://data/upgrades/move_upgrade.tres" id="5_sguap"]
+[ext_resource type="Resource" uid="uid://ch8cydak1p6oh" path="res://data/upgrades/range_upgrade.tres" id="6_kso76"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v13ij"]
 bg_color = Color(0.11858145, 0.11858136, 0.11858138, 1)
@@ -22,7 +23,9 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_rewuw")
-upgrade_tests = Array[ExtResource("2_ag840")]([ExtResource("3_1kv1b"), ExtResource("4_gwd4b"), ExtResource("5_sguap")])
+upgrade_type = 1
+upgrade_weapons = Array[ExtResource("2_yvear")]([ExtResource("3_mwdqw"), ExtResource("3_mwdqw"), ExtResource("3_mwdqw")])
+upgrade_stats = Array[ExtResource("4_251q4")]([ExtResource("5_sguap"), ExtResource("5_sguap"), ExtResource("6_kso76")])
 
 [node name="Tint" type="Panel" parent="." unique_id=12566831]
 layout_mode = 1

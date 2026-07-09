@@ -9,6 +9,7 @@ signal on_xp_change
 signal on_stat_change
 signal on_gained_weapon(weapon_data: WeaponData)
 
+@export var player_character: PlayerCharacter
 @onready var player_anim: AnimatedSprite2D = $Colorizer/Sprite
 
 var stats: Stats = Stats.new()
@@ -18,6 +19,12 @@ var is_alive: bool = true
 
 var lastDirection: Vector2 = Vector2(0,0);
 var direction: Vector2 = Vector2(0,0);
+
+func _ready() -> void:
+	stats = Stats.new()
+	stats.speed = player_character.speed
+	stats.stamina = player_character.stamina
+	give_weapon(player_character.starting_weapon)
 
 func _physics_process(_delta: float) -> void:
 	velocity = direction * stats.calculate_velocity()
@@ -56,7 +63,7 @@ func level_up():
 	on_level_up.emit()
 	
 func give_stat(upgrade_stat_data: UpgradeStatData):
-	if upgrade_stat_data.stat_type == upgrade_stat_data.stat_upgrade_type.SPEED:
+	if upgrade_stat_data.stat_type == upgrade_stat_data.StatType.SPEED:
 		stats.speed += upgrade_stat_data.amount
 	
 	on_stat_change.emit()

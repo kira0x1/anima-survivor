@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="PlayerCharacter" format=3 uid="uid://cvhrfgjik264p"]
+
+[ext_resource type="Script" uid="uid://bgr5uii5tj6py" path="res://scripts/player_character.gd" id="1_w7ga4"]
+[ext_resource type="Resource" uid="uid://74r5humttv6w" path="res://data/weapons/bow_data.tres" id="2_l51vo"]
+
+[resource]
+script = ExtResource("1_w7ga4")
+starting_weapon = ExtResource("2_l51vo")
+metadata/_custom_type_script = "uid://bgr5uii5tj6py"
