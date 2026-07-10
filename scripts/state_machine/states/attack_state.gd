@@ -8,8 +8,8 @@ var in_attack_range: bool = false
 # todo: remove when done testing
 var player_distance: float = 0.0
 
-const ATTACK_DAMAGE: float = 40.0 
-const ATTACK_SPEED: float = 0.8
+const ATTACK_DAMAGE: float = 10.0 
+const ATTACK_SPEED: float = 1.0
 const ATTACK_DISTANCE: float = 60.0
 
 @onready var anim: AnimatedSprite2D = owner.get_node(^"sprite") 
@@ -23,6 +23,7 @@ func enter():
 	is_active = true
 	is_attacking = false
 	attack_timer.wait_time = ATTACK_SPEED
+	attack_timer.start()
 	attack()
 
 func attack():
@@ -49,7 +50,6 @@ func _physics_process(_delta: float) -> void:
 
 func _on_attack_timer_timeout() -> void:
 	attack()
-
 
 func _on_sprite_animation_finished() -> void:
 	if is_attacking and is_active:

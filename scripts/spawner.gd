@@ -9,9 +9,10 @@ var min_spawn_rate: float = 0.2
 var max_spawn_rate: float = 0.3
 var spawn_rate: float = 0.2;
 
-const MAX_MOBS_ALIVE: int = 10
+@export var max_mobs_alive: int = 1
 var mobs_spawned_count: int = 0
 var spawn_points: Array[Variant] = []
+
 @onready var timer: Timer = get_node("Timer") 
 
 func _ready() -> void:
@@ -24,7 +25,7 @@ func _on_timer_timeout() -> void:
 	timer.wait_time = spawn_rate
 	timer.start()
 		
-	if is_spawning_mobs and mobs_spawned_count <= MAX_MOBS_ALIVE:
+	if is_spawning_mobs and mobs_spawned_count < max_mobs_alive:
 		spawn_mob()
 
 func spawn_mob():
