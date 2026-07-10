@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://sl0sj0hopgps"]
 
-[ext_resource type="Script" uid="uid://bnp8u7wko61rq" path="res://scripts/loot table/loot_table.gd" id="1_fomvq"]
-[ext_resource type="Script" uid="uid://c7dsppgor7gln" path="res://scripts/loot table/loot_table_item.gd" id="2_4nfbf"]
+[ext_resource type="Script" uid="uid://bnp8u7wko61rq" path="res://scripts/loot/loot_table.gd" id="1_fomvq"]
+[ext_resource type="Script" uid="uid://c7dsppgor7gln" path="res://scripts/loot/loot_table_item.gd" id="2_4nfbf"]
 [ext_resource type="PackedScene" uid="uid://b6o715cfif1fa" path="res://scenes/loot_items/heal_orb.tscn" id="3_l2wu6"]
 [ext_resource type="PackedScene" uid="uid://bkltruarjgmf0" path="res://scenes/xp_orb.tscn" id="4_o1n12"]
 

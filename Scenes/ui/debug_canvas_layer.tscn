@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://d13a3ncbce6q7"]
 
-[ext_resource type="Script" uid="uid://cakalngity8uc" path="res://scripts/states/state_debug.gd" id="1_yi42q"]
+[ext_resource type="Script" uid="uid://cakalngity8uc" path="res://scripts/state_machine/states/state_debug.gd" id="1_yi42q"]
 
 [node name="Debug CanvasLayer" type="CanvasLayer" unique_id=1166547204]
 

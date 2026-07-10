@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c45qy2dm1vvew"]
 
-[ext_resource type="Script" uid="uid://cm3cb6xqde8ob" path="res://scripts/item.gd" id="1_af1ks"]
+[ext_resource type="Script" uid="uid://cm3cb6xqde8ob" path="res://scripts/loot/item.gd" id="1_af1ks"]
 [ext_resource type="Texture2D" uid="uid://d23tk1rg4x7c2" path="res://sprites/objects/Some Objects.png" id="3_5tery"]
 
 [node name="Apple Item" type="Sprite2D" unique_id=843068427]

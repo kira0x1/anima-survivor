@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://ctf300f3ey3o3"]
 
-[ext_resource type="Script" uid="uid://lhwlu6j5t6dg" path="res://scenes/projectile.gd" id="1_23jat"]
+[ext_resource type="Script" uid="uid://lhwlu6j5t6dg" path="res://scripts/projectile.gd" id="1_23jat"]
 [ext_resource type="Texture2D" uid="uid://crtterasn53vo" path="res://sprites/equipment/rpg_icons_free/arrow.png" id="1_umosx"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_tye4b"]
