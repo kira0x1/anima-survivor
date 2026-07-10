@@ -8,11 +8,12 @@ var in_attack_range: bool = false
 # todo: remove when done testing
 var player_distance: float = 0.0
 
-const ATTACK_DAMAGE: float = 10.0 
+var attack_damage: float = 0.0
 const ATTACK_SPEED: float = 1.0
 const ATTACK_DISTANCE: float = 60.0
 
 @onready var anim: AnimatedSprite2D = owner.get_node(^"sprite") 
+
 var player
 
 func _ready() -> void:
@@ -54,7 +55,7 @@ func _on_attack_timer_timeout() -> void:
 func _on_sprite_animation_finished() -> void:
 	if is_attacking and is_active:
 		if in_attack_range:
-			player.take_damage(ATTACK_DAMAGE)
+			player.take_damage(attack_damage)
 
 		anim.play("idle")
 		is_attacking = false

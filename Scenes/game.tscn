@@ -130,6 +130,7 @@ script = ExtResource("12_kvuet")
 
 [node name="spawner" parent="spawn_manager" unique_id=1997197035 instance=ExtResource("3_lnu2h")]
 position = Vector2(824, 273)
+max_mobs_alive = 2
 
 [connection signal="slot_changed" from="PlayerUI Canvas/Actionbar" to="Player/hand_equip" method="_on_actionbar_slot_changed"]
 [connection signal="on_damage" from="Player" to="PlayerUI Canvas/health_bar" method="_on_player_on_damage"]

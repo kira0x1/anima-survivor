@@ -9,6 +9,8 @@ signal on_death(mob: Mob)
 @onready var aggro_detector: Area2D = $"aggro_radius"
 @onready var loot_table: LootTable = $loot_table
 
+@export var attack_damage: float = 20.0
+
 var move_speed: float = 60.0
 var player
 
@@ -18,6 +20,7 @@ var is_dead: bool = false;
 
 func _ready() -> void:
 	player = get_tree().root.get_node("Game/Player")
+	%attack_state.attack_damage = attack_damage
 
 func chase_player() -> void:
 	if is_dead or not is_node_ready():
