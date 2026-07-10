@@ -1,0 +1,79 @@
+[gd_scene format=3 uid="uid://dhi51bix0ceok"]
+
+[ext_resource type="Script" uid="uid://cfxtxi5fwpvlx" path="res://scripts/ui/xp_bar.gd" id="1_ejb6b"]
+[ext_resource type="Script" uid="uid://tv1fcagy3kh6" path="res://scripts/ui/player_xp_ui.gd" id="1_vryvu"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_vryvu"]
+font_size = 9
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vryvu"]
+bg_color = Color(0.21, 0.21, 0.21, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j2bd3"]
+bg_color = Color(0.4691357, 0.33797655, 0.7592787, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="LabelSettings" id="LabelSettings_qbnsk"]
+font_size = 7
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ejb6b"]
+bg_color = Color(0, 0, 0, 0)
+draw_center = false
+
+[node name="player_xp_ui" type="Control" unique_id=1321787709]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 216.0
+offset_bottom = 47.0
+script = ExtResource("1_vryvu")
+
+[node name="level_label" type="Label" parent="." unique_id=856335028]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 30.0
+grow_horizontal = 2
+size_flags_vertical = 1
+text = "level 1"
+label_settings = SubResource("LabelSettings_vryvu")
+
+[node name="xp_bar" type="ProgressBar" parent="." unique_id=1116943015]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -17.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/background = SubResource("StyleBoxFlat_vryvu")
+theme_override_styles/fill = SubResource("StyleBoxFlat_j2bd3")
+value = 28.0
+show_percentage = false
+script = ExtResource("1_ejb6b")
+
+[node name="Label" type="Label" parent="xp_bar" unique_id=1077782476]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "100 / 100"
+label_settings = SubResource("LabelSettings_qbnsk")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="player_xp_ui" type="Panel" parent="." unique_id=1967807455]
+visible = false
+layout_mode = 0
+offset_right = 216.0
+offset_bottom = 38.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ejb6b")

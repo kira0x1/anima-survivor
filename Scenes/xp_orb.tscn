@@ -12,6 +12,7 @@ collision_mask = 4
 script = ExtResource("1_pkphv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1360401275]
+visible = false
 shape = SubResource("CircleShape2D_tye4b")
 
 [node name="coin_anim" type="AnimatedSprite2D" parent="." unique_id=1087219282]

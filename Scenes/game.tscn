@@ -1,5 +1,6 @@
 [gd_scene format=4 uid="uid://cc76cb4gm2gpx"]
 
+[ext_resource type="PackedScene" uid="uid://dhi51bix0ceok" path="res://scenes/ui/player_xp_ui.tscn" id="1_dinhu"]
 [ext_resource type="PackedScene" uid="uid://dm1lfrvkah64e" path="res://scenes/ui/pause_screen.tscn" id="1_kvpfn"]
 [ext_resource type="TileSet" uid="uid://dm4u0eg76wk5r" path="res://sprites/props/props.tres" id="1_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://dxx3v5mga07pt" path="res://scenes/player.tscn" id="2_lnu2h"]
@@ -42,18 +43,24 @@ color = Color(0.72067666, 0.7173909, 0.6480817, 1)
 
 [node name="PlayerUI Canvas" type="CanvasLayer" parent="." unique_id=1512424151]
 
-[node name="health_bar" type="ProgressBar" parent="PlayerUI Canvas" unique_id=557733983]
+[node name="player_xp_ui" parent="PlayerUI Canvas" unique_id=1321787709 instance=ExtResource("1_dinhu")]
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -90.0
-offset_top = -72.0
-offset_right = 90.0
-offset_bottom = -54.0
+offset_left = 110.0
+offset_top = -46.0
+offset_right = 326.0
+offset_bottom = -11.0
 grow_horizontal = 2
 grow_vertical = 0
+
+[node name="health_bar" type="ProgressBar" parent="PlayerUI Canvas" unique_id=557733983]
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 190.0
+offset_bottom = 28.0
 theme_override_styles/background = SubResource("StyleBoxFlat_lbhrr")
 theme_override_styles/fill = SubResource("StyleBoxFlat_iywne")
 value = 100.0
@@ -80,6 +87,7 @@ offset_right = 90.0
 offset_bottom = -10.0
 
 [node name="stats_ui" parent="PlayerUI Canvas" unique_id=803843134 instance=ExtResource("5_gee14")]
+visible = false
 offset_left = 15.0
 offset_top = -162.0
 offset_right = 278.0
@@ -108,6 +116,9 @@ unique_name_in_owner = true
 position = Vector2(579, 325)
 player_character = ExtResource("7_vtaks")
 
+[node name="CollisionShape2D" parent="Player" index="1" unique_id=2027810709]
+visible = false
+
 [node name="xp_orb" parent="." unique_id=2033809023 instance=ExtResource("9_0tnpc")]
 position = Vector2(477, 361)
 
@@ -125,9 +136,11 @@ position = Vector2(824, 273)
 [connection signal="on_gained_weapon" from="Player" to="PlayerUI Canvas/Actionbar" method="_on_player_on_gained_weapon"]
 [connection signal="on_gained_weapon" from="Player" to="Player/hand_equip" method="_on_player_on_gained_weapon"]
 [connection signal="on_heal" from="Player" to="PlayerUI Canvas/health_bar" method="_on_player_on_heal"]
+[connection signal="on_level_up" from="Player" to="PlayerUI Canvas/player_xp_ui" method="_on_player_on_level_up"]
 [connection signal="on_level_up" from="Player" to="PlayerUI Canvas/stats_ui" method="_on_player_on_level_up"]
 [connection signal="on_level_up" from="Player" to="PlayerUI Canvas/Upgrade Selection" method="_on_player_on_level_up"]
 [connection signal="on_stat_change" from="Player" to="PlayerUI Canvas/stats_ui" method="_on_player_on_stat_change"]
+[connection signal="on_xp_change" from="Player" to="PlayerUI Canvas/player_xp_ui" method="_on_player_on_xp_change"]
 [connection signal="on_xp_change" from="Player" to="PlayerUI Canvas/stats_ui" method="_on_player_on_xp_change"]
 
 [editable path="Player"]
