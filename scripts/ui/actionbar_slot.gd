@@ -19,11 +19,11 @@ func _ready() -> void:
 
 func select_slot():
 	is_selected = true
-	highlight.visible = true
+#	highlight.visible = true
 
 func deselect_slot():
 	is_selected = false
-	highlight.visible = false
+#	highlight.visible = false
 	
 func set_item(item):
 	slot_item = item
