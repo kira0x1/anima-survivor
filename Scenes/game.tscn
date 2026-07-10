@@ -1,5 +1,6 @@
 [gd_scene format=4 uid="uid://cc76cb4gm2gpx"]
 
+[ext_resource type="PackedScene" uid="uid://dm1lfrvkah64e" path="res://scenes/ui/pause_screen.tscn" id="1_kvpfn"]
 [ext_resource type="TileSet" uid="uid://dm4u0eg76wk5r" path="res://sprites/props/props.tres" id="1_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://dxx3v5mga07pt" path="res://scenes/player.tscn" id="2_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://ddr6joisppuo1" path="res://scenes/spawner.tscn" id="3_lnu2h"]
@@ -84,10 +85,11 @@ offset_top = -162.0
 offset_right = 278.0
 offset_bottom = 296.0
 
-[node name="Upgrade Canvas" type="CanvasLayer" parent="." unique_id=1338811253]
-
-[node name="Upgrade Selection" parent="Upgrade Canvas" unique_id=1789212969 instance=ExtResource("10_vtaks")]
+[node name="Upgrade Selection" parent="PlayerUI Canvas" unique_id=1789212969 instance=ExtResource("10_vtaks")]
 process_mode = 3
+visible = false
+
+[node name="Pause Screen" parent="PlayerUI Canvas" unique_id=877117235 instance=ExtResource("1_kvpfn")]
 visible = false
 
 [node name="Tilemaps" type="Node2D" parent="." unique_id=1134287207]
@@ -124,7 +126,7 @@ position = Vector2(824, 273)
 [connection signal="on_gained_weapon" from="Player" to="Player/hand_equip" method="_on_player_on_gained_weapon"]
 [connection signal="on_heal" from="Player" to="PlayerUI Canvas/health_bar" method="_on_player_on_heal"]
 [connection signal="on_level_up" from="Player" to="PlayerUI Canvas/stats_ui" method="_on_player_on_level_up"]
-[connection signal="on_level_up" from="Player" to="Upgrade Canvas/Upgrade Selection" method="_on_player_on_level_up"]
+[connection signal="on_level_up" from="Player" to="PlayerUI Canvas/Upgrade Selection" method="_on_player_on_level_up"]
 [connection signal="on_stat_change" from="Player" to="PlayerUI Canvas/stats_ui" method="_on_player_on_stat_change"]
 [connection signal="on_xp_change" from="Player" to="PlayerUI Canvas/stats_ui" method="_on_player_on_xp_change"]
 

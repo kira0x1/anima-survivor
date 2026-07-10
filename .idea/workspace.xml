@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="48cabc87-ec5c-40a3-92fb-1d75b725d221" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/scripts/ui/pause_ui.gd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addons/rider-plugin/bin/windows/~rider-gdextension.windows.editor.x86_64.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scenes/game.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/Scenes/game.tscn" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -163,6 +164,7 @@
       <workItem from="1783576752469" duration="5995000" />
       <workItem from="1783628054327" duration="2547000" />
       <workItem from="1783631999391" duration="982000" />
+      <workItem from="1783675108159" duration="1341000" />
     </task>
     <servers />
   </component>

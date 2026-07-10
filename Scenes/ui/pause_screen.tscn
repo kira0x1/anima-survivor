@@ -1,9 +1,10 @@
 [gd_scene format=3 uid="uid://dm1lfrvkah64e"]
 
+[ext_resource type="Script" uid="uid://5i2j2ennrls3" path="res://scripts/ui/pause_ui.gd" id="1_fvuwu"]
 [ext_resource type="Theme" uid="uid://b6m0pp1jawr4t" path="res://scenes/ui/ui_theme.tres" id="1_milqs"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xceqw"]
-bg_color = Color(0.17283261, 0.1728327, 0.17283267, 1)
+bg_color = Color(0.15, 0.15, 0.15, 1)
 corner_radius_top_left = 4
 corner_radius_top_right = 4
 corner_radius_bottom_right = 4
@@ -17,6 +18,7 @@ corner_radius_bottom_right = 2
 corner_radius_bottom_left = 2
 
 [node name="Pause Screen" type="Panel" unique_id=877117235]
+process_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -29,6 +31,7 @@ offset_bottom = 150.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_xceqw")
+script = ExtResource("1_fvuwu")
 
 [node name="Title Margin" type="MarginContainer" parent="." unique_id=991186249]
 layout_mode = 1
@@ -38,10 +41,10 @@ anchor_bottom = 1.0
 offset_bottom = -262.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 4
-theme_override_constants/margin_top = 4
-theme_override_constants/margin_right = 4
-theme_override_constants/margin_bottom = 4
+theme_override_constants/margin_left = 6
+theme_override_constants/margin_top = 6
+theme_override_constants/margin_right = 6
+theme_override_constants/margin_bottom = 2
 
 [node name="Title Background" type="Panel" parent="Title Margin" unique_id=483675647]
 layout_mode = 2
@@ -80,3 +83,5 @@ size_flags_vertical = 8
 theme = ExtResource("1_milqs")
 theme_override_font_sizes/font_size = 12
 text = "back"
+
+[connection signal="pressed" from="Buttons Margin/Back Button" to="." method="_on_back_button_pressed"]
