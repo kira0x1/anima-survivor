@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://bqawohm3el6jy"]
+
+[ext_resource type="PackedScene" uid="uid://bwwmup8ytpqwc" path="res://scenes/ui/weapon_card.tscn" id="1_7nagc"]
+
+[node name="InventoryUI" type="Control" unique_id=544077475]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MainPanel" type="Panel" parent="." unique_id=622719800]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="WeaponPanel" type="Panel" parent="MainPanel" unique_id=163813593]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 21.0
+offset_top = 18.0
+offset_right = -26.0
+offset_bottom = 324.0
+grow_horizontal = 2
+
+[node name="Weapon Grid" type="HBoxContainer" parent="MainPanel/WeaponPanel" unique_id=1043415150]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 11.0
+offset_right = 595.0
+offset_bottom = 297.0
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="Weapon Card" parent="MainPanel/WeaponPanel/Weapon Grid" unique_id=113578228 instance=ExtResource("1_7nagc")]
+layout_mode = 2
+
+[node name="Weapon Card2" parent="MainPanel/WeaponPanel/Weapon Grid" unique_id=1325100123 instance=ExtResource("1_7nagc")]
+layout_mode = 2
+
+[node name="Weapon Card3" parent="MainPanel/WeaponPanel/Weapon Grid" unique_id=1432989494 instance=ExtResource("1_7nagc")]
+layout_mode = 2

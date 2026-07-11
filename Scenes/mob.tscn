@@ -24,17 +24,18 @@ attack_damage = 10.0
 
 [node name="sprite" type="AnimatedSprite2D" parent="." unique_id=1989649171]
 texture_filter = 1
-position = Vector2(0, 20)
+position = Vector2(0, -4)
 scale = Vector2(2, 2)
 sprite_frames = ExtResource("1_4are2")
-animation = &"dead"
+animation = &"idle"
 autoplay = "idle"
-offset = Vector2(-3, -14)
+frame_progress = 0.22565095
+offset = Vector2(-3, -4.5)
 script = ExtResource("2_bsing")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=243369397]
 visible = false
-position = Vector2(0, 4)
+position = Vector2(0, 3)
 shape = SubResource("CircleShape2D_tye4b")
 
 [node name="aggro_radius" type="Area2D" parent="." unique_id=1119483291]
@@ -74,9 +75,9 @@ one_shot = true
 
 [node name="world_healthbar" parent="." unique_id=690852122 instance=ExtResource("2_wpivu")]
 offset_left = -18.0
-offset_top = -31.0
+offset_top = -30.0
 offset_right = 17.0
-offset_bottom = -26.0
+offset_bottom = -25.0
 
 [node name="loot_table" parent="." unique_id=162447270 instance=ExtResource("10_i71wu")]
 

@@ -6,8 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="48cabc87-ec5c-40a3-92fb-1d75b725d221" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/mob.gd" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/mob.gd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/state_machine/states/attack_state.gd" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/state_machine/states/attack_state.gd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addons/rider-plugin/bin/windows/~rider-gdextension.windows.editor.x86_64.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/addons/rider-plugin/plugin.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/addons/rider-plugin/plugin.cfg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,7 +15,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DarkyenusTimeTracker">
-    <option name="totalTimeSeconds" value="44351" />
+    <option name="totalTimeSeconds" value="44401" />
     <option name="naggedAbout" value="1" />
   </component>
   <component name="DpaMonitoringSettings">
@@ -164,7 +164,8 @@
       <workItem from="1783576752469" duration="5995000" />
       <workItem from="1783628054327" duration="2547000" />
       <workItem from="1783631999391" duration="982000" />
-      <workItem from="1783675108159" duration="6290000" />
+      <workItem from="1783675108159" duration="6339000" />
+      <workItem from="1783698407503" duration="1764000" />
     </task>
     <servers />
   </component>
