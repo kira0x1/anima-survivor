@@ -27,19 +27,6 @@ icon_alignment = 1
 expand_icon = true
 script = ExtResource("1_peu56")
 
-[node name="slot_text" type="Label" parent="." unique_id=1784208774]
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 4.0
-offset_top = 3.0
-offset_right = -4.0
-offset_bottom = -3.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/font_size = 8
-
 [node name="selected_highlight" type="Panel" parent="." unique_id=1921411113]
 visible = false
 layout_mode = 1
