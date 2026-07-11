@@ -1,24 +1,22 @@
-[gd_scene format=3 uid="uid://dmaohapx4lx2c"]
+[gd_scene format=3 uid="uid://q6m0ljixdolb"]
 
-[ext_resource type="Texture2D" uid="uid://bn6gto0v8q2po" path="res://sprites/equipment/rpg_icons_free/bow.png" id="1_fhpx6"]
-[ext_resource type="Script" uid="uid://btu4miwnm3ac4" path="res://scripts/weapons/bow_item.gd" id="2_5jo3t"]
+[ext_resource type="Script" uid="uid://byv8a8gv6lx8f" path="res://scripts/weapons/ranged_weapon.gd" id="1_i5bwe"]
+[ext_resource type="Texture2D" uid="uid://bn6gto0v8q2po" path="res://sprites/equipment/rpg_icons_free/bow.png" id="2_4txm0"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5jo3t"]
 radius = 250.0
 
-[node name="bow_item" type="Area2D" unique_id=150426745]
+[node name="ranged_weapon" type="Area2D" unique_id=150426745]
 collision_layer = 0
 collision_mask = 2
-script = ExtResource("2_5jo3t")
-fire_rate = 0.4
-damage = 20.0
+script = ExtResource("1_i5bwe")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=156596782]
+visible = false
 shape = SubResource("CircleShape2D_5jo3t")
 
-[node name="Timer" type="Timer" parent="." unique_id=1002586392]
+[node name="Timer" type="Timer" parent="." unique_id=690256687]
 unique_name_in_owner = true
-wait_time = 0.2
 autostart = true
 
 [node name="weapon_pivot" type="Marker2D" parent="." unique_id=103585778]
@@ -29,10 +27,11 @@ position = Vector2(13, 0)
 scale = Vector2(1.5, 1.5)
 
 [node name="bow_sprite" type="Sprite2D" parent="weapon_pivot" unique_id=1305073664]
+modulate = Color(0.89159346, 0.00019849122, 0.7716131, 1)
 texture_filter = 1
 position = Vector2(32, 0)
 rotation = 2.3561945
 scale = Vector2(1.5, 1.5)
-texture = ExtResource("1_fhpx6")
+texture = ExtResource("2_4txm0")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
