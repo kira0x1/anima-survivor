@@ -10,6 +10,8 @@ radius = 250.0
 collision_layer = 0
 collision_mask = 2
 script = ExtResource("1_i5bwe")
+attack_speed = 0.6
+damage = 15.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=156596782]
 visible = false
@@ -27,11 +29,10 @@ position = Vector2(13, 0)
 scale = Vector2(1.5, 1.5)
 
 [node name="bow_sprite" type="Sprite2D" parent="weapon_pivot" unique_id=1305073664]
-modulate = Color(0.89159346, 0.00019849122, 0.7716131, 1)
 texture_filter = 1
 position = Vector2(32, 0)
 rotation = 2.3561945
-scale = Vector2(1.5, 1.5)
+scale = Vector2(2, 2)
 texture = ExtResource("2_4txm0")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
