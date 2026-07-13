@@ -3,6 +3,9 @@
 [ext_resource type="Script" uid="uid://b4suk7vbum8dl" path="res://scripts/ui/inventory_ui.gd" id="1_4ycse"]
 [ext_resource type="PackedScene" uid="uid://bwwmup8ytpqwc" path="res://scenes/ui/weapon_card.tscn" id="1_7nagc"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4ycse"]
+bg_color = Color(0.28118682, 0.28118688, 0.28118682, 0)
+
 [node name="InventoryUI" type="Control" unique_id=544077475]
 layout_mode = 3
 anchors_preset = 15
@@ -14,28 +17,39 @@ script = ExtResource("1_4ycse")
 
 [node name="MainPanel" type="Panel" parent="." unique_id=622719800]
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = -1
 anchor_right = 1.0
-anchor_bottom = 1.0
+anchor_bottom = 0.85
+offset_left = 10.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = 6.1035156e-05
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_4ycse")
 
 [node name="WeaponPanel" type="Panel" parent="MainPanel" unique_id=163813593]
 layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_left = 21.0
-offset_top = 18.0
-offset_right = -26.0
-offset_bottom = 324.0
-grow_horizontal = 2
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = -346.80005
+offset_right = 593.0
+offset_bottom = -10.0
+grow_vertical = 0
 
 [node name="Weapon Grid" type="HBoxContainer" parent="MainPanel/WeaponPanel" unique_id=1043415150]
-layout_mode = 0
-offset_left = 11.0
-offset_top = 11.0
-offset_right = 595.0
-offset_bottom = 297.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 7.0
+offset_right = -101.0
+offset_bottom = -86.80005
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_constants/separation = 16
 alignment = 1
 
