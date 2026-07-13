@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bwwmup8ytpqwc"]
 
-[ext_resource type="Texture2D" uid="uid://gx8f7l5h80ji" path="res://sprites/equipment/rpg_icons_free/sword.png" id="1_ra7uv"]
+[ext_resource type="Script" uid="uid://cbg60mxshnblo" path="res://scripts/ui/inventory_weapon_card.gd" id="1_hclfo"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ikfdi"]
 bg_color = Color(0.051970966, 0.051970966, 0.051970936, 1)
@@ -40,8 +40,9 @@ grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_styles/panel = SubResource("StyleBoxFlat_ikfdi")
+script = ExtResource("1_hclfo")
 
-[node name="Upgrade Icon" type="Button" parent="." unique_id=1583840952]
+[node name="Weapon Icon" type="Button" parent="." unique_id=1583840952]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
@@ -50,22 +51,21 @@ anchor_top = 0.03
 anchor_right = 0.5
 anchor_bottom = 0.25
 offset_right = -10.0
-grow_horizontal = 2
 theme_override_constants/icon_max_width = 52
 theme_override_styles/normal = SubResource("StyleBoxFlat_ay13x")
-icon = ExtResource("1_ra7uv")
 icon_alignment = 1
 expand_icon = true
 
 [node name="Name Text" type="Label" parent="." unique_id=688474]
 layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -111.0
-offset_top = 12.0
-offset_right = -11.0
-offset_bottom = 96.0
+anchors_preset = -1
+anchor_left = 0.49500003
+anchor_top = 0.030000001
+anchor_right = 0.95000005
+anchor_bottom = 0.25
+offset_left = 0.099990845
+offset_right = -1.5258789e-05
+offset_bottom = -4.0
 grow_horizontal = 0
 theme_override_font_sizes/font_size = 12
 clip_text = true
