@@ -19,35 +19,38 @@ script = ExtResource("1_4ycse")
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
-anchor_bottom = 0.85
+anchor_bottom = 0.94400007
 offset_left = 10.0
-offset_top = 10.0
+offset_top = 45.0
 offset_right = -10.0
-offset_bottom = 6.1035156e-05
+offset_bottom = -42.712036
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_4ycse")
+
+[node name="BonusPanel" type="Panel" parent="MainPanel" unique_id=252255136]
+layout_mode = 0
+offset_right = 538.0
+offset_bottom = 232.0
 
 [node name="WeaponPanel" type="Panel" parent="MainPanel" unique_id=163813593]
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_left = 10.0
-offset_top = -346.80005
-offset_right = 593.0
-offset_bottom = -10.0
+offset_top = -281.0
+offset_right = 538.0
 grow_vertical = 0
 
 [node name="Weapon Grid" type="HBoxContainer" parent="MainPanel/WeaponPanel" unique_id=1043415150]
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 10.0
-offset_top = 7.0
-offset_right = -101.0
-offset_bottom = -86.80005
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = -10.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 16
