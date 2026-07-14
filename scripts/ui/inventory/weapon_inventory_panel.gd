@@ -1,19 +1,13 @@
-extends Control
+extends Panel
+
+class_name WeaponInventoryPanel
 
 var weapon_cards: Array[InventoryWeaponCard] = []
-@onready var weapon_grid: HBoxContainer = $"MainPanel/WeaponPanel/Weapon Grid"
+@onready var weapon_grid: HBoxContainer = $WeaponGrid
 
 func _ready() -> void:
 	for cards in weapon_grid.get_children():
 		weapon_cards.push_back(cards)
-
-func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("ui_inventory"):
-		toggle_ui()
-
-func toggle_ui() -> void:
-	visible = !visible
-
 
 func has_free_slots() -> bool:
 	var found_free: bool = false
@@ -38,10 +32,9 @@ func get_free_slot() -> int:
 
 	return free_slot_index
 
-
-func _on_player_on_gained_weapon(weapon_data: WeaponData) -> void:
+func on_player_gained_weapon(weapon_data: WeaponData):
 	if !has_free_slots():
 		print("no free slots found")
 	else:
 		var free_slot_index: int = get_free_slot()
-		weapon_cards[free_slot_index].set_weapon(weapon_data)	
+		weapon_cards[free_slot_index].set_weapon(weapon_data)

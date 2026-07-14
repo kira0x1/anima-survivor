@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://dm1lfrvkah64e" path="res://scenes/ui/pause_screen.tscn" id="1_kvpfn"]
 [ext_resource type="TileSet" uid="uid://dm4u0eg76wk5r" path="res://sprites/props/props.tres" id="1_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://dxx3v5mga07pt" path="res://scenes/player.tscn" id="2_lnu2h"]
-[ext_resource type="PackedScene" uid="uid://bqawohm3el6jy" path="res://scenes/ui/inventory_ui.tscn" id="3_kvuet"]
+[ext_resource type="PackedScene" uid="uid://bqawohm3el6jy" path="res://scenes/ui/inventory/inventory_ui.tscn" id="3_kvuet"]
 [ext_resource type="PackedScene" uid="uid://ddr6joisppuo1" path="res://scenes/spawner.tscn" id="3_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://blknqccvyr6rm" path="res://scenes/ui/stats_ui.tscn" id="5_gee14"]
 [ext_resource type="Script" uid="uid://cs2tfdii6h4bt" path="res://scripts/ui/health_bar.gd" id="5_iywne"]

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bwwmup8ytpqwc"]
 
-[ext_resource type="Script" uid="uid://cbg60mxshnblo" path="res://scripts/ui/inventory_weapon_card.gd" id="1_hclfo"]
+[ext_resource type="Script" uid="uid://cbg60mxshnblo" path="res://scripts/ui/inventory/inventory_weapon_card.gd" id="1_hclfo"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ikfdi"]
 bg_color = Color(0.051970966, 0.051970966, 0.051970936, 1)
@@ -26,7 +26,6 @@ corner_radius_bottom_left = 3
 [node name="Weapon Card" type="Panel" unique_id=113578228]
 custom_maximum_size = Vector2(220, 400)
 propagate_maximum_size = true
-anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
