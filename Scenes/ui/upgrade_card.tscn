@@ -1,14 +1,10 @@
 [gd_scene format=3 uid="uid://bd1j1j2cs1oi4"]
 
 [ext_resource type="Script" uid="uid://b1xs773pnb6sp" path="res://scripts/upgrades/upgrade_card.gd" id="1_40ijt"]
+[ext_resource type="StyleBox" uid="uid://c5xdfpvli6oai" path="res://card_theme.tres" id="1_ay13x"]
 [ext_resource type="Texture2D" uid="uid://gx8f7l5h80ji" path="res://sprites/equipment/rpg_icons_free/sword.png" id="1_jq2e7"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ikfdi"]
-bg_color = Color(0.051970966, 0.051970966, 0.051970936, 1)
-corner_radius_top_left = 4
-corner_radius_top_right = 4
-corner_radius_bottom_right = 4
-corner_radius_bottom_left = 4
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ay13x"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ay13x"]
 bg_color = Color(0.20511743, 0.20511743, 0.20511743, 1)
@@ -47,10 +43,20 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme_override_styles/panel = SubResource("StyleBoxFlat_ikfdi")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_ay13x")
 script = ExtResource("1_40ijt")
 
-[node name="Upgrade Icon" type="Button" parent="." unique_id=1583840952]
+[node name="Card" type="Panel" parent="." unique_id=1835521659]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -43.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = ExtResource("1_ay13x")
+
+[node name="UpgradeIcon" type="Button" parent="Card" unique_id=1583840952]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
@@ -66,7 +72,7 @@ icon = ExtResource("1_jq2e7")
 icon_alignment = 1
 expand_icon = true
 
-[node name="Name Text" type="RichTextLabel" parent="." unique_id=1567801867]
+[node name="NameText" type="RichTextLabel" parent="Card" unique_id=1567801867]
 clip_contents = false
 layout_mode = 1
 anchors_preset = 1
@@ -79,7 +85,7 @@ offset_bottom = 96.0
 grow_horizontal = 0
 theme_override_font_sizes/normal_font_size = 12
 
-[node name="Text Panel" type="Panel" parent="." unique_id=1410290382]
+[node name="TextPanel" type="Panel" parent="Card" unique_id=1410290382]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.05
@@ -91,7 +97,7 @@ grow_horizontal = 2
 grow_vertical = 0
 theme_override_styles/panel = SubResource("StyleBoxFlat_40ijt")
 
-[node name="Description Text" type="Label" parent="Text Panel" unique_id=1169322427]
+[node name="DescriptionText" type="Label" parent="Card/TextPanel" unique_id=1169322427]
 custom_maximum_size = Vector2(178, 254.4)
 layout_mode = 1
 anchors_preset = -1
@@ -105,20 +111,17 @@ grow_horizontal = 2
 grow_vertical = 2
 autowrap_mode = 3
 
-[node name="Accept Button" type="Button" parent="." unique_id=1947230465]
+[node name="AcceptButton" type="Button" parent="." unique_id=1947230465]
 layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
+anchors_preset = -1
+anchor_top = 0.892
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 5.0
-offset_top = 10.0
-offset_right = -5.0
-offset_bottom = 50.0
+offset_top = 12.199982
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_colors/font_color = Color(0.7615194, 0.21205837, 0.51342237, 1)
 theme_override_styles/normal = SubResource("StyleBoxFlat_qdprk")
 text = "Accept"
 
-[connection signal="pressed" from="Accept Button" to="." method="_on_accept_button_pressed"]
+[connection signal="pressed" from="AcceptButton" to="." method="_on_accept_button_pressed"]

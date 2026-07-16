@@ -6,8 +6,13 @@
 [ext_resource type="PackedScene" uid="uid://dxx3v5mga07pt" path="res://scenes/player.tscn" id="2_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://bqawohm3el6jy" path="res://scenes/ui/inventory/inventory_ui.tscn" id="3_kvuet"]
 [ext_resource type="PackedScene" uid="uid://ddr6joisppuo1" path="res://scenes/spawner.tscn" id="3_lnu2h"]
+[ext_resource type="Script" uid="uid://dmcf32uoauw2k" path="res://scripts/upgrades/upgrade_stat_data.gd" id="3_ssvqc"]
+[ext_resource type="Resource" uid="uid://drtu41ltfc3sx" path="res://data/upgrades/move_upgrade.tres" id="4_264po"]
+[ext_resource type="Resource" uid="uid://ch8cydak1p6oh" path="res://data/upgrades/range_upgrade.tres" id="5_1kice"]
 [ext_resource type="PackedScene" uid="uid://blknqccvyr6rm" path="res://scenes/ui/stats_ui.tscn" id="5_gee14"]
 [ext_resource type="Script" uid="uid://cs2tfdii6h4bt" path="res://scripts/ui/health_bar.gd" id="5_iywne"]
+[ext_resource type="Resource" uid="uid://b4e8cvlh1a7bx" path="res://data/upgrades/damage_upgrade.tres" id="6_5newe"]
+[ext_resource type="Resource" uid="uid://i405cc6r8gl8" path="res://data/upgrades/attack_speed_upgrade.tres" id="7_37s47"]
 [ext_resource type="PackedScene" uid="uid://df4unlwix45ey" path="res://scenes/ui/action_bar.tscn" id="7_gee14"]
 [ext_resource type="Resource" uid="uid://cvhrfgjik264p" path="res://data/characters/fox_character.tres" id="7_vtaks"]
 [ext_resource type="PackedScene" uid="uid://bkltruarjgmf0" path="res://scenes/xp_orb.tscn" id="9_0tnpc"]
@@ -61,6 +66,9 @@ grow_vertical = 0
 process_mode = 3
 visible = false
 z_index = 3
+give_upgrade_on_start = true
+upgrade_type = 0
+upgrade_stats = Array[ExtResource("3_ssvqc")]([ExtResource("4_264po"), ExtResource("5_1kice"), ExtResource("6_5newe"), ExtResource("7_37s47")])
 
 [node name="InventoryUI" parent="PlayerUI Canvas" unique_id=544077475 instance=ExtResource("3_kvuet")]
 process_mode = 3

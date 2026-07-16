@@ -5,7 +5,9 @@ class_name UpgradeStatData
 enum StatType {
 	SPEED,
 	STAMINA,
-	RANGE
+	RANGE,
+	DAMAGE,
+	ATTACK_SPEED
 }
 
 enum StatValueType {

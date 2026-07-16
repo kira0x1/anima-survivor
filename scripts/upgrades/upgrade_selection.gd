@@ -45,7 +45,6 @@ func generate_cards():
 		upgrade_pool = upgrade_weapons
 		
 	for card in cards:
-		
 		var random_upgrade: int = get_random_unique(upgrade_pool, upgrades_selected)
 		upgrades_selected.push_back(random_upgrade)
 		

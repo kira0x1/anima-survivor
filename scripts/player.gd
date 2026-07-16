@@ -64,10 +64,12 @@ func level_up():
 func give_stat(upgrade_stat_data: UpgradeStatData):
 	var stat_type: UpgradeStatData.StatType = upgrade_stat_data.stat_type
 	
-	if stat_type == upgrade_stat_data.StatType.SPEED:
+	if stat_type == UpgradeStatData.StatType.SPEED:
 		stats.speed += upgrade_stat_data.amount
 	elif stat_type == UpgradeStatData.StatType.RANGE:
 		stats.weapon_range_bonus += upgrade_stat_data.amount
+	elif stat_type == UpgradeStatData.StatType.ATTACK_SPEED:
+		stats.attack_speed_bonus += upgrade_stat_data.amount
 	
 	on_stat_change.emit()
 
