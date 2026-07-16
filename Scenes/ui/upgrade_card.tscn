@@ -66,7 +66,8 @@ icon = ExtResource("1_jq2e7")
 icon_alignment = 1
 expand_icon = true
 
-[node name="Name Text" type="Label" parent="." unique_id=688474]
+[node name="Name Text" type="RichTextLabel" parent="." unique_id=1567801867]
+clip_contents = false
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -76,8 +77,7 @@ offset_top = 12.0
 offset_right = -11.0
 offset_bottom = 96.0
 grow_horizontal = 0
-theme_override_font_sizes/font_size = 12
-clip_text = true
+theme_override_font_sizes/normal_font_size = 12
 
 [node name="Text Panel" type="Panel" parent="." unique_id=1410290382]
 layout_mode = 1

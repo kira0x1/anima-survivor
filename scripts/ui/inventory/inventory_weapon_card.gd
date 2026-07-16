@@ -2,8 +2,8 @@ extends Panel
 
 class_name InventoryWeaponCard
 
+@onready var name_text: RichTextLabel = $NameText
 @onready var description_text: Label = $"Text Panel/MarginContainer/Description Text"
-@onready var name_text: Label = $"Name Text"
 @onready var icon_btn: Button  = $"Weapon Icon"
 
 var has_weapon: bool = false

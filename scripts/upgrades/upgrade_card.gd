@@ -4,8 +4,8 @@ class_name UpgradeCard
 
 signal upgrade_clicked(upgrade_card: UpgradeCard, upgrade)
 
+@onready var name_text: RichTextLabel = $"Name Text"
 @onready var description_text: Label = $"Text Panel/Description Text"
-@onready var name_text: Label = $"Name Text"
 @onready var icon_btn: Button  = $"Upgrade Icon"
 
 var upgrade_data: Variant
