@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="UpgradeStatData" format=3 uid="uid://i405cc6r8gl8"]
+
+[ext_resource type="Script" uid="uid://dmcf32uoauw2k" path="res://scripts/upgrades/upgrade_stat_data.gd" id="1_p7bao"]
+[ext_resource type="Texture2D" uid="uid://6e8baxj0mta1" path="res://sprites/equipment/rpg_icons_free/scissors.png" id="2_b7yv0"]
+
+[resource]
+script = ExtResource("1_p7bao")
+stat_type = 4
+amount = 5.0
+value_type = 1
+upgrade_name = "Attack Speed"
+upgrade_description = "increases how fast you attack"
+upgrade_icon = ExtResource("2_b7yv0")
+metadata/_custom_type_script = "uid://dmcf32uoauw2k"

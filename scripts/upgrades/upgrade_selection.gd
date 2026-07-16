@@ -27,15 +27,28 @@ func create_upgrades():
 	visible = true
 	get_tree().paused = true
 
+func get_random_unique(upgrade_pool: Array, upgrades_selected: Array[int]):
+	var random_upgrade: int = randi_range(0, upgrade_pool.size()-1)
+
+	if upgrades_selected.has(random_upgrade):
+		return get_random_unique(upgrade_pool, upgrades_selected)
+	else:
+		return random_upgrade
+
 func generate_cards():
 	var i: int = 0
 
 	var upgrade_pool: Array = upgrade_stats
+	var upgrades_selected: Array[int] = []
+	
 	if upgrade_type == UpgradeType.WEAPON:
 		upgrade_pool = upgrade_weapons
 		
 	for card in cards:
-		var random_upgrade: int = randi_range(0, upgrade_pool.size()-1)
+		
+		var random_upgrade: int = get_random_unique(upgrade_pool, upgrades_selected)
+		upgrades_selected.push_back(random_upgrade)
+		
 #		print("upgrade index: %d" % random_upgrade)
 		card.init_card(upgrade_pool[random_upgrade], upgrade_type)
 #		print("card: %s" % card.name)

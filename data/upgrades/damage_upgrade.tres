@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="UpgradeStatData" format=3 uid="uid://b4e8cvlh1a7bx"]
+
+[ext_resource type="Script" uid="uid://dmcf32uoauw2k" path="res://scripts/upgrades/upgrade_stat_data.gd" id="1_uiwrk"]
+[ext_resource type="Texture2D" uid="uid://rshs7c5wpc2r" path="res://sprites/equipment/rpg_icons_free/hammer.png" id="2_hverd"]
+
+[resource]
+script = ExtResource("1_uiwrk")
+upgrade_name = "damage upgrade"
+upgrade_description = "increases damage of all weapons and attacks"
+upgrade_icon = ExtResource("2_hverd")
+metadata/_custom_type_script = "uid://dmcf32uoauw2k"
