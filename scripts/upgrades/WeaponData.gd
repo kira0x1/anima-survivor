@@ -10,6 +10,7 @@ class_name WeaponData
 @export var range_type: RangeType
 @export var base_range: float = 100.0
 @export var base_firerate: float = 0.8
+@export var base_damage: float = 10.0
 
 @export var item_scene: PackedScene
 

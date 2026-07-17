@@ -1,23 +1,23 @@
 [gd_scene format=4 uid="uid://cc76cb4gm2gpx"]
 
-[ext_resource type="PackedScene" uid="uid://dhi51bix0ceok" path="res://scenes/ui/player_xp_ui.tscn" id="1_dinhu"]
-[ext_resource type="PackedScene" uid="uid://dm1lfrvkah64e" path="res://scenes/ui/pause_screen.tscn" id="1_kvpfn"]
-[ext_resource type="TileSet" uid="uid://dm4u0eg76wk5r" path="res://sprites/props/props.tres" id="1_yqjtg"]
-[ext_resource type="PackedScene" uid="uid://dxx3v5mga07pt" path="res://scenes/player.tscn" id="2_lnu2h"]
-[ext_resource type="PackedScene" uid="uid://bqawohm3el6jy" path="res://scenes/ui/inventory/inventory_ui.tscn" id="3_kvuet"]
-[ext_resource type="PackedScene" uid="uid://ddr6joisppuo1" path="res://scenes/spawner.tscn" id="3_lnu2h"]
-[ext_resource type="Script" uid="uid://dmcf32uoauw2k" path="res://scripts/upgrades/upgrade_stat_data.gd" id="3_ssvqc"]
-[ext_resource type="Resource" uid="uid://drtu41ltfc3sx" path="res://data/upgrades/move_upgrade.tres" id="4_264po"]
-[ext_resource type="Resource" uid="uid://ch8cydak1p6oh" path="res://data/upgrades/range_upgrade.tres" id="5_1kice"]
-[ext_resource type="PackedScene" uid="uid://blknqccvyr6rm" path="res://scenes/ui/stats_ui.tscn" id="5_gee14"]
-[ext_resource type="Script" uid="uid://cs2tfdii6h4bt" path="res://scripts/ui/health_bar.gd" id="5_iywne"]
-[ext_resource type="Resource" uid="uid://b4e8cvlh1a7bx" path="res://data/upgrades/damage_upgrade.tres" id="6_5newe"]
-[ext_resource type="Resource" uid="uid://i405cc6r8gl8" path="res://data/upgrades/attack_speed_upgrade.tres" id="7_37s47"]
-[ext_resource type="PackedScene" uid="uid://df4unlwix45ey" path="res://scenes/ui/action_bar.tscn" id="7_gee14"]
-[ext_resource type="Resource" uid="uid://cvhrfgjik264p" path="res://data/characters/fox_character.tres" id="7_vtaks"]
-[ext_resource type="PackedScene" uid="uid://bkltruarjgmf0" path="res://scenes/xp_orb.tscn" id="9_0tnpc"]
-[ext_resource type="PackedScene" uid="uid://b8yqrqhndmi1k" path="res://scenes/ui/upgrade_selection.tscn" id="10_vtaks"]
-[ext_resource type="Script" uid="uid://cpwhcg7vstt0b" path="res://scripts/spawn_manager.gd" id="12_kvuet"]
+[ext_resource type="PackedScene" uid="uid://dhi51bix0ceok" path="res://Scenes/ui/player_xp_ui.tscn" id="1_ssvqc"]
+[ext_resource type="PackedScene" uid="uid://b8yqrqhndmi1k" path="res://Scenes/ui/upgrade_selection.tscn" id="2_264po"]
+[ext_resource type="Script" uid="uid://dmcf32uoauw2k" path="res://scripts/upgrades/upgrade_stat_data.gd" id="3_1kice"]
+[ext_resource type="Resource" uid="uid://drtu41ltfc3sx" path="res://data/upgrades/move_upgrade.tres" id="4_5newe"]
+[ext_resource type="Resource" uid="uid://ch8cydak1p6oh" path="res://data/upgrades/range_upgrade.tres" id="5_37s47"]
+[ext_resource type="Resource" uid="uid://b4e8cvlh1a7bx" path="res://data/upgrades/damage_upgrade.tres" id="6_bt5mj"]
+[ext_resource type="Resource" uid="uid://i405cc6r8gl8" path="res://data/upgrades/attack_speed_upgrade.tres" id="7_e1j6l"]
+[ext_resource type="PackedScene" uid="uid://bqawohm3el6jy" path="res://Scenes/ui/inventory/inventory_ui.tscn" id="8_pl11u"]
+[ext_resource type="PackedScene" uid="uid://dm1lfrvkah64e" path="res://Scenes/ui/pause_screen.tscn" id="9_bhx41"]
+[ext_resource type="PackedScene" uid="uid://blknqccvyr6rm" path="res://Scenes/ui/stats_ui.tscn" id="10_qnb83"]
+[ext_resource type="Script" uid="uid://cs2tfdii6h4bt" path="res://scripts/ui/health_bar.gd" id="11_sww3w"]
+[ext_resource type="PackedScene" uid="uid://df4unlwix45ey" path="res://Scenes/ui/action_bar.tscn" id="12_suyxu"]
+[ext_resource type="TileSet" uid="uid://dm4u0eg76wk5r" path="res://sprites/props/props.tres" id="13_sgl2t"]
+[ext_resource type="PackedScene" uid="uid://dxx3v5mga07pt" path="res://Scenes/player.tscn" id="14_qouja"]
+[ext_resource type="Resource" uid="uid://cvhrfgjik264p" path="res://data/characters/fox_character.tres" id="15_wljb1"]
+[ext_resource type="PackedScene" uid="uid://bkltruarjgmf0" path="res://Scenes/xp_orb.tscn" id="16_v2yb1"]
+[ext_resource type="Script" uid="uid://cpwhcg7vstt0b" path="res://scripts/spawn_manager.gd" id="17_js0lu"]
+[ext_resource type="PackedScene" uid="uid://ddr6joisppuo1" path="res://Scenes/spawner.tscn" id="18_gxtfn"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lbhrr"]
 bg_color = Color(0, 0, 0, 0.09803922)
@@ -49,7 +49,7 @@ color = Color(0.72067666, 0.7173909, 0.6480817, 1)
 
 [node name="PlayerUI Canvas" type="CanvasLayer" parent="." unique_id=1512424151]
 
-[node name="player_xp_ui" parent="PlayerUI Canvas" unique_id=1321787709 instance=ExtResource("1_dinhu")]
+[node name="player_xp_ui" parent="PlayerUI Canvas" unique_id=1321787709 instance=ExtResource("1_ssvqc")]
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
@@ -62,24 +62,24 @@ offset_bottom = -11.0
 grow_horizontal = 2
 grow_vertical = 0
 
-[node name="Upgrade Selection" parent="PlayerUI Canvas" unique_id=1789212969 instance=ExtResource("10_vtaks")]
+[node name="Upgrade Selection" parent="PlayerUI Canvas" unique_id=1789212969 instance=ExtResource("2_264po")]
 process_mode = 3
 visible = false
 z_index = 3
 give_upgrade_on_start = true
 upgrade_type = 0
-upgrade_stats = Array[ExtResource("3_ssvqc")]([ExtResource("4_264po"), ExtResource("5_1kice"), ExtResource("6_5newe"), ExtResource("7_37s47")])
+upgrade_stats = Array[ExtResource("3_1kice")]([ExtResource("4_5newe"), ExtResource("5_37s47"), ExtResource("6_bt5mj"), ExtResource("7_e1j6l")])
 
-[node name="InventoryUI" parent="PlayerUI Canvas" unique_id=544077475 instance=ExtResource("3_kvuet")]
+[node name="InventoryUI" parent="PlayerUI Canvas" unique_id=544077475 instance=ExtResource("8_pl11u")]
 process_mode = 3
 visible = false
 z_index = 3
 
-[node name="Pause Screen" parent="PlayerUI Canvas" unique_id=877117235 instance=ExtResource("1_kvpfn")]
+[node name="Pause Screen" parent="PlayerUI Canvas" unique_id=877117235 instance=ExtResource("9_bhx41")]
 visible = false
 z_index = 2
 
-[node name="stats_ui" parent="PlayerUI Canvas" unique_id=803843134 instance=ExtResource("5_gee14")]
+[node name="stats_ui" parent="PlayerUI Canvas" unique_id=803843134 instance=ExtResource("10_qnb83")]
 visible = false
 z_index = 3
 offset_left = 15.0
@@ -96,7 +96,7 @@ theme_override_styles/background = SubResource("StyleBoxFlat_lbhrr")
 theme_override_styles/fill = SubResource("StyleBoxFlat_iywne")
 value = 100.0
 show_percentage = false
-script = ExtResource("5_iywne")
+script = ExtResource("11_sww3w")
 
 [node name="health_text" type="Label" parent="PlayerUI Canvas/health_bar" unique_id=1617732849]
 layout_mode = 1
@@ -110,7 +110,7 @@ text = "100 / 100"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Actionbar" parent="PlayerUI Canvas" unique_id=1406471244 instance=ExtResource("7_gee14")]
+[node name="Actionbar" parent="PlayerUI Canvas" unique_id=1406471244 instance=ExtResource("12_suyxu")]
 anchors_preset = -1
 offset_left = -90.0
 offset_top = -36.0
@@ -126,26 +126,26 @@ scale = Vector2(2, 2)
 y_sort_enabled = true
 texture_filter = 1
 tile_map_data = PackedByteArray("AAAGAAcAAAACAAAAAAAWAAUAAAACAAMAAAANAAgAAAACAAMAAAAVAA4AAAAHAAQAAAAaAA4AAAACAAMAABAaAAsAAAAHAAAAAAAJAAoAAAAHAAAAAAAKAA0AAAACAAMAAAALAA0AAAAHAAYAAAAKAA4AAAAHAAYAAAAbAAsAAAAHAAYAAAAXAAUAAAAHAAYAAAAVAAYAAAAHAAYAAAAMAAgAAAAHAAYAAAAPAAgAAAAHAAYAAAANAAoAAAAHAAYAAAAbAAwAAAAHAAMAAAANAA8AAAAHAAQAAAAbAAIAAAAHAAAAAAANAAIAAAAHAAAAAAAEAAQAAAAHAAAAAAAWAAcAAAABAAQAAAAQAA4AAAABAAQAABAWABEAAAACAAUAAAAWAAoAAAAHAAYAAAA=")
-tile_set = ExtResource("1_yqjtg")
+tile_set = ExtResource("13_sgl2t")
 
-[node name="Player" parent="." unique_id=1222682647 instance=ExtResource("2_lnu2h")]
+[node name="Player" parent="." unique_id=1222682647 instance=ExtResource("14_qouja")]
 unique_name_in_owner = true
 position = Vector2(575, 318)
-player_character = ExtResource("7_vtaks")
+player_character = ExtResource("15_wljb1")
 
 [node name="CollisionShape2D" parent="Player" index="1" unique_id=2027810709]
 visible = false
 
-[node name="xp_orb" parent="." unique_id=2033809023 instance=ExtResource("9_0tnpc")]
+[node name="xp_orb" parent="." unique_id=2033809023 instance=ExtResource("16_v2yb1")]
 position = Vector2(477, 361)
 
-[node name="xp_orb2" parent="." unique_id=1743396755 instance=ExtResource("9_0tnpc")]
+[node name="xp_orb2" parent="." unique_id=1743396755 instance=ExtResource("16_v2yb1")]
 position = Vector2(556, 278)
 
 [node name="spawn_manager" type="Node2D" parent="." unique_id=1891769547]
-script = ExtResource("12_kvuet")
+script = ExtResource("17_js0lu")
 
-[node name="spawner" parent="spawn_manager" unique_id=1997197035 instance=ExtResource("3_lnu2h")]
+[node name="spawner" parent="spawn_manager" unique_id=1997197035 instance=ExtResource("18_gxtfn")]
 position = Vector2(824, 273)
 max_mobs_alive = 2
 

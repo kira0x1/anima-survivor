@@ -70,6 +70,12 @@ func give_stat(upgrade_stat_data: UpgradeStatData):
 		stats.weapon_range_bonus += upgrade_stat_data.amount
 	elif stat_type == UpgradeStatData.StatType.ATTACK_SPEED:
 		stats.attack_speed_bonus += upgrade_stat_data.amount
+	elif stat_type == UpgradeStatData.StatType.DAMAGE:
+		stats.global_damage_bonus += upgrade_stat_data.amount
+	elif stat_type == UpgradeStatData.StatType.RANGED_DAMAGE:
+		stats.ranged_attack_bonus += upgrade_stat_data.amount
+	elif stat_type == UpgradeStatData.StatType.MELEE_DAMAGE:
+		stats.melee_attack_bonus += upgrade_stat_data.amount
 	
 	on_stat_change.emit()
 

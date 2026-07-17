@@ -7,7 +7,9 @@ enum StatType {
 	STAMINA,
 	RANGE,
 	DAMAGE,
-	ATTACK_SPEED
+	ATTACK_SPEED,
+	RANGED_DAMAGE,
+	MELEE_DAMAGE
 }
 
 enum StatValueType {
