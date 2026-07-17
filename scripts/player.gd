@@ -64,6 +64,8 @@ func level_up():
 func give_stat(upgrade_stat_data: UpgradeStatData):
 	var stat_type: UpgradeStatData.StatType = upgrade_stat_data.stat_type
 	
+	print("stat gained: %s, amount: %d" % [UpgradeStatData.StatType.keys()[upgrade_stat_data.stat_type], upgrade_stat_data.amount])
+	
 	if stat_type == UpgradeStatData.StatType.SPEED:
 		stats.speed += upgrade_stat_data.amount
 	elif stat_type == UpgradeStatData.StatType.RANGE:

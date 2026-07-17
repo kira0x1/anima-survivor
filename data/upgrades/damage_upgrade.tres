@@ -5,6 +5,7 @@
 
 [resource]
 script = ExtResource("1_uiwrk")
+stat_type = 3
 upgrade_name = "damage upgrade"
 upgrade_description = "increases damage of all weapons and attacks"
 upgrade_icon = ExtResource("2_hverd")
