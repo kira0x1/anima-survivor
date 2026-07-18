@@ -12,7 +12,6 @@
 [ext_resource type="PackedScene" uid="uid://blknqccvyr6rm" path="res://Scenes/ui/stats_ui.tscn" id="10_qnb83"]
 [ext_resource type="Script" uid="uid://cs2tfdii6h4bt" path="res://scripts/ui/health_bar.gd" id="11_sww3w"]
 [ext_resource type="PackedScene" uid="uid://df4unlwix45ey" path="res://Scenes/ui/action_bar.tscn" id="12_suyxu"]
-[ext_resource type="PackedScene" uid="uid://c4dy1xcnfatf2" path="res://scenes/ui/damage_numbers.tscn" id="13_264po"]
 [ext_resource type="TileSet" uid="uid://dm4u0eg76wk5r" path="res://sprites/props/props.tres" id="13_sgl2t"]
 [ext_resource type="PackedScene" uid="uid://dxx3v5mga07pt" path="res://Scenes/player.tscn" id="14_qouja"]
 [ext_resource type="Resource" uid="uid://cvhrfgjik264p" path="res://data/characters/fox_character.tres" id="15_wljb1"]
@@ -116,9 +115,6 @@ offset_left = -90.0
 offset_top = -36.0
 offset_right = 90.0
 offset_bottom = -10.0
-
-[node name="damage_numbers" parent="." unique_id=933904567 instance=ExtResource("13_264po")]
-position = Vector2(573, 304)
 
 [node name="Tilemaps" type="Node2D" parent="." unique_id=1134287207]
 z_as_relative = false

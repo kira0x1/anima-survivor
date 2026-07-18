@@ -1,5 +1,7 @@
 extends Marker2D
 
+class_name DamageText
+
 var move_speed: float = 60.0
 var move_distance: float = 30.0
 var start_shrink_time: float = 0.3
@@ -21,5 +23,4 @@ func set_damage(damage: float):
 	label.text = "-%d" % damage
 
 func _on_timer_timeout() -> void:
-	print("damage number time out")
 	queue_free()

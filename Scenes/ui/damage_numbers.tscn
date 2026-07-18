@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c4dy1xcnfatf2"]
 
-[ext_resource type="Script" uid="uid://c8gluvkxayjr5" path="res://scripts/ui/damage_numbers.gd" id="1_evaxg"]
+[ext_resource type="Script" uid="uid://c8gluvkxayjr5" path="damage_text.gd" id="1_evaxg"]
 
 [sub_resource type="FontVariation" id="FontVariation_evaxg"]
 

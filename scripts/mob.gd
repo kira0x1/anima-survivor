@@ -54,12 +54,21 @@ func take_damage(damage: float) -> void:
 		return
 		
 	health -= damage;
-
 	if health <= 0.0:
 		health = 0.0;
 		handle_death()
 	
+	create_damage_text(damage)
 	on_damage.emit()
+
+func create_damage_text(damage_taken: float):
+	const damage_text_scene: PackedScene = preload("res://scenes/ui/damage_numbers.tscn"	)
+	var damage_text:  = damage_text_scene.instantiate()
+	get_tree().root.get_node("Game").add_child(damage_text)
+	var spawn_pos: Vector2 = global_position
+	spawn_pos.y += 10.0
+	damage_text.global_position = spawn_pos
+	damage_text.set_damage(damage_taken)
 
 func handle_death():
 	is_dead = true
