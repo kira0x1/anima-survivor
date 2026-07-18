@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://c4dy1xcnfatf2"]
+
+[ext_resource type="Script" uid="uid://c8gluvkxayjr5" path="res://scripts/ui/damage_numbers.gd" id="1_evaxg"]
+
+[sub_resource type="FontVariation" id="FontVariation_evaxg"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_evaxg"]
+font_size = 26
+font_color = Color(0.7789448, 0.18433988, 0.2757037, 1)
+outline_size = 4
+outline_color = Color(0.34434754, 0.050178923, 0.09635339, 1)
+shadow_size = 4
+shadow_color = Color(0.34509805, 0.050980393, 0.09803922, 1)
+
+[node name="damage_numbers" type="Marker2D" unique_id=933904567]
+z_index = 25
+script = ExtResource("1_evaxg")
+
+[node name="Label" type="Label" parent="." unique_id=1899355104]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -18.0
+offset_right = 20.0
+offset_bottom = 18.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = SubResource("FontVariation_evaxg")
+text = "-50"
+label_settings = SubResource("LabelSettings_evaxg")
+
+[node name="Timer" type="Timer" parent="." unique_id=1602129449]
+wait_time = 0.5
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

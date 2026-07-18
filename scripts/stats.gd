@@ -22,7 +22,7 @@ func calculate_attack_speed(weapon: WeaponData) -> float:
 	return weapon.base_firerate + attack_speed_bonus
 
 func calculate_attack_damage(weapon: WeaponData) -> float:
-	var damage = weapon.base_damage + global_damage_bonus
+	var damage: float = weapon.base_damage + global_damage_bonus
 	
 	if weapon.range_type == WeaponData.RangeType.MELEE:
 		damage += melee_attack_bonus

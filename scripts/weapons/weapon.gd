@@ -12,8 +12,12 @@ const MAX_RANGE: float = 600.0
 @export var attack_speed: float = 0.8;
 @export var damage: float = 10.0;
 
+# damage cached after calculating all stats + bonuses + weapons base damage + player characters base damage
+var total_damage: float = 0.0;
+
 var has_target: bool = false
 var target: Mob
+var weapon_data: WeaponData
 
 func _ready() -> void:
 	var timer: Timer = %Timer
@@ -50,6 +54,8 @@ func can_attack() -> bool:
 	elif target_distance > MAX_RANGE: return false
 	else: return true
 
+func calculate_total_damage(stats: Stats):
+	self.total_damage = stats.calculate_attack_damage(self.weapon_data)
 
 func attack() -> void:
 	pass

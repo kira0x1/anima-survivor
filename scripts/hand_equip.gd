@@ -19,4 +19,5 @@ func _on_player_on_gained_weapon(weapon_data: WeaponData) -> void:
 			var weapon_spawn: Node = weapon_data.item_scene.instantiate()
 			add_child(weapon_spawn)
 			item_spawned = weapon_spawn
+			weapon_spawn.weapon_data = weapon_data
 			has_spawned_item = true
