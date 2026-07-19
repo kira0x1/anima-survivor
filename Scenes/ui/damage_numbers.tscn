@@ -1,15 +1,9 @@
 [gd_scene format=3 uid="uid://c4dy1xcnfatf2"]
 
 [ext_resource type="Script" uid="uid://c8gluvkxayjr5" path="res://scripts/ui/damage_text.gd" id="1_evaxg"]
+[ext_resource type="LabelSettings" uid="uid://dg26k68ame5ob" path="res://scenes/ui/damage_label_crit.tres" id="2_7j330"]
 
 [sub_resource type="FontVariation" id="FontVariation_evaxg"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_evaxg"]
-font_color = Color(0.7789448, 0.18433988, 0.2757037, 1)
-outline_size = 4
-outline_color = Color(0.34434754, 0.050178923, 0.09635339, 1)
-shadow_size = 4
-shadow_color = Color(0.34509805, 0.050980393, 0.09803922, 1)
 
 [node name="damage_numbers" type="Marker2D" unique_id=933904567]
 z_index = 25
@@ -23,7 +17,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = SubResource("FontVariation_evaxg")
 text = "-50"
-label_settings = SubResource("LabelSettings_evaxg")
+label_settings = ExtResource("2_7j330")
 
 [node name="Timer" type="Timer" parent="." unique_id=1602129449]
 wait_time = 0.8

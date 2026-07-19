@@ -24,7 +24,7 @@ func calculate_velocity() -> float:
 func calculate_attack_speed(weapon: WeaponData) -> float:
 	return weapon.base_firerate + attack_speed_bonus
 
-func calculate_attack_damage(weapon: WeaponData) -> float:
+func calculate_attack_damage(weapon: WeaponData) -> DamageInfo:
 	var r: float = randf()
 	var is_crit: bool = r <= crit_chance
 	
@@ -32,11 +32,15 @@ func calculate_attack_damage(weapon: WeaponData) -> float:
 	if is_crit:
 		damage *= crit_multiplier
 		
-	print("damage = (crit: %s, %0.2f) [weapon: %d] + [global: %d]" % [is_crit, r, weapon.base_damage, global_damage_bonus])
+#	print("damage = (crit: %s, %0.2f) [weapon: %d] + [global: %d]" % [is_crit, r, weapon.base_damage, global_damage_bonus])
 	
 	if weapon.range_type == WeaponData.RangeType.MELEE:
 		damage += melee_attack_bonus
 	else:
 		damage += ranged_attack_bonus
 		
-	return damage
+	var damage_info: DamageInfo = DamageInfo.new()
+	damage_info.damage	= damage
+	damage_info.is_crit = is_crit
+	
+	return damage_info

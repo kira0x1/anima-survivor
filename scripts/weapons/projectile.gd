@@ -3,6 +3,7 @@ extends Area2D
 const SPEED: int = 760
 const RANGE: int = 1200
 var damage: float = 5.0
+var damage_info: DamageInfo
 
 var has_hit
 var travel_distance: int = 0
@@ -25,6 +26,6 @@ func _on_body_entered(body: Node2D) -> void:
 		
 	has_hit = true
 	if body.has_method("take_damage"):
-		body.take_damage(damage)
+		body.take_damage(damage_info)
 	
 	queue_free()

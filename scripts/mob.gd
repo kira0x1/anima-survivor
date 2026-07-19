@@ -49,26 +49,26 @@ func get_player_direction() -> Vector2:
 	var player_direction: Vector2 = to_local(player.global_transform.origin).normalized()
 	return player_direction
 
-func take_damage(damage: float) -> void:
+func take_damage(damage_info: DamageInfo) -> void:
 	if is_dead:
 		return
 		
-	health -= damage;
+	health -= damage_info.damage;
 	if health <= 0.0:
 		health = 0.0;
 		handle_death()
 	
-	create_damage_text(damage)
+	create_damage_text(damage_info)
 	on_damage.emit()
 
-func create_damage_text(damage_taken: float):
+func create_damage_text(damage_info: DamageInfo):
 	const damage_text_scene: PackedScene = preload("res://scenes/ui/damage_numbers.tscn"	)
-	var damage_text:  = damage_text_scene.instantiate()
+	var damage_text: DamageText = damage_text_scene.instantiate()
 	get_tree().root.get_node("Game").add_child(damage_text)
 	var spawn_pos: Vector2 = global_position
 	spawn_pos.y += 10.0
 	damage_text.global_position = spawn_pos
-	damage_text.set_damage(damage_taken)
+	damage_text.set_damage(damage_info)
 
 func handle_death():
 	is_dead = true
