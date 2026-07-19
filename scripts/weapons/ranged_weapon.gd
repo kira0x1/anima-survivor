@@ -11,6 +11,6 @@ func attack() -> void:
 	var new_arrow: Node = ARROW.instantiate()
 	new_arrow.global_position = %ShootingPoint.global_position
 	new_arrow.global_rotation = %ShootingPoint.global_rotation
-	new_arrow.damage = damage
-	
+	calculate_total_damage()
+	new_arrow.damage = total_damage
 	%ShootingPoint.add_child(new_arrow)

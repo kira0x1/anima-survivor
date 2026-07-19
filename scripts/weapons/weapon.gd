@@ -18,6 +18,7 @@ var total_damage: float = 0.0;
 var has_target: bool = false
 var target: Mob
 var weapon_data: WeaponData
+var stats: Stats
 
 func _ready() -> void:
 	var timer: Timer = %Timer
@@ -54,7 +55,7 @@ func can_attack() -> bool:
 	elif target_distance > MAX_RANGE: return false
 	else: return true
 
-func calculate_total_damage(stats: Stats):
+func calculate_total_damage():
 	self.total_damage = stats.calculate_attack_damage(self.weapon_data)
 
 func attack() -> void:

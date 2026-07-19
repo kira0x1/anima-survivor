@@ -20,4 +20,5 @@ func _on_player_on_gained_weapon(weapon_data: WeaponData) -> void:
 			add_child(weapon_spawn)
 			item_spawned = weapon_spawn
 			weapon_spawn.weapon_data = weapon_data
+			weapon_spawn.stats = get_parent().stats
 			has_spawned_item = true
