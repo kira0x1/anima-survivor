@@ -68,6 +68,8 @@ offset_left = 1.0999908
 offset_right = -1.0000153
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 10
+text = "Bow"
 
 [node name="Text Panel" type="Panel" parent="." unique_id=1410290382]
 layout_mode = 1

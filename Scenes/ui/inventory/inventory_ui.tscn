@@ -38,12 +38,15 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_4ycse")
 
 [node name="BonusPanel" type="Panel" parent="MainPanel" unique_id=252255136]
 layout_mode = 1
-anchors_preset = 4
+anchors_preset = 6
+anchor_left = 1.0
 anchor_top = 0.5
+anchor_right = 1.0
 anchor_bottom = 0.5
-offset_top = -277.0
-offset_right = 213.0
-offset_bottom = -71.5
+offset_left = -331.0
+offset_top = -134.0
+offset_bottom = 134.0
+grow_horizontal = 0
 grow_vertical = 2
 theme_override_styles/panel = ExtResource("2_7cyi0")
 script = ExtResource("2_nuief")
@@ -52,7 +55,7 @@ script = ExtResource("2_nuief")
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_bottom = 27.0
+offset_bottom = 33.0
 grow_horizontal = 2
 theme_override_colors/font_color = Color(1, 0.34997043, 0.34794325, 1)
 theme_override_font_sizes/font_size = 12
@@ -63,10 +66,10 @@ vertical_alignment = 1
 [node name="BonusSlots" type="Panel" parent="MainPanel/BonusPanel" unique_id=1602647282]
 layout_mode = 1
 anchors_preset = -1
-anchor_top = 0.16000001
+anchor_top = 0.12200001
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -0.040002823
+offset_top = -0.036001205
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_7cyi0")
@@ -90,12 +93,14 @@ theme_override_constants/v_separation = 3
 
 [node name="WeaponPanel" type="Panel" parent="MainPanel" unique_id=163813593]
 layout_mode = 1
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_top = -56.5
-offset_right = 538.0
-offset_bottom = 224.5
+anchors_preset = -1
+anchor_top = 0.293
+anchor_right = 0.39200002
+anchor_bottom = 0.823
+offset_top = -0.32200623
+offset_right = 0.25598145
+offset_bottom = 0.0579834
+grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("2_drsq2")
 
@@ -110,7 +115,7 @@ offset_right = -10.0
 offset_bottom = -10.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/separation = 16
+theme_override_constants/separation = 4
 alignment = 1
 
 [node name="Weapon Card" parent="MainPanel/WeaponPanel/WeaponGrid" unique_id=113578228 instance=ExtResource("1_7nagc")]
