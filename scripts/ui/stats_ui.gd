@@ -27,6 +27,6 @@ func _on_player_on_xp_change() -> void:
 func _on_player_on_level_up() -> void:
 	level_label.text = "lvl %d" % %Player.stats.level
 
-func _on_player_on_stat_change() -> void:
+func _on_player_gained_stat_upgrade(stat_upgrade: UpgradeData) -> void:
 	refresh_stat_ui()
 	print("stat speed: %d" % stats.speed)

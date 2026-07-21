@@ -27,7 +27,7 @@ func create_upgrades():
 	visible = true
 	get_tree().paused = true
 
-func get_random_unique(upgrade_pool: Array, upgrades_selected: Array[int]):
+func get_random_unique(upgrade_pool: Array, upgrades_selected: Array[int]) -> int:
 	var random_upgrade: int = randi_range(0, upgrade_pool.size()-1)
 
 	if upgrades_selected.has(random_upgrade):

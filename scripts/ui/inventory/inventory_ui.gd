@@ -10,5 +10,6 @@ func _input(event: InputEvent) -> void:
 func toggle_ui() -> void:
 	visible = !visible
 
-func _on_player_on_gained_weapon(weapon_data: WeaponData) -> void:
+func _on_player_gained_weapon(weapon_data: WeaponData) -> void:
 	weapon_inventory.on_player_gained_weapon(weapon_data)
+

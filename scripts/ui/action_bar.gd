@@ -73,10 +73,9 @@ func get_free_slot() -> int:
 
 	return free_slot_index
 
-func _on_player_on_gained_weapon(weapon_data: WeaponData) -> void:
+func _on_player_gained_weapon(weapon_data: WeaponData) -> void:
 	if !has_free_slots():
 		print("no free slots found")
 	else:
 		var free_slot_index: int = get_free_slot()
 		slots[free_slot_index].set_item(weapon_data)
-		

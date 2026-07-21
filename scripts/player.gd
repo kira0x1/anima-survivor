@@ -6,8 +6,8 @@ signal on_level_up
 signal on_damage
 signal on_heal
 signal on_xp_change
-signal on_stat_change
-signal on_gained_weapon(weapon_data: WeaponData)
+signal gained_stat_upgrade(stat_upgrade: UpgradeData)
+signal gained_weapon(weapon_data: WeaponData)
 
 @export var player_character: PlayerCharacter
 @onready var player_anim: AnimatedSprite2D = $Colorizer/Sprite
@@ -48,7 +48,7 @@ func take_damage(damage: float) -> void:
 	on_damage.emit()
 
 func give_weapon(weapon_data: WeaponData):
-	on_gained_weapon.emit(weapon_data)
+	gained_weapon.emit(weapon_data)
 
 func give_xp(xp: float):
 	stats.xp += xp
@@ -81,7 +81,7 @@ func give_stat(upgrade_stat_data: UpgradeStatData):
 	elif stat_type == UpgradeStatData.StatType.MELEE_DAMAGE:
 		stats.melee_attack_bonus += upgrade_stat_data.amount
 	
-	on_stat_change.emit()
+	gained_stat_upgrade.emit(upgrade_stat_data)
 
 func heal(amount: float):
 	health += amount
