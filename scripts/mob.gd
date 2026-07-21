@@ -8,6 +8,7 @@ signal on_death(mob: Mob)
 @onready var anim: Node = get_node("sprite")
 @onready var aggro_detector: Area2D = $"aggro_radius"
 @onready var loot_table: LootTable = $loot_table
+@onready var death_despawn_timer: Timer = $despawn_timer
 
 @export var attack_damage: float = 20.0
 
@@ -75,3 +76,7 @@ func handle_death():
 	$CollisionShape2D.set_deferred("disabled", true)
 	loot_table.spawn_item()
 	on_death.emit(self)
+	$despawn_timer.start()
+
+func _on_despawn_timer_timeout() -> void:
+	queue_free()
