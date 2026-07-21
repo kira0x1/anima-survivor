@@ -32,7 +32,7 @@ func has_free_slots() -> bool:
 	var found_free: bool = false
 	
 	for slot in bonus_slots:
-		if !slot.has_weapon:
+		if !slot.is_occupied:
 			found_free = true
 			break
 	
@@ -43,10 +43,17 @@ func get_free_slot() -> int:
 		
 	var i:int = 0
 	for slot in bonus_slots:
-		if !slot.has_weapon:
+		if !slot.is_occupied:
 			free_slot_index = i
 			break
 			
 		i = i + 1
 
 	return free_slot_index
+
+func on_player_gained_bonus(upgrade_data: UpgradeData):
+	if !has_free_slots():
+		print("no free slots found")
+	else:
+		var free_slot_index: int = get_free_slot()
+		bonus_slots[free_slot_index].set_item(upgrade_data)

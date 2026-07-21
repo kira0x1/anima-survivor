@@ -23,5 +23,5 @@ func deselect_slot():
 	
 func set_item(item):
 	slot_item = item
-	icon = slot_item.icon
+	icon = slot_item.upgrade_icon
 	is_occupied = true;

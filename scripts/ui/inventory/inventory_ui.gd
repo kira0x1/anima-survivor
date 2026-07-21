@@ -13,3 +13,5 @@ func toggle_ui() -> void:
 func _on_player_gained_weapon(weapon_data: WeaponData) -> void:
 	weapon_inventory.on_player_gained_weapon(weapon_data)
 
+func _on_player_gained_stat_upgrade(stat_upgrade: UpgradeData) -> void:
+	bonus_inventory.on_player_gained_bonus(stat_upgrade)

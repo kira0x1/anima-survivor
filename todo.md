@@ -5,7 +5,11 @@
 <p style="font-size: 16px; font-weight: 700; line-height: 1px">UI</p>
 
 - [ ] cooldown on actionbar_slot
-- [ ] update bonus inventory slot's on bonus gained
+
+
+- [ ] Bonus Inventory
+    - [x] update bonus inventory slot's on bonus gained
+    - [ ] show bonus tooltip
 
 
 
