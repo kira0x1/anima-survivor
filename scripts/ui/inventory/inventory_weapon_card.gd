@@ -15,3 +15,4 @@ func set_weapon(weapon: WeaponData):
 	name_text.text = weapon.name
 	description_text.text = weapon.description
 	has_weapon = true
+	
