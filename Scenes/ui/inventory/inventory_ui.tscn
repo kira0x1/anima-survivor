@@ -5,6 +5,7 @@
 [ext_resource type="StyleBox" uid="uid://svisfm0mgwpf" path="res://scenes/ui/inventory/inventory_panel_style.tres" id="2_7cyi0"]
 [ext_resource type="Script" uid="uid://bpnmqtvxdhk5v" path="res://scripts/ui/inventory/weapon_inventory_panel.gd" id="2_drsq2"]
 [ext_resource type="Script" uid="uid://du1gvyvgdwaf5" path="res://scripts/ui/inventory/bonus_inventory_panel.gd" id="2_nuief"]
+[ext_resource type="Script" uid="uid://c71ssr14b88w8" path="res://scripts/ui/inventory/items_inventory_panel.gd" id="6_ktvow"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4ycse"]
 bg_color = Color(0.28118682, 0.28118688, 0.28118682, 0)
@@ -27,27 +28,26 @@ script = ExtResource("1_4ycse")
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
-anchor_bottom = 0.94400007
+anchor_bottom = 0.90700006
 offset_left = 10.0
-offset_top = 15.0
+offset_top = 49.0
 offset_right = -10.0
-offset_bottom = -42.712036
-grow_horizontal = 2
-grow_vertical = 2
+offset_bottom = 0.26397705
+grow_horizontal = 0
 theme_override_styles/panel = SubResource("StyleBoxFlat_4ycse")
 
 [node name="BonusPanel" type="Panel" parent="MainPanel" unique_id=252255136]
 layout_mode = 1
-anchors_preset = 6
+anchors_preset = 3
 anchor_left = 1.0
-anchor_top = 0.5
+anchor_top = 1.0
 anchor_right = 1.0
-anchor_bottom = 0.5
-offset_left = -331.0
-offset_top = -134.0
-offset_bottom = 134.0
+anchor_bottom = 1.0
+offset_left = -574.0
+offset_top = -131.0
+offset_right = -314.0
 grow_horizontal = 0
-grow_vertical = 2
+grow_vertical = 0
 theme_override_styles/panel = ExtResource("2_7cyi0")
 script = ExtResource("2_nuief")
 
@@ -55,10 +55,10 @@ script = ExtResource("2_nuief")
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_bottom = 33.0
+offset_bottom = 17.0
 grow_horizontal = 2
 theme_override_colors/font_color = Color(1, 0.34997043, 0.34794325, 1)
-theme_override_font_sizes/font_size = 12
+theme_override_font_sizes/font_size = 10
 text = "Bonus's"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -66,10 +66,10 @@ vertical_alignment = 1
 [node name="BonusSlots" type="Panel" parent="MainPanel/BonusPanel" unique_id=1602647282]
 layout_mode = 1
 anchors_preset = -1
-anchor_top = 0.12200001
+anchor_top = 0.12900001
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -0.036001205
+offset_top = 0.0069942474
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_7cyi0")
@@ -93,15 +93,12 @@ theme_override_constants/v_separation = 3
 
 [node name="WeaponPanel" type="Panel" parent="MainPanel" unique_id=163813593]
 layout_mode = 1
-anchors_preset = -1
-anchor_top = 0.293
-anchor_right = 0.39200002
-anchor_bottom = 0.823
-offset_top = -0.32200623
-offset_right = 0.25598145
-offset_bottom = 0.0579834
-grow_horizontal = 2
-grow_vertical = 2
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -217.0
+offset_right = 460.0
+grow_vertical = 0
 script = ExtResource("2_drsq2")
 
 [node name="WeaponGrid" type="HBoxContainer" parent="MainPanel/WeaponPanel" unique_id=1043415150]
@@ -111,8 +108,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 10.0
 offset_top = 10.0
-offset_right = -10.0
-offset_bottom = -10.0
+offset_right = -9.0
+offset_bottom = -11.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 4
@@ -126,3 +123,58 @@ layout_mode = 2
 
 [node name="Weapon Card3" parent="MainPanel/WeaponPanel/WeaponGrid" unique_id=1432989494 instance=ExtResource("1_7nagc")]
 layout_mode = 2
+
+[node name="ItemsPanel" type="Panel" parent="MainPanel" unique_id=1428302692]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -310.0
+offset_top = -380.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_styles/panel = ExtResource("2_7cyi0")
+script = ExtResource("6_ktvow")
+slots_amount = 28
+
+[node name="Label" type="Label" parent="MainPanel/ItemsPanel" unique_id=144818389]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 28.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 0.34997043, 0.34794325, 1)
+theme_override_font_sizes/font_size = 12
+text = "Items"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ItemSlots" type="Panel" parent="MainPanel/ItemsPanel" unique_id=813382104]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.07300001
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 0.26000023
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_7cyi0")
+
+[node name="MarginContainer" type="MarginContainer" parent="MainPanel/ItemsPanel/ItemSlots" unique_id=173447196]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 6
+theme_override_constants/margin_top = 6
+theme_override_constants/margin_right = 6
+theme_override_constants/margin_bottom = 6
+
+[node name="ItemsGrid" type="GridContainer" parent="MainPanel/ItemsPanel/ItemSlots/MarginContainer" unique_id=443069938]
+layout_mode = 2
+theme_override_constants/h_separation = 3
+theme_override_constants/v_separation = 3
