@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://cycum2ij4bvu"]
+
+[ext_resource type="Texture2D" uid="uid://lger5r5sqytg" path="res://sprites/props/Props-All.png" id="1_fo166"]
+[ext_resource type="Script" uid="uid://brpe5d6n5154h" path="res://scripts/home_chest.gd" id="1_smh3m"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tye4b"]
+radius = 70.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5gcps"]
+
+[node name="HomeChest" type="Area2D" unique_id=1340857614]
+collision_layer = 0
+collision_mask = 4
+script = ExtResource("1_smh3m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=959609226]
+shape = SubResource("CircleShape2D_tye4b")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1997659898]
+texture_filter = 1
+scale = Vector2(2, 2)
+texture = ExtResource("1_fo166")
+region_enabled = true
+region_rect = Rect2(32, 0, 16, 16)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=90198707]
+shape = SubResource("CircleShape2D_5gcps")
