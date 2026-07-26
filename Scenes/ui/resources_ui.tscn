@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://y1nn03gkk3mk"]
+
+[ext_resource type="Script" uid="uid://xlas27hm822n" path="res://scripts/ui/resources_ui.gd" id="1_gwebn"]
+[ext_resource type="Texture2D" uid="uid://brix8k7lrf516" path="res://sprites/objects/Coin Sheet.png" id="2_clmgq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_clmgq"]
+atlas = ExtResource("2_clmgq")
+region = Rect2(3, 17, 10, 10)
+
+[node name="ResourcesUI" type="Control" unique_id=1515978790]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 166.0
+offset_bottom = 20.0
+size_flags_horizontal = 6
+size_flags_vertical = 6
+script = ExtResource("1_gwebn")
+
+[node name="ResourcesPanel" type="Panel" parent="." unique_id=516929750]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ResourceLabel" type="Control" parent="ResourcesPanel" unique_id=1459358862]
+layout_mode = 1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = -3.0
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ResourcesPanel/ResourceLabel" unique_id=662012939]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="ResourcesPanel/ResourceLabel/HBoxContainer" unique_id=362884446]
+texture_filter = 1
+layout_mode = 2
+texture = SubResource("AtlasTexture_clmgq")
+expand_mode = 2
+
+[node name="GoldLabel" type="Label" parent="ResourcesPanel/ResourceLabel/HBoxContainer" unique_id=1942579461]
+layout_mode = 2
+theme_override_font_sizes/font_size = 8
+text = "10"
+
+[node name="MarginContainer" type="MarginContainer" parent="ResourcesPanel" unique_id=1472709874]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 6
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 6
+theme_override_constants/margin_bottom = 4

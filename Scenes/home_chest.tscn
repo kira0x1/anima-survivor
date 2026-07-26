@@ -4,17 +4,13 @@
 [ext_resource type="Script" uid="uid://brpe5d6n5154h" path="res://scripts/home_chest.gd" id="1_smh3m"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_tye4b"]
-radius = 70.0
+radius = 42.047592
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_5gcps"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_smh3m"]
+size = Vector2(28, 26)
 
-[node name="HomeChest" type="Area2D" unique_id=1340857614]
-collision_layer = 0
-collision_mask = 4
+[node name="HomeChest" type="Node2D" unique_id=1330813891]
 script = ExtResource("1_smh3m")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=959609226]
-shape = SubResource("CircleShape2D_tye4b")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1997659898]
 texture_filter = 1
@@ -23,5 +19,17 @@ texture = ExtResource("1_fo166")
 region_enabled = true
 region_rect = Rect2(32, 0, 16, 16)
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=90198707]
-shape = SubResource("CircleShape2D_5gcps")
+[node name="Chest Area" type="Area2D" parent="." unique_id=1340857614]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chest Area" unique_id=959609226]
+shape = SubResource("CircleShape2D_tye4b")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=295360235]
+
+[node name="col_shape" type="CollisionShape2D" parent="StaticBody2D" unique_id=90198707]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_smh3m")
+
+[connection signal="body_entered" from="Chest Area" to="." method="_on_chest_area_body_entered"]

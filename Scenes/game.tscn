@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://bqawohm3el6jy" path="res://scenes/ui/inventory/inventory_ui.tscn" id="8_pl11u"]
 [ext_resource type="PackedScene" uid="uid://dm1lfrvkah64e" path="res://scenes/ui/pause_screen.tscn" id="9_bhx41"]
 [ext_resource type="PackedScene" uid="uid://blknqccvyr6rm" path="res://scenes/ui/stats_ui.tscn" id="10_qnb83"]
+[ext_resource type="PackedScene" uid="uid://y1nn03gkk3mk" path="res://scenes/ui/resources_ui.tscn" id="11_1kice"]
 [ext_resource type="Script" uid="uid://cs2tfdii6h4bt" path="res://scripts/ui/health_bar.gd" id="11_sww3w"]
 [ext_resource type="PackedScene" uid="uid://df4unlwix45ey" path="res://scenes/ui/action_bar.tscn" id="12_suyxu"]
 [ext_resource type="TileSet" uid="uid://dm4u0eg76wk5r" path="res://sprites/props/props.tres" id="13_sgl2t"]
@@ -74,6 +75,19 @@ upgrade_stats = Array[ExtResource("3_1kice")]([ExtResource("4_5newe"), ExtResour
 process_mode = 3
 visible = false
 z_index = 3
+
+[node name="ResourcesUI" parent="PlayerUI Canvas" unique_id=1515978790 instance=ExtResource("11_1kice")]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -216.0
+offset_top = -26.0
+offset_right = -106.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 0
 
 [node name="Pause Screen" parent="PlayerUI Canvas" unique_id=877117235 instance=ExtResource("9_bhx41")]
 visible = false
@@ -150,7 +164,7 @@ position = Vector2(824, 273)
 max_mobs_alive = 2
 
 [node name="HomeChest" parent="." unique_id=1340857614 instance=ExtResource("19_264po")]
-position = Vector2(494, 325)
+position = Vector2(529, 220)
 
 [connection signal="slot_changed" from="PlayerUI Canvas/Actionbar" to="Player/hand_equip" method="_on_actionbar_slot_changed"]
 [connection signal="gained_stat_upgrade" from="Player" to="PlayerUI Canvas/InventoryUI" method="_on_player_gained_stat_upgrade"]
