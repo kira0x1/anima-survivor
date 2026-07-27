@@ -144,7 +144,7 @@ tile_set = ExtResource("13_sgl2t")
 
 [node name="Player" parent="." unique_id=1222682647 instance=ExtResource("14_qouja")]
 unique_name_in_owner = true
-position = Vector2(575, 318)
+position = Vector2(856, -202)
 player_character = ExtResource("15_wljb1")
 
 [node name="CollisionShape2D" parent="Player" index="1" unique_id=2027810709]
