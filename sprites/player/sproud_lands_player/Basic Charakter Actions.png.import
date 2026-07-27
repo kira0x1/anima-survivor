@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cjkcjr05vu0ls"
-path="res://.godot/imported/death.png-38c1ac97cb5cfaf0978d1dffcd7f1ab8.ctex"
+uid="uid://c1e4vr44nymdl"
+path="res://.godot/imported/Basic Charakter Actions.png-7672c08f1ca9c2361c4f5c101d479cba.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/player/death.png"
-dest_files=["res://.godot/imported/death.png-38c1ac97cb5cfaf0978d1dffcd7f1ab8.ctex"]
+source_file="res://sprites/player/sproud_lands_player/Basic Charakter Actions.png"
+dest_files=["res://.godot/imported/Basic Charakter Actions.png-7672c08f1ca9c2361c4f5c101d479cba.ctex"]
 
 [params]
 

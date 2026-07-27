@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://ch61xemtdtsny"]
+
+[ext_resource type="Texture2D" uid="uid://bo36miecx14js" path="res://sprites/objects/TilesetProps02.png" id="1_tr32c"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7v3dx"]
+atlas = ExtResource("1_tr32c")
+region = Rect2(66, 33, 44, 31)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tr32c"]
+size = Vector2(84, 55)
+
+[node name="UpgradeWorkBench" type="Node2D" unique_id=1353999203]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=328255395]
+texture_filter = 1
+scale = Vector2(2.2, 2.2)
+texture = SubResource("AtlasTexture_7v3dx")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1640663182]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1890129869]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_tr32c")
