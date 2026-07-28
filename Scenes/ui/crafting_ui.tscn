@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://bs82bwgi3vta3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_efemu"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_edhdf"]
+load_path = "res://.godot/imported/tile_0014.png-a06008f4de14d610c761ee9c7160a509.ctex"
+
+[node name="CraftingUI" type="Control" unique_id=449987277]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="." unique_id=822846859]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -280.0
+offset_top = -200.0
+offset_right = 280.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_efemu")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Panel" unique_id=2019212938]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -70.0
+offset_top = -50.0
+offset_right = 70.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(4, 4)
+pivot_offset = Vector2(70, 50)
+texture = SubResource("CompressedTexture2D_edhdf")
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+
+[node name="CraftButton" type="Button" parent="Panel" unique_id=175873142]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -92.0
+offset_top = -56.0
+offset_right = 92.0
+offset_bottom = -25.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Craft"
