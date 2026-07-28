@@ -1,5 +1,8 @@
 [gd_scene format=3 uid="uid://bs82bwgi3vta3"]
 
+[ext_resource type="PackedScene" uid="uid://di67s5tgeefq2" path="res://scenes/ui/craft_slot.tscn" id="1_xjqke"]
+[ext_resource type="Texture2D" uid="uid://cr0vsnmb4o4ja" path="res://sprites/ui/kenny_pixel/Tiles/Large tiles/Thin outline/tile_0013_hover.png" id="3_4hpgr"]
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_efemu"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_edhdf"]
@@ -50,6 +53,54 @@ patch_margin_left = 3
 patch_margin_top = 3
 patch_margin_right = 3
 patch_margin_bottom = 3
+metadata/_edit_lock_ = true
+
+[node name="FlowContainer" type="FlowContainer" parent="Panel" unique_id=1563028532]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -156.0
+offset_top = -160.0
+offset_right = 1.5
+offset_bottom = -26.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+theme_override_constants/h_separation = 11
+theme_override_constants/v_separation = 4
+alignment = 1
+
+[node name="CraftSlot1" parent="Panel/FlowContainer" unique_id=958136872 instance=ExtResource("1_xjqke")]
+layout_mode = 2
+texture_pressed = ExtResource("3_4hpgr")
+
+[node name="CraftSlot2" parent="Panel/FlowContainer" unique_id=148034391 instance=ExtResource("1_xjqke")]
+layout_mode = 2
+texture_pressed = ExtResource("3_4hpgr")
+
+[node name="CraftSlot3" parent="Panel/FlowContainer" unique_id=689523430 instance=ExtResource("1_xjqke")]
+layout_mode = 2
+
+[node name="CraftSlot4" parent="Panel/FlowContainer" unique_id=341168519 instance=ExtResource("1_xjqke")]
+layout_mode = 2
+
+[node name="CraftSlot5" parent="Panel/FlowContainer" unique_id=1864614017 instance=ExtResource("1_xjqke")]
+layout_mode = 2
+
+[node name="CraftSlot6" parent="Panel/FlowContainer" unique_id=986853015 instance=ExtResource("1_xjqke")]
+layout_mode = 2
+
+[node name="CraftSlot7" parent="Panel/FlowContainer" unique_id=804454278 instance=ExtResource("1_xjqke")]
+layout_mode = 2
+
+[node name="CraftSlot8" parent="Panel/FlowContainer" unique_id=659565033 instance=ExtResource("1_xjqke")]
+layout_mode = 2
+
+[node name="CraftSlot9" parent="Panel/FlowContainer" unique_id=1775959875 instance=ExtResource("1_xjqke")]
+layout_mode = 2
 
 [node name="CraftButton" type="Button" parent="Panel" unique_id=175873142]
 layout_mode = 1
