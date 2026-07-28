@@ -14,6 +14,7 @@
 [ext_resource type="Script" uid="uid://cs2tfdii6h4bt" path="res://scripts/ui/health_bar.gd" id="11_sww3w"]
 [ext_resource type="PackedScene" uid="uid://df4unlwix45ey" path="res://scenes/ui/action_bar.tscn" id="12_suyxu"]
 [ext_resource type="TileSet" uid="uid://dm4u0eg76wk5r" path="res://sprites/props/props.tres" id="13_sgl2t"]
+[ext_resource type="PackedScene" uid="uid://dvnqybuhkxgcw" path="res://scenes/ui/tooltip.tscn" id="14_37s47"]
 [ext_resource type="PackedScene" uid="uid://dxx3v5mga07pt" path="res://scenes/player.tscn" id="14_qouja"]
 [ext_resource type="Resource" uid="uid://cvhrfgjik264p" path="res://data/characters/fox_character.tres" id="15_wljb1"]
 [ext_resource type="PackedScene" uid="uid://bkltruarjgmf0" path="res://scenes/xp_orb.tscn" id="16_v2yb1"]
@@ -131,6 +132,9 @@ offset_left = -90.0
 offset_top = -36.0
 offset_right = 90.0
 offset_bottom = -10.0
+
+[node name="Tooltip" parent="PlayerUI Canvas" unique_id=1898302966 instance=ExtResource("14_37s47")]
+unique_name_in_owner = true
 
 [node name="Tilemaps" type="Node2D" parent="." unique_id=1134287207]
 z_as_relative = false

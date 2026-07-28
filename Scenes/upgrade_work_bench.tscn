@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://ch61xemtdtsny"]
 
+[ext_resource type="Script" uid="uid://40qovhtdpi8o" path="res://scripts/upgrade_work_bench.gd" id="1_q1i4r"]
 [ext_resource type="Texture2D" uid="uid://bo36miecx14js" path="res://sprites/objects/TilesetProps02.png" id="1_tr32c"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7v3dx"]
@@ -7,17 +8,36 @@ atlas = ExtResource("1_tr32c")
 region = Rect2(66, 33, 44, 31)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tr32c"]
-size = Vector2(84, 55)
+size = Vector2(84, 45)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tr32c"]
+radius = 18.0
+height = 80.0
 
 [node name="UpgradeWorkBench" type="Node2D" unique_id=1353999203]
+script = ExtResource("1_q1i4r")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=328255395]
 texture_filter = 1
 scale = Vector2(2.2, 2.2)
 texture = SubResource("AtlasTexture_7v3dx")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1640663182]
+[node name="Collision" type="StaticBody2D" parent="." unique_id=1640663182]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1890129869]
-position = Vector2(0, 0.5)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collision" unique_id=1890129869]
+position = Vector2(0, -4.5)
 shape = SubResource("RectangleShape2D_tr32c")
+
+[node name="PlayerAreaTrigger" type="Area2D" parent="." unique_id=1938772599]
+position = Vector2(0, 34)
+rotation = -1.5707964
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerAreaTrigger" unique_id=999530582]
+position = Vector2(6, 2.6226832e-07)
+shape = SubResource("CapsuleShape2D_tr32c")
+debug_color = Color(0.50166667, 0, 0.7, 0.41960785)
+
+[connection signal="body_entered" from="PlayerAreaTrigger" to="." method="_on_player_area_trigger_body_entered"]
+[connection signal="body_exited" from="PlayerAreaTrigger" to="." method="_on_player_area_trigger_body_exited"]
