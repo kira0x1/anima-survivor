@@ -1,5 +1,4 @@
 extends CharacterBody2D
-
 class_name Player
 
 signal on_level_up
@@ -17,14 +16,14 @@ var health: float = 100.0;
 var max_health: float = 100.0
 var is_alive: bool = true
 
-var lastDirection: Vector2 = Vector2(0,0);
-var direction: Vector2 = Vector2(0,0);
+var lastDirection: Vector2 = Vector2(0, 0);
+var direction: Vector2 = Vector2(0, 0);
 
 func _ready() -> void:
 	stats.speed = player_character.speed
 	stats.stamina = player_character.stamina
 	stats.global_damage_bonus = player_character.global_damage_bonus
-	
+
 	give_weapon(player_character.starting_weapon)
 
 func _physics_process(_delta: float) -> void:
@@ -40,11 +39,11 @@ func take_damage(damage: float) -> void:
 		return
 
 	health -= damage;
-	
+
 	if health <= 0.0:
 		is_alive = false
 		health = 0
-		
+
 	on_damage.emit()
 
 func give_weapon(weapon_data: WeaponData):
@@ -52,35 +51,23 @@ func give_weapon(weapon_data: WeaponData):
 
 func give_xp(xp: float):
 	stats.xp += xp
-	
+
 	if stats.xp >= stats.max_xp:
 		level_up()
-	
+
 	on_xp_change.emit()
 
 func level_up():
 	stats.xp = 0.0
 	stats.level = stats.level + 1
 	on_level_up.emit()
-	
+
 func give_stat(upgrade_stat_data: UpgradeStatData):
 	var stat_type: UpgradeStatData.StatType = upgrade_stat_data.stat_type
-	
+
 	print("stat gained: %s, amount: %d" % [UpgradeStatData.StatType.keys()[upgrade_stat_data.stat_type], upgrade_stat_data.amount])
-	
-	if stat_type == UpgradeStatData.StatType.SPEED:
-		stats.speed += upgrade_stat_data.amount
-	elif stat_type == UpgradeStatData.StatType.RANGE:
-		stats.weapon_range_bonus += upgrade_stat_data.amount
-	elif stat_type == UpgradeStatData.StatType.ATTACK_SPEED:
-		stats.attack_speed_bonus += upgrade_stat_data.amount
-	elif stat_type == UpgradeStatData.StatType.DAMAGE:
-		stats.global_damage_bonus += upgrade_stat_data.amount
-	elif stat_type == UpgradeStatData.StatType.RANGED_DAMAGE:
-		stats.ranged_attack_bonus += upgrade_stat_data.amount
-	elif stat_type == UpgradeStatData.StatType.MELEE_DAMAGE:
-		stats.melee_attack_bonus += upgrade_stat_data.amount
-	
+
+	stats.add_stat(upgrade_stat_data.stat_type, upgrade_stat_data.amount)
 	gained_stat_upgrade.emit(upgrade_stat_data)
 
 func heal(amount: float):

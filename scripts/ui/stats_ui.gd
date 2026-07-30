@@ -2,6 +2,8 @@ extends Panel
 
 @onready var stamina_label: RichTextLabel = %stamina_label
 @onready var speed_label: RichTextLabel = %speed_label
+@onready var weapon_range_label: RichTextLabel = %weapon_range
+
 @onready var xp_bar: ProgressBar = $bio/xp_bar
 @onready var level_label: Label = $bio/info/level_label
 @onready var stats: Stats = %Player.stats
@@ -10,8 +12,15 @@ func _ready() -> void:
 	refresh_stat_ui()
 
 func refresh_stat_ui():
-	stamina_label.text = "stamina: %d" % stats.stamina
-	speed_label.text = "speed: %d (%d)" % [stats.speed, stats.calculate_velocity()]
+	if stats.stamina_bonus > 0.0: speed_label.text = "stamina: [color=#25B55A]%d[/color]" % stats.total_stamina
+	else: stamina_label.text = "stamina: %d" % stats.stamina
+
+	if stats.speed_bonus > 0.0: speed_label.text = "speed: [color=#25B55A]%d[/color] (%d)" % [stats.total_speed, stats.calculate_velocity()]
+	else: speed_label.text = "speed: %d (%d)" % [stats.total_speed, stats.calculate_velocity()]
+
+	if stats.weapon_range_bonus > 0.0: weapon_range_label.text = "range: [color=#25B55A]%d[/color]" % stats.weapon_range_bonus
+	else: weapon_range_label.text = "range: %d" % stats.weapon_range_bonus
+
 	xp_bar.refresh_ui(stats.xp, stats.max_xp)
 
 func _input(event: InputEvent) -> void:
@@ -19,6 +28,7 @@ func _input(event: InputEvent) -> void:
 		toggle_ui()
 
 func toggle_ui() -> void:
+	refresh_stat_ui()
 	visible = ! visible
 
 func _on_player_on_xp_change() -> void:

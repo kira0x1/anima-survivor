@@ -161,6 +161,7 @@ offset_left = 15.0
 offset_top = -162.0
 offset_right = 278.0
 offset_bottom = 296.0
+mouse_filter = 2
 
 [node name="Tilemaps" type="Node2D" parent="." unique_id=1134287207]
 z_as_relative = false

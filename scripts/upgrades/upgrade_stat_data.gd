@@ -1,5 +1,4 @@
 extends UpgradeData
-
 class_name UpgradeStatData
 
 enum StatType {

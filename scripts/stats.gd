@@ -5,7 +5,13 @@ var xp: float = 0.0
 var max_xp: float = 100.0
 
 var stamina: float = 1
+var stamina_bonus: float = 0.0
+var total_stamina: float = stamina + stamina_bonus
+
 var speed: float = 10
+var speed_bonus: float = 0.0
+var total_speed: float = speed + speed_bonus
+
 var weapon_range_bonus: float = 0.0
 var attack_speed_bonus: float = 1.0
 
@@ -18,29 +24,47 @@ var crit_multiplier: float = 2.0
 
 var attack_speed_mods: Array = []
 
+func add_stat(stat_type: UpgradeStatData.StatType, amount: float):
+	if stat_type == UpgradeStatData.StatType.SPEED:
+		speed_bonus += amount
+		total_speed = speed + speed_bonus
+	elif stat_type == UpgradeStatData.StatType.STAMINA:
+		stamina_bonus += amount
+		total_stamina = stamina + stamina_bonus
+	elif stat_type == UpgradeStatData.StatType.RANGE:
+		weapon_range_bonus += amount
+	elif stat_type == UpgradeStatData.StatType.ATTACK_SPEED:
+		attack_speed_bonus += amount
+	elif stat_type == UpgradeStatData.StatType.DAMAGE:
+		global_damage_bonus += amount
+	elif stat_type == UpgradeStatData.StatType.RANGED_DAMAGE:
+		ranged_attack_bonus += amount
+	elif stat_type == UpgradeStatData.StatType.MELEE_DAMAGE:
+		melee_attack_bonus += amount
+
 func calculate_velocity() -> float:
-	return speed * 12.0;
-	
+	return total_speed * 12.0;
+
 func calculate_attack_speed(weapon: WeaponData) -> float:
 	return weapon.base_firerate + attack_speed_bonus
 
 func calculate_attack_damage(weapon: WeaponData) -> DamageInfo:
 	var r: float = randf()
 	var is_crit: bool = r <= crit_chance
-	
+
 	var damage: float = weapon.base_damage + global_damage_bonus
 	if is_crit:
 		damage *= crit_multiplier
-		
-#	print("damage = (crit: %s, %0.2f) [weapon: %d] + [global: %d]" % [is_crit, r, weapon.base_damage, global_damage_bonus])
-	
+
+	#	print("damage = (crit: %s, %0.2f) [weapon: %d] + [global: %d]" % [is_crit, r, weapon.base_damage, global_damage_bonus])
+
 	if weapon.range_type == WeaponData.RangeType.MELEE:
 		damage += melee_attack_bonus
 	else:
 		damage += ranged_attack_bonus
-		
+
 	var damage_info: DamageInfo = DamageInfo.new()
-	damage_info.damage	= damage
+	damage_info.damage = damage
 	damage_info.is_crit = is_crit
-	
+
 	return damage_info

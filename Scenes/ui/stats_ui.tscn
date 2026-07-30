@@ -134,6 +134,7 @@ offset_right = -10.0
 offset_bottom = -10.0
 grow_horizontal = 2
 grow_vertical = 0
+mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_08kyh")
 
 [node name="stats_vlist" type="VBoxContainer" parent="stats" unique_id=150477407]
@@ -147,11 +148,14 @@ offset_right = -5.0
 offset_bottom = -5.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 
 [node name="speed_label" type="RichTextLabel" parent="stats/stats_vlist" unique_id=958968875]
 unique_name_in_owner = true
 layout_mode = 2
+mouse_filter = 2
 theme = SubResource("Theme_37s47")
+bbcode_enabled = true
 text = "speed:  0"
 fit_content = true
 scroll_active = false
@@ -159,6 +163,17 @@ scroll_active = false
 [node name="stamina_label" type="RichTextLabel" parent="stats/stats_vlist" unique_id=1880203735]
 unique_name_in_owner = true
 layout_mode = 2
+mouse_filter = 2
 theme = SubResource("Theme_37s47")
+bbcode_enabled = true
 text = "stamina: 0"
+fit_content = true
+
+[node name="weapon_range" type="RichTextLabel" parent="stats/stats_vlist" unique_id=1663718600]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_filter = 2
+theme = SubResource("Theme_37s47")
+bbcode_enabled = true
+text = "range: 0"
 fit_content = true
