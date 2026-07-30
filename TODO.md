@@ -2,6 +2,7 @@
 
 ### UI
 
+- [ ] Stat Modifiers text should be colored green if mod is changed
 - [ ] Hide healthbar when inventory open
 - [ ] Show Cooldown on actionbar_slot
 - [ ] Show currently selected card during upgrade selection
