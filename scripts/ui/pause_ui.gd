@@ -8,6 +8,5 @@ func toggle_pause() -> void:
 	visible = !visible
 	get_tree().paused = visible
 
-
 func _on_back_button_pressed() -> void:
 	toggle_pause()

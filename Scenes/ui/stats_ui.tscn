@@ -41,6 +41,8 @@ corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 corner_detail = 5
 
+[sub_resource type="Theme" id="Theme_37s47"]
+
 [node name="StatsUI" type="Panel" unique_id=1141133084]
 anchors_preset = 4
 anchor_top = 0.5
@@ -146,12 +148,17 @@ offset_bottom = -5.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="speed_label" type="Label" parent="stats/stats_vlist" unique_id=1413432804]
+[node name="speed_label" type="RichTextLabel" parent="stats/stats_vlist" unique_id=958968875]
 unique_name_in_owner = true
 layout_mode = 2
+theme = SubResource("Theme_37s47")
 text = "speed:  0"
+fit_content = true
+scroll_active = false
 
-[node name="stamina_label" type="Label" parent="stats/stats_vlist" unique_id=656083268]
+[node name="stamina_label" type="RichTextLabel" parent="stats/stats_vlist" unique_id=1880203735]
 unique_name_in_owner = true
 layout_mode = 2
+theme = SubResource("Theme_37s47")
 text = "stamina: 0"
+fit_content = true

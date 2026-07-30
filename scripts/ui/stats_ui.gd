@@ -1,7 +1,7 @@
 extends Panel
 
-@onready var stamina_label: Label = %stamina_label
-@onready var speed_label: Label = %speed_label
+@onready var stamina_label: RichTextLabel = %stamina_label
+@onready var speed_label: RichTextLabel = %speed_label
 @onready var xp_bar: ProgressBar = $bio/xp_bar
 @onready var level_label: Label = $bio/info/level_label
 @onready var stats: Stats = %Player.stats

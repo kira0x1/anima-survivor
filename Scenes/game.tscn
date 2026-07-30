@@ -53,20 +53,31 @@ color = Color(0.72067666, 0.7173909, 0.6480817, 1)
 
 [node name="PlayerUI Canvas" type="CanvasLayer" parent="." unique_id=1512424151]
 
-[node name="Upgrade Selection" parent="PlayerUI Canvas" unique_id=1789212969 instance=ExtResource("2_264po")]
+[node name="Menus" type="Control" parent="PlayerUI Canvas" unique_id=23155563]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Upgrade Selection" parent="PlayerUI Canvas/Menus" unique_id=1789212969 instance=ExtResource("2_264po")]
 process_mode = 3
 visible = false
 z_index = 3
+layout_mode = 1
 give_upgrade_on_start = true
 upgrade_type = 0
 upgrade_stats = Array[ExtResource("3_1kice")]([ExtResource("4_5newe"), ExtResource("5_37s47"), ExtResource("6_bt5mj"), ExtResource("7_e1j6l")])
 
-[node name="InventoryUI" parent="PlayerUI Canvas" unique_id=544077475 instance=ExtResource("8_pl11u")]
+[node name="InventoryUI" parent="PlayerUI Canvas/Menus" unique_id=544077475 instance=ExtResource("8_pl11u")]
 process_mode = 3
 visible = false
 z_index = 3
+layout_mode = 1
 
-[node name="ResourcesUI" parent="PlayerUI Canvas" unique_id=1515978790 instance=ExtResource("11_1kice")]
+[node name="ResourcesUI" parent="PlayerUI Canvas/Menus" unique_id=1515978790 instance=ExtResource("11_1kice")]
+layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
@@ -79,28 +90,10 @@ offset_bottom = -10.0
 grow_horizontal = 2
 grow_vertical = 0
 
-[node name="Menus" type="Control" parent="PlayerUI Canvas" unique_id=23155563]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
 [node name="Pause Screen" parent="PlayerUI Canvas/Menus" unique_id=877117235 instance=ExtResource("9_bhx41")]
 visible = false
-z_index = 2
+z_index = 5
 layout_mode = 1
-offset_left = 456.0
-offset_top = 154.0
-offset_right = 656.0
-offset_bottom = 454.0
-
-[node name="StatsUI" parent="PlayerUI Canvas/Menus" unique_id=803843134 instance=ExtResource("10_qnb83")]
-z_index = 2
-layout_mode = 1
-offset_left = 15.0
-offset_top = 142.0
-offset_right = 278.0
-offset_bottom = 600.0
 
 [node name="HUD" type="Control" parent="PlayerUI Canvas" unique_id=1203399815]
 layout_mode = 3
@@ -161,6 +154,14 @@ offset_top = -46.0
 offset_right = 90.0
 offset_bottom = -10.0
 
+[node name="StatsUI" parent="PlayerUI Canvas/HUD" unique_id=803843134 instance=ExtResource("10_qnb83")]
+z_index = 2
+layout_mode = 1
+offset_left = 15.0
+offset_top = -162.0
+offset_right = 278.0
+offset_bottom = 296.0
+
 [node name="Tilemaps" type="Node2D" parent="." unique_id=1134287207]
 z_as_relative = false
 y_sort_enabled = true
@@ -200,17 +201,17 @@ position = Vector2(529, 220)
 position = Vector2(853, -131)
 
 [connection signal="slot_changed" from="PlayerUI Canvas/HUD/Actionbar" to="Player/hand_equip" method="_on_actionbar_slot_changed"]
-[connection signal="gained_stat_upgrade" from="Player" to="PlayerUI Canvas/InventoryUI" method="_on_player_gained_stat_upgrade"]
-[connection signal="gained_stat_upgrade" from="Player" to="PlayerUI Canvas/Menus/StatsUI" method="_on_player_gained_stat_upgrade"]
-[connection signal="gained_weapon" from="Player" to="PlayerUI Canvas/InventoryUI" method="_on_player_gained_weapon"]
+[connection signal="gained_stat_upgrade" from="Player" to="PlayerUI Canvas/Menus/InventoryUI" method="_on_player_gained_stat_upgrade"]
+[connection signal="gained_stat_upgrade" from="Player" to="PlayerUI Canvas/HUD/StatsUI" method="_on_player_gained_stat_upgrade"]
+[connection signal="gained_weapon" from="Player" to="PlayerUI Canvas/Menus/InventoryUI" method="_on_player_gained_weapon"]
 [connection signal="gained_weapon" from="Player" to="PlayerUI Canvas/HUD/Actionbar" method="_on_player_gained_weapon"]
 [connection signal="gained_weapon" from="Player" to="Player/hand_equip" method="_on_player_gained_weapon"]
 [connection signal="on_damage" from="Player" to="PlayerUI Canvas/HUD/health_bar" method="_on_player_on_damage"]
 [connection signal="on_heal" from="Player" to="PlayerUI Canvas/HUD/health_bar" method="_on_player_on_heal"]
-[connection signal="on_level_up" from="Player" to="PlayerUI Canvas/Upgrade Selection" method="_on_player_on_level_up"]
-[connection signal="on_level_up" from="Player" to="PlayerUI Canvas/Menus/StatsUI" method="_on_player_on_level_up"]
+[connection signal="on_level_up" from="Player" to="PlayerUI Canvas/Menus/Upgrade Selection" method="_on_player_on_level_up"]
 [connection signal="on_level_up" from="Player" to="PlayerUI Canvas/HUD/PlayerXpUI" method="_on_player_on_level_up"]
-[connection signal="on_xp_change" from="Player" to="PlayerUI Canvas/Menus/StatsUI" method="_on_player_on_xp_change"]
+[connection signal="on_level_up" from="Player" to="PlayerUI Canvas/HUD/StatsUI" method="_on_player_on_level_up"]
 [connection signal="on_xp_change" from="Player" to="PlayerUI Canvas/HUD/PlayerXpUI" method="_on_player_on_xp_change"]
+[connection signal="on_xp_change" from="Player" to="PlayerUI Canvas/HUD/StatsUI" method="_on_player_on_xp_change"]
 
 [editable path="Player"]
