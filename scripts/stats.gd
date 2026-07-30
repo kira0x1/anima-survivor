@@ -20,7 +20,10 @@ var ranged_attack_bonus: float = 0.0
 var melee_attack_bonus: float = 0.0
 
 var crit_chance: float = 0.2
+var crit_chance_bonus: float = 0.0
+
 var crit_multiplier: float = 2.0
+var crit_mult_bonus: float = 0.0
 
 var attack_speed_mods: Array = []
 

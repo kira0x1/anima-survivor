@@ -4,12 +4,15 @@ extends Control
 @onready var bonus_inventory: BonusInventoryPanel = $MainPanel/BonusPanel
 @onready var item_inventory: ItemsInventoryPanel = $MainPanel/ItemsPanel
 
+signal inventory_toggled(showing: bool)
+
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_inventory"):
 		toggle_ui()
 
 func toggle_ui() -> void:
-	visible = !visible
+	visible = ! visible
+	inventory_toggled.emit(visible)
 
 func _on_player_gained_weapon(weapon_data: WeaponData) -> void:
 	weapon_inventory.on_player_gained_weapon(weapon_data)
@@ -17,4 +20,4 @@ func _on_player_gained_weapon(weapon_data: WeaponData) -> void:
 func _on_player_gained_stat_upgrade(stat_upgrade: UpgradeData) -> void:
 	bonus_inventory.on_player_gained_bonus(stat_upgrade)
 
-# TODO: on player gained item
+	# TODO: on player gained item

@@ -201,6 +201,7 @@ position = Vector2(529, 220)
 [node name="UpgradeWorkBench" parent="." unique_id=1353999203 instance=ExtResource("21_5newe")]
 position = Vector2(853, -131)
 
+[connection signal="inventory_toggled" from="PlayerUI Canvas/Menus/InventoryUI" to="PlayerUI Canvas/HUD/StatsUI" method="_on_inventory_ui_inventory_toggled"]
 [connection signal="slot_changed" from="PlayerUI Canvas/HUD/Actionbar" to="Player/hand_equip" method="_on_actionbar_slot_changed"]
 [connection signal="gained_stat_upgrade" from="Player" to="PlayerUI Canvas/Menus/InventoryUI" method="_on_player_gained_stat_upgrade"]
 [connection signal="gained_stat_upgrade" from="Player" to="PlayerUI Canvas/HUD/StatsUI" method="_on_player_gained_stat_upgrade"]

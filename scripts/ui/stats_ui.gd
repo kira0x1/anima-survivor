@@ -40,3 +40,7 @@ func _on_player_on_level_up() -> void:
 func _on_player_gained_stat_upgrade(_stat_upgrade: UpgradeData) -> void:
 	refresh_stat_ui()
 	print("stat speed: %d" % stats.speed)
+
+
+func _on_inventory_ui_inventory_toggled(showing: bool) -> void:
+	visible = ! showing
