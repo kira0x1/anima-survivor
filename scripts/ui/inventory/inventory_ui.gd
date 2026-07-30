@@ -1,8 +1,8 @@
 extends Control
 
 @onready var weapon_inventory: WeaponInventoryPanel = $MainPanel/WeaponPanel
-@onready var bonus_inventory: BonusInventoryPanel = $MainPanel/BonusPanel
-@onready var item_inventory: ItemsInventoryPanel = $MainPanel/ItemsPanel
+@onready var bonus_inventory: BonusInventoryPanel = $MainPanel/SlotPanels/BonusPanel
+@onready var item_inventory: ItemsInventoryPanel = $MainPanel/SlotPanels/ItemsPanel
 
 signal inventory_toggled(showing: bool)
 
