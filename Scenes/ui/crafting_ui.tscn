@@ -1,12 +1,36 @@
 [gd_scene format=3 uid="uid://bs82bwgi3vta3"]
 
+[ext_resource type="Script" uid="uid://djtaknboy252n" path="res://scripts/ui/crafting_ui.gd" id="1_4hpgr"]
 [ext_resource type="PackedScene" uid="uid://di67s5tgeefq2" path="res://scenes/ui/craft_slot.tscn" id="1_xjqke"]
-[ext_resource type="Texture2D" uid="uid://cr0vsnmb4o4ja" path="res://sprites/ui/kenny_pixel/Tiles/Large tiles/Thin outline/tile_0013_hover.png" id="3_4hpgr"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_efemu"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_edhdf"]
 load_path = "res://.godot/imported/tile_0014.png-a06008f4de14d610c761ee9c7160a509.ctex"
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xjqke"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 0.58431375)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4hpgr"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.09, 0.09, 0.09, 0.8352941)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
 
 [node name="CraftingUI" type="Control" unique_id=449987277]
 texture_filter = 1
@@ -16,6 +40,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_4hpgr")
 
 [node name="Panel" type="Panel" parent="." unique_id=822846859]
 texture_filter = 1
@@ -73,13 +98,11 @@ theme_override_constants/h_separation = 11
 theme_override_constants/v_separation = 4
 alignment = 1
 
-[node name="CraftSlot1" parent="Panel/FlowContainer" unique_id=958136872 instance=ExtResource("1_xjqke")]
+[node name="CraftSlot1" parent="Panel/FlowContainer" unique_id=1734264306 instance=ExtResource("1_xjqke")]
 layout_mode = 2
-texture_pressed = ExtResource("3_4hpgr")
 
-[node name="CraftSlot2" parent="Panel/FlowContainer" unique_id=148034391 instance=ExtResource("1_xjqke")]
+[node name="CraftSlot2" parent="Panel/FlowContainer" unique_id=958136872 instance=ExtResource("1_xjqke")]
 layout_mode = 2
-texture_pressed = ExtResource("3_4hpgr")
 
 [node name="CraftSlot3" parent="Panel/FlowContainer" unique_id=689523430 instance=ExtResource("1_xjqke")]
 layout_mode = 2
@@ -116,3 +139,26 @@ offset_bottom = -25.0
 grow_horizontal = 2
 grow_vertical = 0
 text = "Craft"
+
+[node name="CloseButton" type="Button" parent="Panel" unique_id=918226471]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -46.0
+offset_top = 17.0
+offset_right = -17.0
+offset_bottom = 45.0
+grow_horizontal = 0
+theme_override_colors/font_color = Color(0.75, 0.1875, 0.1875, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.17000002, 0.17000002, 1)
+theme_override_colors/font_hover_color = Color(0.69, 0.1242, 0.1242, 1)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 14
+theme_override_styles/normal = SubResource("StyleBoxFlat_xjqke")
+theme_override_styles/hover = SubResource("StyleBoxFlat_4hpgr")
+text = "X"
+icon_alignment = 1
+expand_icon = true
+
+[connection signal="pressed" from="Panel/CloseButton" to="." method="_on_close_button_pressed"]
