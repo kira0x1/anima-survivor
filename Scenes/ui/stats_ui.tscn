@@ -41,7 +41,7 @@ corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 corner_detail = 5
 
-[node name="stats_ui" type="Panel" unique_id=1141133084]
+[node name="StatsUI" type="Panel" unique_id=1141133084]
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5

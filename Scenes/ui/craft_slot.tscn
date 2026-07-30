@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://c22rkrd8ctxr4" path="res://sprites/ui/kenny_pixel/Tiles/Large tiles/Thin outline/tile_0013_pressed.png" id="2_5cy6q"]
 [ext_resource type="Texture2D" uid="uid://cr0vsnmb4o4ja" path="res://sprites/ui/kenny_pixel/Tiles/Large tiles/Thin outline/tile_0013_hover.png" id="3_sfnqg"]
 [ext_resource type="Texture2D" uid="uid://rshs7c5wpc2r" path="res://sprites/equipment/rpg_icons_free/hammer.png" id="4_cwilb"]
-[ext_resource type="Script" uid="uid://dvtlkuprvrvjl" path="res://scenes/ui/craft_slot.gd" id="4_f3fwo"]
+[ext_resource type="Script" uid="uid://dvtlkuprvrvjl" path="res://scripts/ui/craft_slot.gd" id="4_f3fwo"]
 
 [node name="CraftSlot" type="TextureButton" unique_id=958136872]
 texture_filter = 1
