@@ -5,6 +5,7 @@
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tye4b"]
 bg_color = Color(0.2509804, 0.2509804, 0.2509804, 1)
+draw_center = false
 corner_radius_top_left = 4
 corner_radius_top_right = 4
 corner_radius_bottom_right = 4
@@ -27,6 +28,19 @@ corner_radius_bottom_left = 2
 [sub_resource type="LabelSettings" id="LabelSettings_uiwkp"]
 font_size = 12
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_08kyh"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+draw_center = false
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
 [node name="stats_ui" type="Panel" unique_id=1141133084]
 anchors_preset = 4
 anchor_top = 0.5
@@ -40,6 +54,7 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_tye4b")
 script = ExtResource("1_xm8em")
 
 [node name="bio" type="Panel" parent="." unique_id=341613111]
+visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
@@ -117,6 +132,7 @@ offset_right = -10.0
 offset_bottom = -10.0
 grow_horizontal = 2
 grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_08kyh")
 
 [node name="stats_vlist" type="VBoxContainer" parent="stats" unique_id=150477407]
 layout_mode = 1
