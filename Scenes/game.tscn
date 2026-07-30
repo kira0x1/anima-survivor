@@ -70,6 +70,7 @@ grow_vertical = 0
 process_mode = 3
 visible = false
 z_index = 3
+give_upgrade_on_start = true
 upgrade_type = 0
 upgrade_stats = Array[ExtResource("3_1kice")]([ExtResource("4_5newe"), ExtResource("5_37s47"), ExtResource("6_bt5mj"), ExtResource("7_e1j6l")])
 
@@ -135,6 +136,7 @@ offset_bottom = -10.0
 
 [node name="Tooltip" parent="PlayerUI Canvas" unique_id=1898302966 instance=ExtResource("14_37s47")]
 unique_name_in_owner = true
+mouse_filter = 2
 
 [node name="Tilemaps" type="Node2D" parent="." unique_id=1134287207]
 z_as_relative = false
