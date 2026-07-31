@@ -10,6 +10,7 @@
 - [ ] Bonus Inventory
     - [x] update bonus inventory slot's on bonus gained
     - [ ] show bonus tooltip
+    - [ ] Show stat's on the upgrade card when the player is given an upgrade selection
 
 ---
 
