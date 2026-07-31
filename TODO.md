@@ -29,3 +29,9 @@
 
 - [x] Show Damage Text
 - [ ] Mob Death Despawn Effect
+
+---
+
+### Editor
+
+- [ ] Show a percentage slider when upgrade_data is set to percentage  
