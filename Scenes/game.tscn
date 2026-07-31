@@ -206,7 +206,6 @@ position = Vector2(853, -131)
 [connection signal="gained_stat_upgrade" from="Player" to="PlayerUI Canvas/Menus/InventoryUI" method="_on_player_gained_stat_upgrade"]
 [connection signal="gained_stat_upgrade" from="Player" to="PlayerUI Canvas/HUD/StatsUI" method="_on_player_gained_stat_upgrade"]
 [connection signal="gained_stat_upgrade" from="Player" to="Player/hand_equip" method="_on_player_gained_stat_upgrade"]
-[connection signal="gained_weapon" from="Player" to="PlayerUI Canvas/Menus/InventoryUI" method="_on_player_gained_weapon"]
 [connection signal="gained_weapon" from="Player" to="PlayerUI Canvas/HUD/Actionbar" method="_on_player_gained_weapon"]
 [connection signal="gained_weapon" from="Player" to="Player/hand_equip" method="_on_player_gained_weapon"]
 [connection signal="on_damage" from="Player" to="PlayerUI Canvas/HUD/health_bar" method="_on_player_on_damage"]
@@ -216,5 +215,6 @@ position = Vector2(853, -131)
 [connection signal="on_level_up" from="Player" to="PlayerUI Canvas/HUD/StatsUI" method="_on_player_on_level_up"]
 [connection signal="on_xp_change" from="Player" to="PlayerUI Canvas/HUD/PlayerXpUI" method="_on_player_on_xp_change"]
 [connection signal="on_xp_change" from="Player" to="PlayerUI Canvas/HUD/StatsUI" method="_on_player_on_xp_change"]
+[connection signal="spawned_weapon" from="Player/hand_equip" to="PlayerUI Canvas/Menus/InventoryUI" method="_on_hand_equip_spawned_weapon"]
 
 [editable path="Player"]

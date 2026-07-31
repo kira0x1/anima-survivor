@@ -5,6 +5,8 @@ var item_spawned: Variant
 var has_equip: bool = false
 var has_spawned_item: bool = false
 
+signal spawned_weapon(weapon: Weapon)
+
 func hide_item():
 	item_spawned.set("visible", false)
 
@@ -23,6 +25,8 @@ func _on_player_gained_weapon(weapon_data: WeaponData) -> void:
 		weapon_spawn.stats = get_parent().stats
 		weapon_spawn.update_stats()
 		weapons_spawned.push_front(weapon_spawn)
+
+		spawned_weapon.emit(weapon_spawn)
 		has_spawned_item = true
 
 func _on_player_gained_stat_upgrade(_stat_upgrade: UpgradeData) -> void:
