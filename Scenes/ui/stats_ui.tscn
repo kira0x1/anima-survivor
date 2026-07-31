@@ -177,3 +177,12 @@ theme = SubResource("Theme_37s47")
 bbcode_enabled = true
 text = "range: 0"
 fit_content = true
+
+[node name="attack_speed" type="RichTextLabel" parent="stats/stats_vlist" unique_id=1264072780]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_filter = 2
+theme = SubResource("Theme_37s47")
+bbcode_enabled = true
+text = "atk spd: 0"
+fit_content = true

@@ -13,7 +13,7 @@ var speed_bonus: float = 0.0
 var total_speed: float = speed + speed_bonus
 
 var weapon_range_bonus: float = 0.0
-var attack_speed_bonus: float = 1.0
+var attack_speed_bonus: float = 0.0
 
 var global_damage_bonus: float = 0.0
 var ranged_attack_bonus: float = 0.0

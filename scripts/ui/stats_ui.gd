@@ -3,6 +3,7 @@ extends Panel
 @onready var stamina_label: RichTextLabel = %stamina_label
 @onready var speed_label: RichTextLabel = %speed_label
 @onready var weapon_range_label: RichTextLabel = %weapon_range
+@onready var attack_speed_label: RichTextLabel = %attack_speed
 
 @onready var xp_bar: ProgressBar = $bio/xp_bar
 @onready var level_label: Label = $bio/info/level_label
@@ -20,6 +21,9 @@ func refresh_stat_ui():
 
 	if stats.weapon_range_bonus > 0.0: weapon_range_label.text = "range: [color=#25B55A]%d[/color]" % stats.weapon_range_bonus
 	else: weapon_range_label.text = "range: %d" % stats.weapon_range_bonus
+
+	if stats.attack_speed_bonus > 0.0: attack_speed_label.text = "atkspd: [color=#25B55A]%d[/color]" % stats.attack_speed_bonus
+	else: attack_speed_label.text = "atkspd: %d" % stats.attack_speed_bonus
 
 	xp_bar.refresh_ui(stats.xp, stats.max_xp)
 
