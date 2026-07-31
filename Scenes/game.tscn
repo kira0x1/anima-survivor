@@ -205,6 +205,7 @@ position = Vector2(853, -131)
 [connection signal="slot_changed" from="PlayerUI Canvas/HUD/Actionbar" to="Player/hand_equip" method="_on_actionbar_slot_changed"]
 [connection signal="gained_stat_upgrade" from="Player" to="PlayerUI Canvas/Menus/InventoryUI" method="_on_player_gained_stat_upgrade"]
 [connection signal="gained_stat_upgrade" from="Player" to="PlayerUI Canvas/HUD/StatsUI" method="_on_player_gained_stat_upgrade"]
+[connection signal="gained_stat_upgrade" from="Player" to="Player/hand_equip" method="_on_player_gained_stat_upgrade"]
 [connection signal="gained_weapon" from="Player" to="PlayerUI Canvas/Menus/InventoryUI" method="_on_player_gained_weapon"]
 [connection signal="gained_weapon" from="Player" to="PlayerUI Canvas/HUD/Actionbar" method="_on_player_gained_weapon"]
 [connection signal="gained_weapon" from="Player" to="Player/hand_equip" method="_on_player_gained_weapon"]

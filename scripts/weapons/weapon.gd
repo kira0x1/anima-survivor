@@ -1,5 +1,4 @@
 extends Area2D
-
 class_name Weapon
 
 # TODO - create weapon class and inherit from it 
@@ -12,15 +11,32 @@ const MAX_RANGE: float = 600.0
 @export var attack_speed: float = 0.8;
 @export var damage: float = 10.0;
 
+# calculated attack speed
+var final_attack_speed: float = 0.0
+
+@onready var timer: Timer = %Timer
+
 var has_target: bool = false
 var target: Mob
 var weapon_data: WeaponData
 var stats: Stats
 
+func update_stats():
+	final_attack_speed = attack_speed
+
+	# bonus attack speed is a percentage
+	if (stats.attack_speed_bonus > 0.0):
+		var perc: float = stats.attack_speed_bonus / 100.0
+		var bonus: float = perc * attack_speed
+		final_attack_speed = attack_speed - bonus
+		print("calculating final attack speed %0.2f" % (final_attack_speed))
+		
+	print("weapon %s attackspd = (%0.2f) [%0.2f, bonus: %0.1f]" % [weapon_data.name, final_attack_speed, attack_speed, stats.attack_speed_bonus])
+	timer.wait_time = final_attack_speed
+
 func _ready() -> void:
-	var timer: Timer = %Timer
 	timer.wait_time = attack_speed
-	
+
 func filter_targets(bodies: Array[Node2D]) -> void:
 	has_target = false
 
@@ -36,16 +52,16 @@ func filter_targets(bodies: Array[Node2D]) -> void:
 		has_target = true
 		target = t
 		break
-	
+
 func _physics_process(_delta: float) -> void:
 	var bodies: Array[Node2D] = get_overlapping_bodies()
 
 	filter_targets(bodies)
-	
+
 	if has_target:
 		look_at(target.global_position)
-			
-		
+
+
 func can_attack() -> bool:
 	var target_distance: float = target.get_player_distance()
 	if target_distance <= MIN_RANGE: return false

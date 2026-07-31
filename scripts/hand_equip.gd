@@ -7,7 +7,7 @@ var has_spawned_item: bool = false
 
 func hide_item():
 	item_spawned.set("visible", false)
-	
+
 func show_item():
 	item_spawned.set("visible", true)
 
@@ -21,4 +21,10 @@ func _on_player_gained_weapon(weapon_data: WeaponData) -> void:
 		item_spawned = weapon_spawn
 		weapon_spawn.weapon_data = weapon_data
 		weapon_spawn.stats = get_parent().stats
+		weapon_spawn.update_stats()
+		weapons_spawned.push_front(weapon_spawn)
 		has_spawned_item = true
+
+func _on_player_gained_stat_upgrade(_stat_upgrade: UpgradeData) -> void:
+	for wep in weapons_spawned:
+		wep.update_stats()

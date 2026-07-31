@@ -1,5 +1,4 @@
 extends Resource
-
 class_name WeaponData
 
 @export var name: String
@@ -19,7 +18,7 @@ enum WeaponType {
 	AXE,
 	KATANA,
 	DAGGER,
-	
+
 	PISTOL,
 	RIFLE,
 	BOW,
