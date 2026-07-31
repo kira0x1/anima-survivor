@@ -41,6 +41,10 @@ corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 corner_detail = 5
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3ktwi"]
+draw_center = false
+border_width_top = 2
+
 [sub_resource type="Theme" id="Theme_37s47"]
 
 [node name="StatsUI" type="Panel" unique_id=1141133084]
@@ -137,52 +141,112 @@ grow_vertical = 0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_08kyh")
 
-[node name="stats_vlist" type="VBoxContainer" parent="stats" unique_id=150477407]
+[node name="Label" type="Label" parent="stats" unique_id=1009472497]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = -20.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 14
+text = "Character Stats"
+
+[node name="Panel2" type="Panel" parent="stats" unique_id=1879925238]
+propagate_maximum_size = true
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.116000004
+offset_right = -98.0
+offset_bottom = -0.12000275
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_3ktwi")
+
+[node name="character_stats" type="VBoxContainer" parent="stats/Panel2" unique_id=2110189007]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 5.0
-offset_top = 5.0
-offset_right = -5.0
-offset_bottom = -5.0
+offset_top = 4.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+theme_override_constants/separation = -1
 
-[node name="speed_label" type="RichTextLabel" parent="stats/stats_vlist" unique_id=958968875]
+[node name="speed_label" type="RichTextLabel" parent="stats/Panel2/character_stats" unique_id=958968875]
 unique_name_in_owner = true
 layout_mode = 2
 mouse_filter = 2
 theme = SubResource("Theme_37s47")
+theme_override_font_sizes/normal_font_size = 10
 bbcode_enabled = true
 text = "speed:  0"
 fit_content = true
 scroll_active = false
 
-[node name="stamina_label" type="RichTextLabel" parent="stats/stats_vlist" unique_id=1880203735]
+[node name="stamina_label" type="RichTextLabel" parent="stats/Panel2/character_stats" unique_id=1880203735]
 unique_name_in_owner = true
 layout_mode = 2
 mouse_filter = 2
 theme = SubResource("Theme_37s47")
+theme_override_font_sizes/normal_font_size = 10
 bbcode_enabled = true
 text = "stamina: 0"
 fit_content = true
 
-[node name="weapon_range" type="RichTextLabel" parent="stats/stats_vlist" unique_id=1663718600]
+[node name="Label2" type="Label" parent="stats" unique_id=2078276899]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.178
+anchor_right = 1.0
+anchor_bottom = 0.178
+offset_top = -19.96
+offset_bottom = 0.040000916
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 14
+text = "Weapon Stats"
+
+[node name="Panel" type="Panel" parent="stats" unique_id=2088797260]
+propagate_maximum_size = true
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.178
+anchor_right = 0.97900003
+anchor_bottom = 1.0
+offset_top = 0.040000916
+offset_right = -89.897
+theme_override_styles/panel = SubResource("StyleBoxFlat_3ktwi")
+
+[node name="weapon_stats" type="VBoxContainer" parent="stats/Panel" unique_id=150477407]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 4.0
+offset_right = 5.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/separation = -1
+
+[node name="weapon_range" type="RichTextLabel" parent="stats/Panel/weapon_stats" unique_id=1663718600]
 unique_name_in_owner = true
 layout_mode = 2
 mouse_filter = 2
 theme = SubResource("Theme_37s47")
+theme_override_font_sizes/normal_font_size = 10
 bbcode_enabled = true
 text = "range: 0"
 fit_content = true
 
-[node name="attack_speed" type="RichTextLabel" parent="stats/stats_vlist" unique_id=1264072780]
+[node name="attack_speed" type="RichTextLabel" parent="stats/Panel/weapon_stats" unique_id=1264072780]
 unique_name_in_owner = true
 layout_mode = 2
 mouse_filter = 2
 theme = SubResource("Theme_37s47")
+theme_override_font_sizes/normal_font_size = 10
 bbcode_enabled = true
-text = "atk spd: 0"
+text = "atkspd: 0"
 fit_content = true
