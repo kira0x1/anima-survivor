@@ -2,20 +2,37 @@
 
 ### UI
 
-- [x] Stat Modifiers text should be colored green if mod is changed
-- [ ] Hide healthbar when inventory open
-- [ ] Show Cooldown on actionbar_slot
-- [ ] Show currently selected card during upgrade selection
-- [ ] Select card keyboard controls
+- [ ] Resize project resolution to 1920x1080
+  - [x] Resize Stats UI
+  - [ ] Resize Hotbar
+  - [ ] Gold HUD Element
+
+
+  - [ ] Resize Upgrade Selection UI
+    - [ ] Resize Upgrade Cards
+
+
+  - [ ] Resize Inventory UI
+    - [ ] Resize Weapon Card
+    - [ ] Resize Bonus Inventory Slots
+
 
 - [ ] Weapon Inventory
     - [x] Show attack speed in weapon card
     - [ ] Show range stat in weapon card
 
+
 - [ ] Bonus Inventory
     - [x] update bonus inventory slot's on bonus gained
     - [ ] show bonus tooltip
     - [ ] Show stat's on the upgrade card when the player is given an upgrade selection
+
+
+- [x] Stat Modifiers text should be colored green if mod is changed
+- [ ] Hide healthbar when inventory open
+- [ ] Show Cooldown on actionbar_slot
+- [ ] Show currently selected card during upgrade selection
+- [ ] Select card keyboard controls
 
 ---
 
