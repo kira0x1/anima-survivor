@@ -3,16 +3,16 @@
 ### UI
 
 - [ ] Resize project resolution to 1920x1080
-  - [x] Resize Stats UI
-  - [x] Resize Hotbar
-  - [x] Gold HUD Element
-  - [x] Resize Pause UI
+    - [x] Resize Stats UI
+    - [x] Resize Hotbar
+    - [x] Gold HUD Element
+    - [x] Resize Pause UI
 
-  - [ ] Resize Upgrade Selection UI
-    - [ ] Resize Upgrade Cards
-    
+    - [ ] Resize Upgrade Selection UI
+        - [ ] Resize Upgrade Cards
 
-  - [ ] Resize Inventory UI
+
+- [ ] Resize Inventory UI
     - [ ] Resize Weapon Card
     - [ ] Resize Bonus Inventory Slots
 
@@ -38,13 +38,17 @@
 
 ### Combat
 
-- [ ] more mobs
 - [x] player_stats -> to indivisual stat
     - [x] global upgrade -> a player stat that effects all weapons like a upgrade that is called "+5% Attack Speed" would make all ranged weapons shoot projectiles 5% faster and melee weapons would swing 5% faster in addition to their base rate of fire and swing speeds
-- [ ] update attack range to take into account bonus's
+
 
 - [ ] weapon augments
     - [ ] bow -> multi shot
+
+
+- [ ] Upgrade Rarity / Tiers
+- [ ] more mobs
+- [ ] update attack range to take into account bonus's
 
 ---
 
