@@ -4,13 +4,12 @@
 
 - [ ] Resize project resolution to 1920x1080
   - [x] Resize Stats UI
-  - [ ] Resize Hotbar
-  - [ ] Gold HUD Element
-
+  - [x] Resize Hotbar
+  - [x] Gold HUD Element
 
   - [ ] Resize Upgrade Selection UI
     - [ ] Resize Upgrade Cards
-
+    
 
   - [ ] Resize Inventory UI
     - [ ] Resize Weapon Card

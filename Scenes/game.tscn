@@ -83,9 +83,9 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -216.0
-offset_top = -26.0
-offset_right = -106.0
+offset_left = -271.0
+offset_top = -30.0
+offset_right = -133.5
 offset_bottom = -10.0
 grow_horizontal = 2
 grow_vertical = 0
@@ -107,6 +107,8 @@ mouse_filter = 2
 [node name="Tooltip" parent="PlayerUI Canvas/HUD" unique_id=981434686 instance=ExtResource("14_37s47")]
 unique_name_in_owner = true
 layout_mode = 1
+offset_top = -165.0
+offset_bottom = -125.0
 
 [node name="PlayerXpUI" parent="PlayerUI Canvas/HUD" unique_id=1321787709 instance=ExtResource("1_ssvqc")]
 layout_mode = 1
@@ -115,9 +117,9 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = 110.0
-offset_top = -46.0
-offset_right = 326.0
+offset_left = 133.0
+offset_top = -56.0
+offset_right = 342.0
 offset_bottom = -11.0
 grow_horizontal = 2
 grow_vertical = 0
@@ -126,8 +128,8 @@ grow_vertical = 0
 layout_mode = 0
 offset_left = 10.0
 offset_top = 10.0
-offset_right = 190.0
-offset_bottom = 28.0
+offset_right = 310.0
+offset_bottom = 40.0
 theme_override_styles/background = SubResource("StyleBoxFlat_lbhrr")
 theme_override_styles/fill = SubResource("StyleBoxFlat_iywne")
 value = 100.0
@@ -141,17 +143,16 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 10
+theme_override_font_sizes/font_size = 14
 text = "100 / 100"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Actionbar" parent="PlayerUI Canvas/HUD" unique_id=1406471244 instance=ExtResource("12_suyxu")]
 layout_mode = 1
-anchors_preset = -1
-offset_left = -90.0
-offset_top = -46.0
-offset_right = 90.0
+offset_left = -115.0
+offset_top = -56.0
+offset_right = 115.0
 offset_bottom = -10.0
 
 [node name="StatsUI" parent="PlayerUI Canvas/HUD" unique_id=803843134 instance=ExtResource("10_qnb83")]
@@ -176,7 +177,7 @@ tile_set = ExtResource("13_sgl2t")
 
 [node name="Player" parent="." unique_id=1222682647 instance=ExtResource("14_qouja")]
 unique_name_in_owner = true
-position = Vector2(856, -202)
+position = Vector2(540, 337)
 player_character = ExtResource("15_wljb1")
 
 [node name="CollisionShape2D" parent="Player" index="1" unique_id=2027810709]
