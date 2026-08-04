@@ -46,7 +46,7 @@ func add_stat(stat_type: UpgradeStatData.StatType, amount: float):
 		melee_attack_bonus += amount
 
 func calculate_velocity() -> float:
-	return total_speed * 12.0;
+	return total_speed * 3.0;
 
 func calculate_attack_speed(weapon: WeaponData) -> float:
 	return weapon.base_firerate + attack_speed_bonus
