@@ -1,5 +1,4 @@
 extends Node
-
 class_name LootTable
 
 @export var items_table: Array[LootTableItem] = []
@@ -9,16 +8,19 @@ func generate_loot() -> Array[LootTableItem]:
 
 	for item in items_table:
 		var f: float = randf()
-#		print("rng: %.2f / %.2f" % [f, item.chance])
+		#		print("rng: %.2f / %.2f" % [f, item.chance])
 		if item.chance >= f:
 			drops.push_front(item)
-	
+
 	return drops
-			
+
 
 func spawn_item():
 	var drops: Array[LootTableItem] = generate_loot()
-	
+
 	for item in drops:
 		var item_spawn: Node2D = item.item_data.instantiate()
-		get_parent().call_deferred("add_child", item_spawn)
+		var parent: Node = get_tree().current_scene
+		var mob: Mob = get_owner()
+		item_spawn.global_position = mob.global_position
+		parent.add_child.call_deferred(item_spawn)
