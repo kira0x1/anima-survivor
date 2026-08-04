@@ -6,7 +6,7 @@
   - [x] Resize Stats UI
   - [x] Resize Hotbar
   - [x] Gold HUD Element
-  - [ ] Resize Pause UI
+  - [x] Resize Pause UI
 
   - [ ] Resize Upgrade Selection UI
     - [ ] Resize Upgrade Cards
