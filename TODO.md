@@ -54,6 +54,26 @@
 
 ### Effects
 
+- [ ] Sound
+    - [ ] Weapon Audio
+        - [ ] Weapon on hit sound
+        - [ ] Shoot Sound
+
+    - [ ] Player Sound
+        - [ ] player damaged sfx
+        - [ ] player dead sfx
+        - [ ] footsteps sfx
+        - [ ] level up sfx
+        - [ ] heal sfx
+        - [ ] item pickup sfx
+        - [ ] xp pickup sfx
+
+    - [ ] Mob Sound
+        - [ ] mob hit sfx
+        - [ ] mob dead sfx
+        - [ ] mob aggro'd sfx
+
+
 - [x] Show Damage Text
 - [ ] Mob Death Despawn Effect
 - [ ] Show radius around weapon when buffing attack range or inspecting
