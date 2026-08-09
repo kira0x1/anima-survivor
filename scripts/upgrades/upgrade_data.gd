@@ -1,5 +1,4 @@
 extends Resource
-
 class_name UpgradeData
 
 @export var upgrade_name: String

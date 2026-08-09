@@ -27,13 +27,35 @@ var crit_mult_bonus: float = 0.0
 
 var attack_speed_mods: Array = []
 
+func init(player_character: PlayerCharacter):
+	set_speed(player_character.speed)
+	set_stamina(player_character.stamina)
+
+	global_damage_bonus = player_character.global_damage_bonus
+	print("player character speed: %0.1f / %0.1f" % [speed, total_speed])
+
+func set_stamina(amount: float):
+	stamina = amount
+	refresh_stamina()
+
+# sets base speed
+func set_speed(amount: float):
+	speed = amount
+	refresh_speed()
+
+func refresh_speed():
+	total_speed = speed + speed_bonus
+
+func refresh_stamina():
+	total_stamina = stamina + stamina_bonus
+
 func add_stat(stat_type: UpgradeStatData.StatType, amount: float):
 	if stat_type == UpgradeStatData.StatType.SPEED:
 		speed_bonus += amount
-		total_speed = speed + speed_bonus
+		refresh_speed()
 	elif stat_type == UpgradeStatData.StatType.STAMINA:
 		stamina_bonus += amount
-		total_stamina = stamina + stamina_bonus
+		refresh_stamina()
 	elif stat_type == UpgradeStatData.StatType.RANGE:
 		weapon_range_bonus += amount
 	elif stat_type == UpgradeStatData.StatType.ATTACK_SPEED:

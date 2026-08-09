@@ -20,10 +20,7 @@ var lastDirection: Vector2 = Vector2(0, 0);
 var direction: Vector2 = Vector2(0, 0);
 
 func _ready() -> void:
-	stats.speed = player_character.speed
-	stats.stamina = player_character.stamina
-	stats.global_damage_bonus = player_character.global_damage_bonus
-
+	stats.init(player_character)
 	give_weapon(player_character.starting_weapon)
 
 func _physics_process(_delta: float) -> void:
