@@ -5,7 +5,7 @@
 
 [resource]
 script = ExtResource("1_4tf7f")
-amount = 3.5
+amount = 4.0
 upgrade_name = "Boots"
 upgrade_description = "increase movement speed"
 upgrade_icon = ExtResource("2_vojsa")
