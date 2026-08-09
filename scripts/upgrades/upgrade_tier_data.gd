@@ -1,5 +1,4 @@
-extends Resource
-class_name UpgradeTierData
+class_name UpgradeTierData extends Resource
 
 enum StatValueType {
 	FLAT,

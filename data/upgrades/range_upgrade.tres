@@ -6,6 +6,7 @@
 [resource]
 script = ExtResource("1_8u667")
 stat_type = 2
+tiers = Array[Object]([])
 upgrade_name = "Range"
 upgrade_description = "increases weapon range"
 upgrade_icon = ExtResource("2_wsai5")

@@ -18,4 +18,6 @@ enum StatValueType {
 
 @export var stat_type: StatType
 @export var amount: float = 10.0
+
 @export var value_type: StatValueType = StatValueType.FLAT
+@export var tiers: Array[UpgradeTierData] = []
