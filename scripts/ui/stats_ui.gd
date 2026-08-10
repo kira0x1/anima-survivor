@@ -1,5 +1,13 @@
 extends Panel
 
+# editor 
+@export_group("Style")
+@export var title_font_size: int = 18
+@export_group("Style")
+@export var stat_font_size: int = 16
+@export_group("Style")
+@export var stat_gap: int = 2
+
 @onready var stamina_label: RichTextLabel = %stamina_label
 @onready var speed_label: RichTextLabel = %speed_label
 @onready var weapon_range_label: RichTextLabel = %weapon_range
@@ -11,6 +19,48 @@ extends Panel
 
 func _ready() -> void:
 	refresh_stat_ui()
+	_update_ui_style()
+
+func _update_ui_style():
+	var character_panel: Panel = $stats/Character_Panel
+	var weapon_panel: Panel = $stats/Weapon_Panel
+
+	var c_stats_grid: VBoxContainer = $stats/Character_Panel/Character_Stats
+	var w_stats_grid: VBoxContainer = $stats/Weapon_Panel/Weapon_Stats
+	c_stats_grid.add_theme_constant_override("separation", stat_gap)
+	w_stats_grid.add_theme_constant_override("separation", stat_gap)
+
+	# weapon_panel.offset_top = 35;
+
+	var weapon_title: Label = $stats/Weapon_Panel/Weapon_Label
+	var character_title: Label = $stats/Character_Panel/Character_Label
+	weapon_title.offset_top = weapon_panel.offset_top;
+	character_title.offset_top = character_panel.offset_top;
+
+	var titles: Array[Label] = [weapon_title, character_title]
+	character_title.add_theme_font_size_override("font_size", title_font_size)
+	weapon_title.add_theme_font_size_override("font_size", title_font_size)
+
+	for t in titles:
+		t.offset_bottom = 0;
+		t.offset_top = -(title_font_size + 9);
+
+	# print("offset: %f" % weapon_title.offset_top)
+
+	var c_labels: Array[Node] = character_panel.find_children("", "RichTextLabel", true, true)
+	var w_labels: Array[Node] = weapon_panel.find_children("", "RichTextLabel", true, true)
+	var labels: Array[RichTextLabel] = []
+	labels.append_array(c_labels)
+	labels.append_array(w_labels)
+
+	for l in labels:
+		l.add_theme_font_size_override("normal_font_size", stat_font_size)
+
+
+func _print_labels(labels):
+	print("labels found %d" % labels.size())
+	for l in labels:
+		print(l.name)
 
 func refresh_stat_ui():
 	if stats.stamina_bonus > 0.0: speed_label.text = "stamina: [color=#25B55A]%d[/color]" % stats.total_stamina

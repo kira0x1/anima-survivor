@@ -158,10 +158,10 @@ offset_bottom = -10.0
 [node name="StatsUI" parent="PlayerUI Canvas/HUD" unique_id=803843134 instance=ExtResource("10_qnb83")]
 z_index = 2
 layout_mode = 1
-offset_left = 15.0
-offset_top = -162.0
-offset_right = 278.0
-offset_bottom = 296.0
+offset_left = 10.0
+offset_top = -59.0
+offset_right = 158.0
+offset_bottom = 102.0
 mouse_filter = 2
 
 [node name="Tilemaps" type="Node2D" parent="." unique_id=1134287207]
