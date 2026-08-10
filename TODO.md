@@ -83,3 +83,4 @@
 ### Editor
 
 - [ ] Show a percentage slider when upgrade_data is set to percentage  
+- [ ] Create tool to adjust stat ui layout, font size, and gap
