@@ -32,7 +32,7 @@ func init(player_character: PlayerCharacter):
 	set_stamina(player_character.stamina)
 
 	global_damage_bonus = player_character.global_damage_bonus
-	print("player character speed: %0.1f / %0.1f" % [speed, total_speed])
+# print("player character speed: %0.1f / %0.1f" % [speed, total_speed])
 
 func set_stamina(amount: float):
 	stamina = amount

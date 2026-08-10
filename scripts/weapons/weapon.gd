@@ -31,7 +31,7 @@ func update_stats():
 		final_attack_speed = attack_speed - bonus
 		print("calculating final attack speed %0.2f" % (final_attack_speed))
 
-	print("weapon %s attackspd = (%0.2f) [%0.2f, bonus: %0.1f]" % [weapon_data.name, final_attack_speed, attack_speed, stats.attack_speed_bonus])
+	# print("weapon %s attackspd = (%0.2f) [%0.2f, bonus: %0.1f]" % [weapon_data.name, final_attack_speed, attack_speed, stats.attack_speed_bonus])
 	timer.wait_time = final_attack_speed
 
 func _ready() -> void:

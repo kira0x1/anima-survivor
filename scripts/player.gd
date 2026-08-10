@@ -62,7 +62,7 @@ func level_up():
 func give_stat(upgrade_stat_data: UpgradeStatData):
 	var stat_type: UpgradeStatData.StatType = upgrade_stat_data.stat_type
 
-	print("stat gained: %s, amount: %d" % [UpgradeStatData.StatType.keys()[upgrade_stat_data.stat_type], upgrade_stat_data.amount])
+	# print("stat gained: %s, amount: %d" % [UpgradeStatData.StatType.keys()[upgrade_stat_data.stat_type], upgrade_stat_data.amount])
 
 	stats.add_stat(upgrade_stat_data.stat_type, upgrade_stat_data.amount)
 	gained_stat_upgrade.emit(upgrade_stat_data)
