@@ -41,8 +41,14 @@
 - [x] player_stats -> to indivisual stat
     - [x] global upgrade -> a player stat that effects all weapons like a upgrade that is called "+5% Attack Speed" would make all ranged weapons shoot projectiles 5% faster and melee weapons would swing 5% faster in addition to their base rate of fire and swing speeds
 
-- [ ] weapon augments
-    - [ ] bow -> multi shot
+- [ ] Augments
+    - [ ] Weapon Augments
+        - [ ] Bow -> multi shot
+        - [ ] Elemental Augment's
+            - [ ] Toxic
+            - [ ] Fire
+            - [ ] Electric
+            - [ ] Ice
 
 - [x] Create Upgrade Rarity / Tiers
 - [ ] setup Upgrade rarity rng mechanism
@@ -82,5 +88,5 @@
 
 ### Editor
 
-- [ ] Show a percentage slider when upgrade_data is set to percentage  
+- [ ] Show a percentage slider when upgrade_data is set to percentage
 - [ ] Create tool to adjust stat ui layout, font size, and gap
