@@ -13,7 +13,7 @@
 
 ### UI
 
-- [ ] Resize project resolution to 1920x1080
+- [x] Resize project resolution to 1920x1080
     - [x] Resize Stats UI
     - [x] Resize Hotbar
     - [x] Gold HUD Element
@@ -23,11 +23,13 @@
         - [ ] Resize Upgrade Cards
 
 
-- [ ] Resize Inventory UI
-    - [ ] Resize Weapon Card
-    - [ ] Resize Bonus Inventory Slots
+- [x] Resize Inventory UI
+    - [x] Resize Weapon Card
+    - [x] Resize Bonus Inventory Slots
 
-
+- [ ] Show detailed stats in inventory and upgrade selection
+- [ ] Upgrade comparison on tooltip
+    
 - [ ] Weapon Inventory
     - [x] Show attack speed in weapon card
     - [ ] Show range stat in weapon card
