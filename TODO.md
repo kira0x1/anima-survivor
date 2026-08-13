@@ -3,7 +3,7 @@
 ### Gameplay
 
 - [ ] Main Menu
-  
+
 - [ ] Character Selection
     - [ ] Passive Selection
     - [ ] Modifier
@@ -29,7 +29,7 @@
 
 - [ ] Show detailed stats in inventory and upgrade selection
 - [ ] Upgrade comparison on tooltip
-    
+
 - [ ] Weapon Inventory
     - [x] Show attack speed in weapon card
     - [ ] Show range stat in weapon card
@@ -100,6 +100,8 @@
 - [x] Show Damage Text
 - [ ] Mob Death Despawn Effect
 - [ ] Show radius around weapon when buffing attack range or inspecting
+- [x] Show debug range indicator for testing
+- [ ] Toggle debug range indicator with key or setting
 
 ---
 

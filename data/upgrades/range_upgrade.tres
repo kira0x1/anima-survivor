@@ -2,11 +2,12 @@
 
 [ext_resource type="Script" uid="uid://dmcf32uoauw2k" path="res://scripts/upgrades/upgrade_stat_data.gd" id="1_8u667"]
 [ext_resource type="Texture2D" uid="uid://bn6gto0v8q2po" path="res://sprites/equipment/rpg_icons_free/bow.png" id="2_wsai5"]
+[ext_resource type="Script" uid="uid://cbaef4aqlqbba" path="res://scripts/upgrades/upgrade_tier_data.gd" id="2_yf3ki"]
 
 [resource]
 script = ExtResource("1_8u667")
 stat_type = 2
-tiers = Array[Object]([])
+amount = 25.0
 upgrade_name = "Range"
 upgrade_description = "increases weapon range"
 upgrade_icon = ExtResource("2_wsai5")

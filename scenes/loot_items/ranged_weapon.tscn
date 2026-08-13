@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://byv8a8gv6lx8f" path="res://scripts/weapons/ranged_weapon.gd" id="1_i5bwe"]
 [ext_resource type="Texture2D" uid="uid://bn6gto0v8q2po" path="res://sprites/equipment/rpg_icons_free/bow.png" id="2_4txm0"]
+[ext_resource type="Texture2D" uid="uid://gx8f7l5h80ji" path="res://sprites/equipment/rpg_icons_free/sword.png" id="3_4txm0"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5jo3t"]
 radius = 250.0
@@ -14,7 +15,6 @@ attack_speed = 0.6
 damage = 15.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=156596782]
-visible = false
 shape = SubResource("CircleShape2D_5jo3t")
 
 [node name="Timer" type="Timer" parent="." unique_id=690256687]
@@ -34,5 +34,15 @@ position = Vector2(32, 0)
 rotation = 2.3561945
 scale = Vector2(2, 2)
 texture = ExtResource("2_4txm0")
+
+[node name="weapon_range" type="Marker2D" parent="." unique_id=955987873]
+unique_name_in_owner = true
+position = Vector2(80, 0)
+scale = Vector2(1.6, 1.6)
+
+[node name="Sprite2D" type="Sprite2D" parent="weapon_range" unique_id=2019175777]
+texture_filter = 1
+rotation = 0.7853982
+texture = ExtResource("3_4txm0")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

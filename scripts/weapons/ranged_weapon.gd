@@ -1,6 +1,13 @@
 extends Weapon
 class_name RangedWeapon
 
+@onready var range_indicator: Marker2D = %weapon_range
+@onready var collider: CollisionShape2D = $CollisionShape2D
+
+func _on_stats_updated():
+	print("range: %0.1f" % collider.shape.radius)
+	range_indicator.position.x = collider.shape.radius
+
 func attack() -> void:
 	if not can_attack():
 		print("cant attack...")

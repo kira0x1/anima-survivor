@@ -33,9 +33,11 @@ func update_stats():
 
 	# print("weapon %s attackspd = (%0.2f) [%0.2f, bonus: %0.1f]" % [weapon_data.name, final_attack_speed, attack_speed, stats.attack_speed_bonus])
 	timer.wait_time = final_attack_speed
+	_on_stats_updated()
 
 func _ready() -> void:
 	timer.wait_time = attack_speed
+	_weapon_init()
 
 func filter_targets(bodies: Array[Node2D]) -> void:
 	has_target = false
@@ -72,6 +74,12 @@ func calculate_total_damage() -> DamageInfo:
 	return stats.calculate_attack_damage(self.weapon_data)
 
 func attack() -> void:
+	pass
+
+func _on_stats_updated():
+	pass
+
+func _weapon_init():
 	pass
 
 func _on_timer_timeout() -> void:
