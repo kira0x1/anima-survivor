@@ -32,12 +32,12 @@ func update_stats():
 		print("calculating final attack speed %0.2f" % (final_attack_speed))
 
 	# print("weapon %s attackspd = (%0.2f) [%0.2f, bonus: %0.1f]" % [weapon_data.name, final_attack_speed, attack_speed, stats.attack_speed_bonus])
-	timer.wait_time = final_attack_speed
+	timer.wait_time = clamp(final_attack_speed, 0, 100)
 	_on_stats_updated()
 
 func _ready() -> void:
 	timer.wait_time = attack_speed
-	_weapon_init()
+# _weapon_init()
 
 func filter_targets(bodies: Array[Node2D]) -> void:
 	has_target = false

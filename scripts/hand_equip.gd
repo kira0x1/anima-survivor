@@ -27,6 +27,7 @@ func _on_player_gained_weapon(weapon_data: WeaponData) -> void:
 		weapons_spawned.push_front(weapon_spawn)
 
 		spawned_weapon.emit(weapon_spawn)
+		weapon_spawn._weapon_init()
 		has_spawned_item = true
 
 func _on_player_gained_stat_upgrade(_stat_upgrade: UpgradeData) -> void:
