@@ -10,6 +10,8 @@ extends Panel
 
 @onready var stamina_label: RichTextLabel = %stamina_label
 @onready var speed_label: RichTextLabel = %speed_label
+@onready var range_label: RichTextLabel = %range_label
+
 @onready var weapon_range_label: RichTextLabel = %weapon_range
 @onready var attack_speed_label: RichTextLabel = %attack_speed
 
@@ -29,7 +31,6 @@ func _update_ui_style():
 	var w_stats_grid: VBoxContainer = $stats/Weapon_Panel/Weapon_Stats
 	c_stats_grid.add_theme_constant_override("separation", stat_gap)
 	w_stats_grid.add_theme_constant_override("separation", stat_gap)
-
 	# weapon_panel.offset_top = 35;
 
 	var weapon_title: Label = $stats/Weapon_Panel/Weapon_Label
@@ -47,6 +48,7 @@ func _update_ui_style():
 
 	# print("offset: %f" % weapon_title.offset_top)
 
+	# get character / weapon labels
 	var c_labels: Array[Node] = character_panel.find_children("", "RichTextLabel", true, true)
 	var w_labels: Array[Node] = weapon_panel.find_children("", "RichTextLabel", true, true)
 	var labels: Array[RichTextLabel] = []
@@ -56,13 +58,15 @@ func _update_ui_style():
 	for l in labels:
 		l.add_theme_font_size_override("normal_font_size", stat_font_size)
 
-
 func _print_labels(labels):
 	print("labels found %d" % labels.size())
 	for l in labels:
 		print(l.name)
 
 func refresh_stat_ui():
+	if stats.character_range_bonus > 0.0: range_label.text = "range: [color=#25B55A]%d[/color]" % stats.character_total_range
+	else: range_label.text = "range: %d" % stats.character_range_bonus
+
 	if stats.stamina_bonus > 0.0: speed_label.text = "stamina: [color=#25B55A]%d[/color]" % stats.total_stamina
 	else: stamina_label.text = "stamina: %d" % stats.stamina
 
@@ -94,7 +98,6 @@ func _on_player_on_level_up() -> void:
 func _on_player_gained_stat_upgrade(_stat_upgrade: UpgradeData) -> void:
 	refresh_stat_ui()
 	print("stat speed: %d" % stats.speed)
-
 
 func _on_inventory_ui_inventory_toggled(showing: bool) -> void:
 	visible = ! showing

@@ -12,6 +12,10 @@ var speed: float = 10
 var speed_bonus: float = 0.0
 var total_speed: float = speed + speed_bonus
 
+var character_range: float = 0.0
+var character_range_bonus: float = 0.0
+var character_total_range: float = 0.0
+
 var weapon_range_bonus: float = 0.0
 var attack_speed_bonus: float = 0.0
 

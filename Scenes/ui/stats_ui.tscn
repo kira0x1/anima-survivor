@@ -188,6 +188,16 @@ bbcode_enabled = true
 text = "stamina: 0"
 fit_content = true
 
+[node name="range_label" type="RichTextLabel" parent="stats/Character_Panel/Character_Stats" unique_id=2118122083]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_filter = 2
+theme = SubResource("Theme_37s47")
+theme_override_font_sizes/normal_font_size = 13
+bbcode_enabled = true
+text = "range: 0"
+fit_content = true
+
 [node name="Weapon_Panel" type="Panel" parent="stats" unique_id=2088797260]
 propagate_maximum_size = true
 layout_mode = 1

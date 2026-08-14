@@ -1,6 +1,4 @@
-extends Resource
-
-class_name PlayerCharacter
+class_name PlayerCharacter extends Resource
 
 @export var character_name: String = "character"
 @export var character_bio: String = "backstory.."
@@ -11,5 +9,7 @@ class_name PlayerCharacter
 @export_category("stats")
 @export var speed: float = 10
 @export var stamina: float = 1
+@export var character_range_bonus: float = 0.0
+
 @export var weapon_range_bonus: float = 0.0
 @export var global_damage_bonus: float = 0.0
