@@ -1,5 +1,4 @@
-extends Resource
-class_name WeaponData
+class_name WeaponData extends Resource
 
 @export var name: String
 @export var description: String

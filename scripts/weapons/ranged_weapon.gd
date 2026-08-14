@@ -5,7 +5,7 @@ class_name RangedWeapon
 @onready var collider: CollisionShape2D = $CollisionShape2D
 
 func _on_stats_updated():
-	var prev_radius = collider.shape.radius
+	# var prev_radius = collider.shape.radius
 	# print("range: %0.1f" % collider.shape.radius)
 	# collider.shape.radius
 

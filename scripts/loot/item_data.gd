@@ -1,6 +1,4 @@
-extends Resource
-
-class_name ItemData
+class_name ItemData extends Resource
 
 @export var name: String
 @export var icon: Texture
@@ -13,7 +11,8 @@ class_name ItemData
 
 enum ItemType {
 	CONSUMABLE,
-	WEAPON
+	WEAPON,
+	RELIC
 }
 
 @export var item_type: ItemType = ItemType.CONSUMABLE

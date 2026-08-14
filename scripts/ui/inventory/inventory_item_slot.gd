@@ -1,6 +1,4 @@
-extends Button
-
-class_name InventoryItemSlot
+class_name InventoryItemSlot extends Button
 
 var is_occupied: bool = false
 var is_selected: bool = false
@@ -20,7 +18,7 @@ func select_slot():
 func deselect_slot():
 	is_selected = false
 #	highlight.visible = false
-	
+
 func set_item(item):
 	slot_item = item
 	icon = slot_item.icon
