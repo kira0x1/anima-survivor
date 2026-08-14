@@ -180,9 +180,6 @@ unique_name_in_owner = true
 position = Vector2(540, 337)
 player_character = ExtResource("15_wljb1")
 
-[node name="CollisionShape2D" parent="Player" index="1" unique_id=2027810709]
-visible = false
-
 [node name="xp_orb" parent="." unique_id=2033809023 instance=ExtResource("16_v2yb1")]
 position = Vector2(477, 361)
 
