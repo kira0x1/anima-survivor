@@ -64,8 +64,8 @@ func _print_labels(labels):
 		print(l.name)
 
 func refresh_stat_ui():
-	if stats.character_range_bonus > 0.0: range_label.text = "range: [color=#25B55A]%d[/color]" % stats.character_total_range
-	else: range_label.text = "range: %d" % stats.character_range_bonus
+	if stats.character_range_bonus > 0.0: range_label.text = "range: [color=#25B55A]%d[/color]" % stats.total_character_range
+	else: range_label.text = "range: %d" % stats.total_character_range
 
 	if stats.stamina_bonus > 0.0: speed_label.text = "stamina: [color=#25B55A]%d[/color]" % stats.total_stamina
 	else: stamina_label.text = "stamina: %d" % stats.stamina
@@ -73,8 +73,9 @@ func refresh_stat_ui():
 	if stats.speed_bonus > 0.0: speed_label.text = "speed: [color=#25B55A]%d[/color] (%d)" % [stats.total_speed, stats.calculate_velocity()]
 	else: speed_label.text = "speed: %d (%d)" % [stats.total_speed, stats.calculate_velocity()]
 
-	if stats.weapon_range_bonus > 0.0: weapon_range_label.text = "range: [color=#25B55A]%d[/color]" % stats.weapon_range_bonus
-	else: weapon_range_label.text = "range: %d" % stats.weapon_range_bonus
+	# weapon stats
+	if stats.weapon_range_bonus > 0.0: weapon_range_label.text = "range: [color=#25B55A]%d[/color]" % stats.total_range
+	else: weapon_range_label.text = "range: %d" % stats.total_range
 
 	if stats.attack_speed_bonus > 0.0: attack_speed_label.text = "atkspd: [color=#25B55A]%d[/color]" % stats.attack_speed_bonus
 	else: attack_speed_label.text = "atkspd: %d" % stats.attack_speed_bonus

@@ -14,7 +14,8 @@ var total_speed: float = speed + speed_bonus
 
 var character_range: float = 0.0
 var character_range_bonus: float = 0.0
-var character_total_range: float = 0.0
+var total_character_range: float = 0.0
+var total_range: float = 0.0
 
 var weapon_range_bonus: float = 0.0
 var attack_speed_bonus: float = 0.0
@@ -34,6 +35,7 @@ var attack_speed_mods: Array = []
 func init(player_character: PlayerCharacter):
 	set_speed(player_character.speed)
 	set_stamina(player_character.stamina)
+	set_range(player_character.character_range)
 
 	global_damage_bonus = player_character.global_damage_bonus
 # print("player character speed: %0.1f / %0.1f" % [speed, total_speed])
@@ -41,6 +43,10 @@ func init(player_character: PlayerCharacter):
 func set_stamina(amount: float):
 	stamina = amount
 	refresh_stamina()
+
+func set_range(amount: float):
+	character_range = amount;
+	refresh_range()
 
 # sets base speed
 func set_speed(amount: float):
@@ -53,6 +59,10 @@ func refresh_speed():
 func refresh_stamina():
 	total_stamina = stamina + stamina_bonus
 
+func refresh_range():
+	total_character_range = character_range + character_range_bonus
+	total_range = total_character_range + weapon_range_bonus
+
 func add_stat(stat_type: UpgradeStatData.StatType, amount: float):
 	if stat_type == UpgradeStatData.StatType.SPEED:
 		speed_bonus += amount
@@ -62,6 +72,10 @@ func add_stat(stat_type: UpgradeStatData.StatType, amount: float):
 		refresh_stamina()
 	elif stat_type == UpgradeStatData.StatType.RANGE:
 		weapon_range_bonus += amount
+		refresh_range()
+	elif stat_type == UpgradeStatData.StatType.CHARACTER_RANGE:
+		character_range_bonus += amount
+		refresh_range()
 	elif stat_type == UpgradeStatData.StatType.ATTACK_SPEED:
 		attack_speed_bonus += amount
 	elif stat_type == UpgradeStatData.StatType.DAMAGE:

@@ -9,7 +9,7 @@ class_name PlayerCharacter extends Resource
 @export_category("stats")
 @export var speed: float = 10
 @export var stamina: float = 1
-@export var character_range_bonus: float = 0.0
+@export var character_range: float = 0.0
 
 @export var weapon_range_bonus: float = 0.0
 @export var global_damage_bonus: float = 0.0

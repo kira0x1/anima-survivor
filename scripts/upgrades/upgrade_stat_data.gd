@@ -8,7 +8,8 @@ enum StatType {
 	DAMAGE,
 	ATTACK_SPEED,
 	RANGED_DAMAGE,
-	MELEE_DAMAGE
+	MELEE_DAMAGE,
+	CHARACTER_RANGE
 }
 
 enum StatValueType {

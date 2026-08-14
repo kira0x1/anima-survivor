@@ -9,9 +9,9 @@ func _on_stats_updated():
 	# print("range: %0.1f" % collider.shape.radius)
 	# collider.shape.radius
 
-	collider.shape.radius = weapon_data.base_range + stats.weapon_range_bonus
+	collider.shape.radius = weapon_data.base_range + stats.total_range
 	range_indicator.position.x = collider.shape.radius
-	print("increasing radius from %d to %d" % [prev_radius, collider.shape.radius])
+# print("increasing radius from %d to %d" % [prev_radius, collider.shape.radius])
 
 func _weapon_init():
 	print("on weapon init")
