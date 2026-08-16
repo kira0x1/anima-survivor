@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://c4ycu1o05xfks"]
+
+[ext_resource type="Texture2D" uid="uid://cf6rse8k14uk5" path="res://sprites/ui/kira/anima_btn_01.png" id="1_0t2hm"]
+[ext_resource type="Texture2D" uid="uid://d1fvjhgip50lp" path="res://sprites/ui/kira/anima_btn_04.png" id="2_c8vc7"]
+[ext_resource type="Texture2D" uid="uid://ctihptwai61h0" path="res://sprites/ui/kira/anima_btn_02.png" id="3_0t2hm"]
+
+[node name="TextureButton" type="TextureButton" unique_id=593444906]
+texture_filter = 1
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(2, 2)
+texture_normal = ExtResource("1_0t2hm")
+texture_pressed = ExtResource("2_c8vc7")
+texture_hover = ExtResource("3_0t2hm")
