@@ -1,22 +1,26 @@
 extends Weapon
 class_name RangedWeapon
 
-@onready var range_indicator: Marker2D = %weapon_range
+# @onready var range_indicator: Marker2D = %weapon_range
 @onready var collider: CollisionShape2D = $CollisionShape2D
+@onready var range_line: Line2D = $weapon_pivot/Line2D
 
 func _on_stats_updated():
-	# var prev_radius = collider.shape.radius
-	# print("range: %0.1f" % collider.shape.radius)
-	# collider.shape.radius
+	update_range()
 
-	collider.shape.radius = weapon_data.base_range + stats.total_range
-	range_indicator.position.x = collider.shape.radius
-# print("increasing radius from %d to %d" % [prev_radius, collider.shape.radius])
+func update_range():
+	collider.shape.radius = weapon_data.base_range + stats.weapon_range_bonus
+
+	var i: int = 0
+	var size: int = range_line.points.size()
+
+	for p in range_line.points:
+		var s: float = ((i + 1.0) / size) * collider.shape.radius
+		range_line.set_point_position(i, Vector2(s, 0))
+		i = i + 1
 
 func _weapon_init():
-	print("on weapon init")
-	collider.shape.radius = weapon_data.base_range + stats.weapon_range_bonus
-	range_indicator.position.x = collider.shape.radius
+	update_range()
 
 func attack() -> void:
 	if not can_attack():

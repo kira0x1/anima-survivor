@@ -7,6 +7,10 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_5jo3t"]
 radius = 250.0
 
+[sub_resource type="Curve" id="Curve_yxcmo"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.19620252, 1), 0.0, 0.0, 0, 0, Vector2(0.78164554, 0.49180323), -0.86805505, -2.252316, 1, 1, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 4
+
 [node name="ranged_weapon" type="Area2D" unique_id=150426745]
 collision_layer = 0
 collision_mask = 2
@@ -23,6 +27,13 @@ autostart = true
 
 [node name="weapon_pivot" type="Marker2D" parent="." unique_id=103585778]
 
+[node name="Line2D" type="Line2D" parent="weapon_pivot" unique_id=1469666851]
+points = PackedVector2Array(0, 0, 10, 0, 20, 0, 200, 0)
+width = 3.5
+width_curve = SubResource("Curve_yxcmo")
+default_color = Color(1, 0.36822748, 0.38394055, 1)
+antialiased = true
+
 [node name="ShootingPoint" type="Marker2D" parent="weapon_pivot" unique_id=873672110]
 unique_name_in_owner = true
 position = Vector2(13, 0)
@@ -37,6 +48,7 @@ texture = ExtResource("2_4txm0")
 
 [node name="weapon_range" type="Marker2D" parent="." unique_id=955987873]
 unique_name_in_owner = true
+visible = false
 position = Vector2(80, 0)
 scale = Vector2(1.6, 1.6)
 
