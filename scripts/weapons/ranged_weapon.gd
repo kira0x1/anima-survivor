@@ -27,7 +27,7 @@ func attack() -> void:
 		print("cant attack...")
 		return
 
-	const ARROW: PackedScene = preload("res://scenes/arrow.tscn")
+	const ARROW: PackedScene = preload("res://scenes/prefabs/arrow.tscn")
 	var new_arrow: Node = ARROW.instantiate()
 	new_arrow.global_position = %ShootingPoint.global_position
 	new_arrow.global_rotation = %ShootingPoint.global_rotation

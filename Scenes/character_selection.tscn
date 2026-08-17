@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://bil8tqokqgtl7"]
+
+[ext_resource type="PackedScene" uid="uid://wp2xl5tx1h7y" path="res://scenes/ui/character_card.tscn" id="1_dd54q"]
+
+[node name="CharacterSelection" type="Control" unique_id=1028664773]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1946672585]
+propagate_maximum_size = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 281.0
+offset_top = 176.0
+offset_right = -465.0
+offset_bottom = -211.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CharacterCard" parent="HBoxContainer" unique_id=342142955 instance=ExtResource("1_dd54q")]
+custom_maximum_size = Vector2(279, 423)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TopText" parent="HBoxContainer/CharacterCard" index="2" unique_id=637759489]
+offset_left = 15.0
+offset_top = 18.0
+offset_right = 9.061996
+offset_bottom = -34.717003
+theme_override_colors/default_color = Color(0.783984, 0.53934425, 0.7107718, 1)
+theme_override_font_sizes/italics_font_size = 24
+text = "character 1"
+
+[editable path="HBoxContainer/CharacterCard"]

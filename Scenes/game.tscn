@@ -15,13 +15,13 @@
 [ext_resource type="PackedScene" uid="uid://df4unlwix45ey" path="res://scenes/ui/action_bar.tscn" id="12_suyxu"]
 [ext_resource type="TileSet" uid="uid://dm4u0eg76wk5r" path="res://sprites/props/props.tres" id="13_sgl2t"]
 [ext_resource type="PackedScene" uid="uid://dvnqybuhkxgcw" path="res://scenes/ui/tooltip.tscn" id="14_37s47"]
-[ext_resource type="PackedScene" uid="uid://dxx3v5mga07pt" path="res://scenes/player.tscn" id="14_qouja"]
+[ext_resource type="PackedScene" uid="uid://dxx3v5mga07pt" path="res://scenes/prefabs/player.tscn" id="14_qouja"]
 [ext_resource type="Resource" uid="uid://cvhrfgjik264p" path="res://data/characters/fox_character.tres" id="15_wljb1"]
-[ext_resource type="PackedScene" uid="uid://bkltruarjgmf0" path="res://scenes/xp_orb.tscn" id="16_v2yb1"]
+[ext_resource type="PackedScene" uid="uid://bkltruarjgmf0" path="res://scenes/prefabs/xp_orb.tscn" id="16_v2yb1"]
 [ext_resource type="Script" uid="uid://cpwhcg7vstt0b" path="res://scripts/spawn_manager.gd" id="17_js0lu"]
-[ext_resource type="PackedScene" uid="uid://ddr6joisppuo1" path="res://scenes/spawner.tscn" id="18_gxtfn"]
-[ext_resource type="PackedScene" uid="uid://cycum2ij4bvu" path="res://scenes/home_chest.tscn" id="19_264po"]
-[ext_resource type="PackedScene" uid="uid://ch61xemtdtsny" path="res://scenes/upgrade_work_bench.tscn" id="21_5newe"]
+[ext_resource type="PackedScene" uid="uid://ddr6joisppuo1" path="res://scenes/prefabs/spawner.tscn" id="18_gxtfn"]
+[ext_resource type="PackedScene" uid="uid://cycum2ij4bvu" path="res://scenes/prefabs/home_chest.tscn" id="19_264po"]
+[ext_resource type="PackedScene" uid="uid://ch61xemtdtsny" path="res://scenes/prefabs/upgrade_work_bench.tscn" id="21_5newe"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lbhrr"]
 bg_color = Color(0, 0, 0, 0.09803922)

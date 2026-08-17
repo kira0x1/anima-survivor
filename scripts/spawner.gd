@@ -30,7 +30,7 @@ func _on_timer_timeout() -> void:
 
 func spawn_mob():
 	var spawn_picked = spawn_points.pick_random()
-	const mob_prefab: PackedScene = preload("res://scenes/mob.tscn")
+	const mob_prefab: PackedScene = preload("res://scenes/prefabs/mob.tscn")
 	var mob: Mob = mob_prefab.instantiate()
 	spawn_picked.add_child(mob)
 	mob.on_death.connect(mob_died)
