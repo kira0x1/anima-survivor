@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://jhuc7mylhd76" path="res://sprites/ui/kira/character_select_card_back.png" id="1_hb02x"]
 [ext_resource type="Texture2D" uid="uid://d38bhhv7op1t5" path="res://sprites/ui/kira/card_inner.png" id="2_1b1wn"]
-[ext_resource type="Texture2D" uid="uid://b5gf112254ofy" path="res://sprites/ui/kira/character_portrait.png" id="3_x8tbm"]
+[ext_resource type="Texture2D" uid="uid://dkj1dravdp8au" path="res://sprites/ui/kira/character_portrait thin.png" id="3_x8tbm"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tye4b"]
 texture = ExtResource("1_hb02x")
@@ -16,8 +16,9 @@ texture = ExtResource("3_x8tbm")
 [node name="CharacterCard" type="Panel" unique_id=342142955]
 texture_filter = 1
 custom_minimum_size = Vector2(186, 282)
-offset_right = 40.0
-offset_bottom = 40.0
+custom_maximum_size = Vector2(279, 423)
+offset_right = 198.0
+offset_bottom = 282.0
 scale = Vector2(2, 2)
 theme_override_styles/panel = SubResource("StyleBoxTexture_tye4b")
 
@@ -26,11 +27,11 @@ texture_filter = 1
 custom_minimum_size = Vector2(158, 175)
 layout_mode = 1
 anchors_preset = -1
-anchor_top = 0.27800003
+anchor_top = 0.238
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 18.6
-offset_top = 6.2039948
+offset_top = 11.883995
 offset_right = -18.600006
 offset_bottom = -11.279999
 grow_horizontal = 2
@@ -42,12 +43,12 @@ texture_filter = 1
 custom_minimum_size = Vector2(61, 56)
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.583
+anchor_left = 0.51900005
 anchor_right = 1.0
 anchor_bottom = 0.238
-offset_left = 0.06199646
+offset_left = 15.237991
 offset_top = 11.0
-offset_right = -16.5
+offset_right = -19.0
 offset_bottom = -0.116004944
 grow_horizontal = 0
 theme_override_styles/panel = SubResource("StyleBoxTexture_5gcps")
@@ -55,12 +56,13 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_5gcps")
 [node name="TopText" type="RichTextLabel" parent="." unique_id=637759489]
 layout_mode = 1
 anchors_preset = -1
+anchor_left = 0.025
 anchor_right = 0.583
-anchor_bottom = 0.179
-offset_left = 6.0
-offset_top = 6.0
-offset_right = 0.06199646
-offset_bottom = -10.478001
+anchor_bottom = 0.21900001
+offset_left = 4.0499997
+offset_top = 17.0
+offset_right = 0.06600189
+offset_bottom = -21.758003
 theme_override_colors/default_color = Color(0.35000002, 0.51250005, 1, 1)
 bbcode_enabled = true
 text = "[i]Character 1[/i]"
