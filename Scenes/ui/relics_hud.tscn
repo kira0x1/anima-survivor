@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://pj50gtjo46md"]
+
+[ext_resource type="PackedScene" uid="uid://8ijao3r8g5qc" path="res://scenes/ui/relics/relic_slot.tscn" id="1_vtqrv"]
+[ext_resource type="Script" uid="uid://bc5kgrgftve2g" path="res://scripts/ui/relics_hud.gd" id="1_w3bwl"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vtqrv"]
+draw_center = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w3bwl"]
+draw_center = false
+
+[node name="RelicsHUD" type="Panel" unique_id=1672975311]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -418.0
+offset_top = 15.0
+offset_right = -20.0
+offset_bottom = 91.0
+grow_horizontal = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_vtqrv")
+script = ExtResource("1_w3bwl")
+
+[node name="BgPanel" type="Panel" parent="." unique_id=935801939]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_w3bwl")
+
+[node name="Grid" type="HBoxContainer" parent="BgPanel" unique_id=21098635]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -40.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 2
+
+[node name="RelicSlot" parent="BgPanel/Grid" unique_id=1754236802 instance=ExtResource("1_vtqrv")]
+visible = false
+layout_mode = 2
+
+[node name="RelicSlot2" parent="BgPanel/Grid" unique_id=2030607668 instance=ExtResource("1_vtqrv")]
+visible = false
+layout_mode = 2
+
+[node name="RelicSlot3" parent="BgPanel/Grid" unique_id=411080260 instance=ExtResource("1_vtqrv")]
+visible = false
+layout_mode = 2
+
+[node name="RelicSlot4" parent="BgPanel/Grid" unique_id=1680447165 instance=ExtResource("1_vtqrv")]
+visible = false
+layout_mode = 2
+
+[node name="RelicSlot5" parent="BgPanel/Grid" unique_id=1249644147 instance=ExtResource("1_vtqrv")]
+visible = false
+layout_mode = 2
+
+[node name="RelicSlot6" parent="BgPanel/Grid" unique_id=805512357 instance=ExtResource("1_vtqrv")]
+visible = false
+layout_mode = 2
+
+[node name="RelicSlot7" parent="BgPanel/Grid" unique_id=450140184 instance=ExtResource("1_vtqrv")]
+visible = false
+layout_mode = 2
+
+[node name="RelicSlot8" parent="BgPanel/Grid" unique_id=729437559 instance=ExtResource("1_vtqrv")]
+visible = false
+layout_mode = 2
+
+[node name="RelicSlot9" parent="BgPanel/Grid" unique_id=706557661 instance=ExtResource("1_vtqrv")]
+visible = false
+layout_mode = 2
+
+[node name="RelicSlot10" parent="BgPanel/Grid" unique_id=1391138755 instance=ExtResource("1_vtqrv")]
+visible = false
+layout_mode = 2

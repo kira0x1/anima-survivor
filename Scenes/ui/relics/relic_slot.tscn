@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://8ijao3r8g5qc"]
+
+[ext_resource type="Script" uid="uid://c0hc5latgt4ui" path="res://scripts/ui/relic_slot.gd" id="1_swc44"]
+
+[node name="RelicSlot" type="Button" unique_id=1754236802]
+custom_minimum_size = Vector2(36, 36)
+offset_right = 36.0
+offset_bottom = 36.0
+script = ExtResource("1_swc44")
